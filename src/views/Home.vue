@@ -4,19 +4,6 @@
       <div class="clearfix row">
         <div class="col-md-12 column">
           <Nav :num="1" />
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">
-                Panel title
-              </h3>
-            </div>
-            <div class="panel-body">
-              Panel content
-            </div>
-            <div class="panel-footer">
-              Panel footer
-            </div>
-          </div>
           <div class="carousel slide" id="carousel-260043">
             <ol class="carousel-indicators">
               <li class="active" data-slide-to="0" data-target="#carousel-260043">
