@@ -9,7 +9,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Kinron</a>
+                <a class="navbar-brand" style="cursor:pointer;" @click="handleNav('/')">Kinron</a>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <form class="navbar-form navbar-left" role="search">
@@ -19,19 +19,19 @@
                 </form>
                 <ul class="nav navbar-nav navbar-right lin-ul">
                 <li :class="num === 1 ? 'active' : ''">
-                    <a href="/">主页</a>
+                    <a style="cursor:pointer;" @click="handleNav('/')">主页</a>
                 </li>
                 <li :class="num === 2 ? 'active' : ''">
-                    <a href="/paint">绘画</a>
+                    <a  style="cursor:pointer;" @click="handleNav('/paint')">绘画</a>
                 </li>
                 <li :class="num === 3 ? 'active' : ''">
-                    <a href="/diy">DIY</a>
+                    <a  style="cursor:pointer;" @click="handleNav('/diy')">DIY</a>
                 </li>
                 <li :class="num === 4 ? 'active' : ''">
-                    <a href="/live">生活</a>
+                    <a  style="cursor:pointer;" @click="handleNav('/live')">生活</a>
                 </li>
                 <li :class="num === 5 ? 'active' : ''">
-                    <a href="/note">总结</a>
+                    <a  style="cursor:pointer;" @click="handleNav('/note')">总结</a>
                 </li>
                 </ul>
             </div>
@@ -43,6 +43,11 @@
 export default {
     props: {
         num: Number
+    },
+    methods: {
+        handleNav(path) {
+            this.$router.push(path)
+        }
     }
 }
 </script>

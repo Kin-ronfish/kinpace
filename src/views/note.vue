@@ -1,18 +1,14 @@
 <template>
     <div>
-        <div class="container">
-            <div class="clearfix row">
-                <div class="col-md-12 column">
-                    <Nav :num="5" />
-                </div>
-            </div>
-        </div>
+        <Nav :num="5" />
+        <div>xx</div>
     </div>
 </template>
 
 <script>
+import Nav from '../components/nav.vue'
     export default {
-        
+        components: { Nav },
     }
 </script>
 
