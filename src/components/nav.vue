@@ -47,20 +47,33 @@ export default {
     .IconTitle {
         font-size: 20px;
         padding-left: 50px;
+        transition-duration: 500ms;
+    }
+    .IconTitle:hover {
+        font-size: 23px;
+        transition-duration: 500ms;
+        text-shadow: 1px 1px 3px rgb(199, 222, 241);
+    }
+    a:hover {
+        color: #fff !important;
+    }
+    a {
+        color: rgb(194, 153, 216) !important;
     }
     .li-font {
         font-size: 18px;
+        transition-duration: 500ms;
     }
     .li-font:hover {
         font-size: 19px;
         background: rgba(161, 161, 161, 0.205);
-        transition: 500ms;
+        transition-duration: 500ms;
     }
 }
 .bg2 {
     color: rgb(156, 156, 156);
 
-    background: rgb(236, 214, 240);
+    background: rgb(51, 104, 137);
 }
 .bg3 {
     background: rgb(111, 169, 240);
