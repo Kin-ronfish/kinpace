@@ -11,12 +11,7 @@
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right lin-ul">
-                    <form class="navbar-form navbar-left" role="search">
-                        <div class="form-group">
-                            <input type="text" class="form-control" />
-                        </div> <button type="submit" class="btn btn-default">Submit</button>
-                    </form>
-                    <li class="li-font animated bounceIn" v-for="(item, index) in titleList" :key="index">
+                    <li class="li-font" v-for="(item, index) in titleList" :key="index">
                         <a style="cursor:pointer;" @click="handleNav(pathList[index])">{{ item }}</a>
                     </li>
                 </ul>
@@ -46,21 +41,25 @@ export default {
 
 <style scoped>
 @media (min-width: 768px) {
-  .lin-ul {
-    padding-right: 50px;
-  }
-  .IconTitle {
-    font-size: 20px;
-    padding-left: 50px;
-  }
-  .li-font {
-    font-size: 18px;
-  }
-  .li-font:hover {
-    font-size: 20px;
-  }
+    .lin-ul {
+        padding-right: 50px;
+    }
+    .IconTitle {
+        font-size: 20px;
+        padding-left: 50px;
+    }
+    .li-font {
+        font-size: 18px;
+    }
+    .li-font:hover {
+        font-size: 19px;
+        background: rgba(161, 161, 161, 0.205);
+        transition: 500ms;
+    }
 }
 .bg2 {
+    color: rgb(156, 156, 156);
+
     background: rgb(236, 214, 240);
 }
 .bg3 {
