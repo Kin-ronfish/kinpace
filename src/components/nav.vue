@@ -58,7 +58,7 @@ export default {
         color: #fff !important;
     }
     a {
-        color: rgb(194, 153, 216) !important;
+        color: rgb(159, 144, 167) !important;
     }
     .li-font {
         font-size: 18px;
@@ -71,9 +71,7 @@ export default {
     }
 }
 .bg2 {
-    color: rgb(156, 156, 156);
-
-    background: rgb(51, 104, 137);
+    background: rgb(27, 63, 85);
 }
 .bg3 {
     background: rgb(111, 169, 240);
