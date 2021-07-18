@@ -149,8 +149,6 @@ export default {
 }
 </script>
 <style>
-@import url('../css/normalize.css');
-@import url('../css/style.css');
 @media (min-width: 768px) {
   .lin-ul {
     padding-right: 50px;
