@@ -61,6 +61,7 @@
                             @current-change="handleCurrentChange"
                             background
                             :page-size="3"
+                            :pager-count="4"
                             layout="prev, pager, next"
                             style="text-align: center;"
                             :total="list.length">
@@ -666,13 +667,5 @@ import cloneDeep from 'lodash/cloneDeep'
     position: absolute;
     top:100px;
     right: 10px;
-}
-.innerbox{
-    overflow-y: auto;
-    height: 500px;
-    padding: 10px;
-}
-.innerbox::-webkit-scrollbar {/*滚动条整体样式*/
-    width: 4px;     /*高宽分别对应横竖滚动条的尺寸*/
 }
 </style>
