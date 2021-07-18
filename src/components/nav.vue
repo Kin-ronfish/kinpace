@@ -44,42 +44,42 @@ export default {
     .lin-ul {
         padding-right: 50px;
     }
-    .IconTitle {
-        font-size: 20px;
-        padding-left: 50px;
-        transition-duration: 500ms;
-    }
-    .IconTitle:hover {
-        font-size: 23px;
-        transition-duration: 500ms;
-        text-shadow: 1px 1px 3px rgb(199, 222, 241);
-    }
-    a:hover {
-        color: #fff !important;
-    }
-    a {
-        color: rgb(159, 144, 167) !important;
-    }
-    .li-font {
-        font-size: 18px;
-        transition-duration: 500ms;
-    }
-    .li-font:hover {
-        font-size: 19px;
-        background: rgba(161, 161, 161, 0.205);
-        transition-duration: 500ms;
-    }
+}
+.IconTitle {
+    font-size: 20px;
+    padding-left: 50px;
+    transition-duration: 500ms;
+}
+.IconTitle:hover {
+    font-size: 23px;
+    transition-duration: 500ms;
+    text-shadow: 1px 1px 3px rgb(199, 222, 241);
+}
+a:hover {
+    color: #fff !important;
+}
+a {
+    color: rgb(202, 181, 213) !important;
+}
+.li-font {
+    font-size: 18px;
+    transition-duration: 500ms;
+}
+.li-font:hover {
+    font-size: 19px;
+    background: rgba(161, 161, 161, 0.205);
+    transition-duration: 500ms;
 }
 .bg2 {
     background: rgb(27, 63, 85);
 }
 .bg3 {
-    background: rgb(111, 169, 240);
+    background: rgb(61, 85, 126);
 }
 .bg4 {
-    background: rgb(124, 233, 177);
+    background: rgb(69, 132, 99);
 }
 .bg5 {
-    background: rgb(241, 196, 110);
+    background: rgb(126, 102, 58);
 }
 </style>
