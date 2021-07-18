@@ -73,32 +73,6 @@
                             </div>
                         </div>
                     </div>
-                    <section class="untree_co-section" id="portfolio-section">
-                        <div class="container">
-                            <div class="filters-content mb-5" data-aos="fade-up" data-aos-delay="200">
-                                <div class="row grid">
-                                <div class="single-portfolio col-sm-4 all mockup">
-                                    <a href="images/work_5.jpg" data-fancybox="gal">
-                                    <img src="images/work_5.jpg" alt="Image" class="img-fluid">
-                                    <div class="contents">
-                                        <h3>Card Vol. 3</h3>
-                                        <div class="cat">Mockup</div>
-                                    </div>
-                                    </a>
-                                </div>
-                                <div class="single-portfolio col-sm-4 all typography">
-                                    <a href="images/work_1.jpg" data-fancybox="gal">
-                                    <img src="images/work_1.jpg" alt="Image" class="img-fluid">
-                                    <div class="contents">
-                                        <h3>House Design</h3>
-                                        <div class="cat">Typography</div>
-                                    </div>
-                                    </a>
-                                </div>                            
-                                </div>
-                            </div>
-                        </div>
-                    </section>
                 </div>
             </div>
         </div>
