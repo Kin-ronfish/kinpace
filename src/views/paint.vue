@@ -37,6 +37,7 @@
                             </div>
                         </div> <a class="left carousel-control" href="#carousel-260043" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control" href="#carousel-260043" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
                     </div>
+                    <h1 class="animated fadeInUp" style="text-align:center; color:#fff; margin-bottom: 100px;">我的作品</h1>
                     <div class="row">
                         <div class="col-md-4" v-for="(item, index) in pageList" :key="index">
                             <div class="thumbnail animated fadeInUp">
@@ -49,7 +50,7 @@
                                     <h3 class="titleH3">{{ item.value }}</h3>
                                     <p>{{ item.word }}</p>
                                     <p>
-                                        <a class="btn btn-primary" href="#">Action</a> <a class="btn" href="#">Action</a>
+                                        <a class="btn btn-primary" href="#">查看</a> <a class="btn" href="#">Action</a>
                                     </p>
                                 </div>
                             </div>
@@ -65,14 +66,7 @@
                             :total="list.length">
                         </el-pagination>
                     </div>
-                    <h1 class="animated fadeInUp" style="text-align:center; color:#fff; margin-bottom: 100px;">我的作品</h1>
-                    <div class="row">
-                        <div class="col-md-4" v-for="(item, index) in list" :key="index">
-                            <div class="thumbnail">
-                                <img alt="300x200" :src="item.img" />
-                            </div>
-                        </div>
-                    </div>
+                    <div style="margin-top:200px;">xx</div>
                 </div>
             </div>
         </div>
