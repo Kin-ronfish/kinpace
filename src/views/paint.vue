@@ -61,7 +61,7 @@
                             @current-change="handleCurrentChange"
                             background
                             :page-size="3"
-                            :pager-count="4"
+                            :pager-count="3"
                             layout="prev, pager, next"
                             style="text-align: center;"
                             :total="list.length">
@@ -92,7 +92,7 @@ import cloneDeep from 'lodash/cloneDeep'
                     {
                         "value": "品茶老人",
                         "time": "2011年",
-                        "word": "绘画的第一天",
+                        "word": "绘画的第一天，发现兴趣的时刻，感受到绘画给自己带来了乐趣。",
                         "label": ['古风','人物'],
                         "color": [0,5],
                         "img": require('@/assets/img/2011/1.jpg')
@@ -100,72 +100,72 @@ import cloneDeep from 'lodash/cloneDeep'
                     {
                         "value": "山水画",
                         "time": "2013年",
-                        "word": "--",
-                        "label": ['场景','风景', '联想'],
+                        "word": "尝试着将学习的多个部分整合，青山绿水，李白遥望瀑布吟诗作对。",
+                        "label": ['场景','风景', '意向'],
                         "color": [0,3,4],
                         "img": require('@/assets/img/2013/1.jpg')
                     },
                     {
                         "value": " 刻画蝴蝶",
                         "time": "2013年",
-                        "word": "美术课上画的蝴蝶",
-                        "label": ['古风','人物'],
+                        "word": "初中美术课留下一幅比较有印象的画，记录着自己对绘画的喜爱。",
+                        "label": ['雕画','动物'],
                         "color": [0,5],
                         "img": require('@/assets/img/2013/2.jpg')
                     },
                     {
                         "value": "小兰新一",
                         "time": "2013年",
-                        "word": "开始学画漫画",
-                        "label": ['古风','人物'],
-                        "color": [0,5],
+                        "word": "开始接触动漫临摹，在同学家跟他一起完成这幅画的临摹。",
+                        "label": ['小兰','新一','动漫'],
+                        "color": [0,5,2],
                         "img": require('@/assets/img/2013/3.jpg')
                     },
                     {
                         "value": "霸气苍龙",
                         "time": "2013年",
                         "word": "--",
-                        "label": ['古风','人物'],
+                        "label": ['苍龙','神话'],
                         "color": [0,5],
                         "img": require('@/assets/img/2013/4.jpg')
                     },
                     {
                         "value": "想象之地",
                         "time": "2013年",
-                        "word": "开始接触水粉",
-                        "label": ['古风','人物'],
+                        "word": "第一次接触水粉画，根据自己的想法画出自己脑海中的一个印象。",
+                        "label": ['水粉','联想'],
                         "color": [0,5],
                         "img": require('@/assets/img/2013/5.jpg')
                     },
                     {
                         "value": "天边之树",
                         "time": "2013年",
-                        "word": "--",
-                        "label": ['古风','人物'],
+                        "word": "水粉绘画功底还在缓慢提升，画出来的东西比较抽象且缺少美感。",
+                        "label": ['水粉','联想'],
                         "color": [0,5],
                         "img": require('@/assets/img/2013/6.jpg')
                     },
                     {
                         "value": "家中客厅",
                         "time": "2013年",
-                        "word": "--",
-                        "label": ['古风','人物'],
-                        "color": [0,5],
+                        "word": "坐在客厅的沙发上，眼前正是一个框架结构，于是用笔记录下静态的一面。",
+                        "label": ['彩铅','客厅','静物'],
+                        "color": [0,5,3],
                         "img": require('@/assets/img/2013/7.jpg')
                     },
                     {
                         "value": "花花世界",
                         "time": "2013年4月",
-                        "word": "走进花的世界",
-                        "label": ['古风','人物'],
-                        "color": [0,5],
+                        "word": "欣赏花朵的美，来自大自然的清新。",
+                        "label": ['彩铅','花朵','静物'],
+                        "color": [0,5,1],
                         "img": require('@/assets/img/2013/8.jpg')
                     },
                     {
                         "value": "雄鹰展翅",
                         "time": "2013年4月",
-                        "word": "飞的更高，看得更远",
-                        "label": ['古风','人物'],
+                        "word": "飞得更高，看得更远，划破长空，翱翔天际。",
+                        "label": ['雄鹰','动物'],
                         "color": [0,5],
                         "img": require('@/assets/img/2013/9.jpg')
                     },
