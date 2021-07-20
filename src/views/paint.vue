@@ -37,21 +37,27 @@
                             </div>
                         </div> <a class="left carousel-control" href="#carousel-260043" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control" href="#carousel-260043" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
                     </div>
-                    <h1 class="animated fadeInUp" style="text-align:center; color:#fff; margin-bottom: 100px;">我的作品</h1>
+                    <div class="animated fadeInUp box">
+                        <img :src="require('@/assets/Kin.png')" alt="" style="width:50px;height: 50px;" />
+                        <div class="myWork">我的作品</div>
+                    </div>
                     <div class="row">
                         <div class="col-md-4" v-for="(item, index) in pageList" :key="index">
-                            <div class="thumbnail animated fadeInUp">
+                            <div class="thumbnail animated fadeInUp paintImg">
                                 <img alt="300x200" :src="item.img" />
+                                <div class="content animated fadeInUp">
+                                    <span class="icon glyphicon glyphicon-download-alt btn" @click="download(index)"></span>
+                                    <span class="icon glyphicon glyphicon-search btn" @click="look(index)"></span>
+                                    <span class="icon glyphicon glyphicon-link btn"></span>
+                                </div>
+                                <div class="time animated fadeInDown">{{item.time}}</div>
                                 <div class="caption">
                                     <span v-for="(value, key) in item.label" :key="key">
                                         <span class="label" :class="'label-' + type[item.color[key]]">{{value}}</span>
                                         &nbsp;
                                     </span>
-                                    <h3 class="titleH3">{{ item.value }}</h3>
-                                    <p>{{ item.word }}</p>
-                                    <p>
-                                        <a class="btn btn-primary" href="#">查看</a> <a class="btn" href="#">Action</a>
-                                    </p>
+                                    <h3 class="value">{{ item.value }}</h3>
+                                    <p class="word">{{ item.word }}</p>
                                 </div>
                             </div>
                         </div>
@@ -71,6 +77,9 @@
                 </div>
             </div>
         </div>
+        <el-dialog :title="pageList[imgIndex].value" :visible.sync="dialogTableVisible">
+            <el-image :src="pageList[imgIndex].img"></el-image>
+        </el-dialog>
     </div>
 </template>
 
@@ -82,6 +91,8 @@ import cloneDeep from 'lodash/cloneDeep'
             return {
                 list: cloneDeep(this.loadAll()),
                 pageList: this.loadAll().slice(0, 3),
+                dialogTableVisible: false,
+                imgIndex: 0,
                 type: ['default', 'primary', 'success', 'info', 'warning', 'danger']
             }
         },
@@ -580,64 +591,64 @@ import cloneDeep from 'lodash/cloneDeep'
                     {
                         "value": "手绘海琴烟",
                         "time": "2020月11月26日",
-                        "word": "--",
-                        "label": ['古风','人物'],
+                        "word": "送给师弟的礼，外表腼腆的他也喜欢绘画，在了解到他喜欢的漫画，画个海琴烟送给他作为他当组长的礼物。",
+                        "label": ['人物','上色','鬼刀'],
                         "color": [0,5],
                         "img": require('@/assets/img/2020/11.jpg')
                     },
                     {
                         "value": "手绘吉他",
                         "time": "2020月11月26日",
-                        "word": "--",
-                        "label": ['古风','人物'],
+                        "word": "送给师妹的礼物，充满娱乐气息的她喜欢弹吉他，画个吉他送给她作为她当组长的礼物。",
+                        "label": ['静物','上色','吉他'],
                         "color": [0,5],
                         "img": require('@/assets/img/2020/12.jpg')
                     },
                     {
                         "value": "手绘笔记本电脑",
                         "time": "2020月11月27日",
-                        "word": "--",
-                        "label": ['古风','人物'],
+                        "word": "送给师弟的礼物，热爱专研代码，画个电脑送给他作为他当组长的礼物。",
+                        "label": ['静物','上色','电脑'],
                         "color": [0,5],
                         "img": require('@/assets/img/2020/13.jpg')
                     },
                     {
                         "value": "女孩",
                         "time": "2021月2月11日",
-                        "word": "--",
-                        "label": ['古风','人物'],
+                        "word": "尝试画壁纸和上色，在人物比例协调上存在一定的出入，导致画面看起来有点变形。",
+                        "label": ['人物','上色','壁纸'],
                         "color": [0,5],
                         "img": require('@/assets/img/2021/1.jpg')
                     },
                     {
                         "value": "小哥",
                         "time": "2021月2月13日",
-                        "word": "--",
-                        "label": ['古风','人物'],
+                        "word": "接受阿姐给我的一个小任务，尝试画一个动漫版的小哥，相对真实人物还是比较简单的。",
+                        "label": ['人物','动漫','盗墓笔记'],
                         "color": [0,5],
                         "img": require('@/assets/img/2021/2.jpg')
                     },
                     {
                         "value": "小物品",
                         "time": "2021月3月25日",
-                        "word": "--",
-                        "label": ['古风','人物'],
+                        "word": "在公司休息时间，拿起笔画下桌子上的几个小物品，静物素描是绘画基础练习。",
+                        "label": ['静物','素描'],
                         "color": [0,5],
                         "img": require('@/assets/img/2021/3.jpg')
                     },
                     {
                         "value": "可爱女孩",
                         "time": "2021月3月27日",
-                        "word": "--",
-                        "label": ['古风','人物'],
+                        "word": "细致素描尝试，试绘壁纸，在素描画中感觉比较好的一幅，但与壁纸仍存在一定差别。",
+                        "label": ['人物','素描','壁纸'],
                         "color": [0,5],
                         "img": require('@/assets/img/2021/4.jpg')
                     },
                     {
                         "value": "王一博",
                         "time": "2021月4月20日",
-                        "word": "--",
-                        "label": ['古风','人物'],
+                        "word": "细致素描尝试，试绘大众追捧的明星。没有学习素描基础，画出来有点变形。",
+                        "label": ['人物','素描','王一博'],
                         "color": [0,5],
                         "img": require('@/assets/img/2021/5.jpg')
                     }
@@ -645,6 +656,18 @@ import cloneDeep from 'lodash/cloneDeep'
             },
             handleCurrentChange(val) {
                 this.pageList = this.loadAll().slice(val * 3 - 3, val * 3)
+            },
+            look(index) {
+                this.imgIndex = index
+                this.dialogTableVisible = true
+            },
+            download(index) {
+                console.log(this.pageList[index].img)
+                const url = this.pageList[index].img
+                const a = document.createElement('a')
+                a.download = this.pageList[index].value
+                a.href = url
+                a.click()
             }
         }
     }
@@ -660,12 +683,59 @@ import cloneDeep from 'lodash/cloneDeep'
 #title, #quto {
     animation-delay: 500ms;
 }
-.titleH3:hover {
-    color: rgb(54, 121, 162);;
+.word {
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
 }
 .timeList {
     position: absolute;
     top:100px;
     right: 10px;
+}
+.box {
+    display: flex;
+    margin: 100px;
+    justify-content: center;
+}
+.myWork {
+    color:#fff;
+    font-size: 35px;
+}
+.buttonGroup {
+    display: flex;
+    justify-content: space-around;
+}
+.content,
+.time {
+    display: none;
+}
+.paintImg:hover .content {
+    display: flex;
+    position:absolute;
+    width: 90%;
+    margin-top:-30%;
+    justify-content: center;
+}
+.paintImg:hover .value {
+    color: rgb(54, 121, 162);
+}
+.paintImg:hover .time {
+    display: block;
+    text-align: center;
+    font-size: 25px;
+    color: beige;
+    margin-top:-15%;
+    width: 90%;
+    position:absolute;
+}
+.icon {
+    background-color:rgb(155, 169, 189);
+    color:#fff;
+    margin: 0 20px;;
+}
+.icon:hover {
+    background-color:rgb(103, 113, 126);
+    color:rgb(34, 60, 85);
 }
 </style>
