@@ -1,5 +1,22 @@
 <template>
     <div class="bg">
+        <vue-particles
+            class="particles"
+            color="#cbb8ea"
+            :particleOpacity="0.7"
+            :particlesNumber="80"
+            shapeType="circle"
+            :particleSize="4"
+            :linesWidth="1"
+            :lineLinked="true"
+            :lineOpacity="0.4"
+            :linesDistance="150"
+            :moveSpeed="3"
+            :hoverEffect="true"
+            :clickEffect="true"
+            clickMode="push"
+        >
+        </vue-particles>
         <div class="container">
             <div class="clearfix row">
                 <div class="col-md-12 column">
@@ -38,7 +55,7 @@
                         </div> <a class="left carousel-control" href="#carousel-260043" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control" href="#carousel-260043" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
                     </div>
                     <div class="animated fadeInUp box">
-                        <img :src="require('@/assets/Kin.png')" alt="" style="width:50px;height: 50px;" />
+                        <img class="boxImg" :src="require('@/assets/Kin.png')" />&nbsp;
                         <div class="myWork">我的作品</div>
                     </div>
                     <div class="row">
@@ -66,19 +83,19 @@
                         <el-pagination
                             @current-change="handleCurrentChange"
                             background
-                            :page-size="3"
+                            :page-size="6"
                             :pager-count="3"
                             layout="prev, pager, next"
                             style="text-align: center;"
                             :total="list.length">
                         </el-pagination>
                     </div>
-                    <div style="margin-top:200px;">xx</div>
                 </div>
             </div>
         </div>
-        <el-dialog :title="pageList[imgIndex].value" :visible.sync="dialogTableVisible">
-            <el-image :src="pageList[imgIndex].img"></el-image>
+        <el-dialog width="60%" :title="pageList[imgIndex].value" :visible.sync="dialogTableVisible">
+            <el-image class="lookImg" :src="pageList[imgIndex].img"></el-image>
+            <div class="text-center">{{ pageList[imgIndex].word }}</div>
         </el-dialog>
     </div>
 </template>
@@ -90,7 +107,7 @@ import cloneDeep from 'lodash/cloneDeep'
         data() {
             return {
                 list: cloneDeep(this.loadAll()),
-                pageList: this.loadAll().slice(0, 3),
+                pageList: this.loadAll().slice(0, 6),
                 dialogTableVisible: false,
                 imgIndex: 0,
                 type: ['default', 'primary', 'success', 'info', 'warning', 'danger']
@@ -655,7 +672,7 @@ import cloneDeep from 'lodash/cloneDeep'
                 ]
             },
             handleCurrentChange(val) {
-                this.pageList = this.loadAll().slice(val * 3 - 3, val * 3)
+                this.pageList = this.loadAll().slice(val * 6 - 6, val * 6)
             },
             look(index) {
                 this.imgIndex = index
@@ -674,6 +691,15 @@ import cloneDeep from 'lodash/cloneDeep'
 </script>
 
 <style scoped>
+@media (min-width: 768px) {
+    #title, #quto {
+        animation-delay: 500ms;
+        font-size: 25px;
+    }
+}
+.container {
+    background-color: rgba(104, 129, 157, 0.469);
+}
 .bg {
     background-image: url('../assets/img/星空5.jpg');
     background-origin: border-box;
@@ -695,12 +721,38 @@ import cloneDeep from 'lodash/cloneDeep'
 }
 .box {
     display: flex;
-    margin: 100px;
+    margin: 50px auto;
+    width: 20%;
     justify-content: center;
+    transition-duration: 1s;
+}
+.box:hover {
+    display: flex;
+    margin: 50px auto;
+    width: 20%;
+    flex-direction: column;
+    transition-duration: 500ms;
+}
+.box:hover .myWork {
+    transition-duration: 500ms;
+    margin: 0 auto;
+    font-size: 25px;
+}
+.box:hover .boxImg {
+    transition-duration: 500ms;
+    margin: 0 auto;
+    width:60px;
+    height: 60px;
 }
 .myWork {
-    color:#fff;
-    font-size: 35px;
+    transition-duration: 500ms;
+    color:rgb(166, 211, 228);
+    font-size: 23px;
+    font-family: '楷体';
+}
+.boxImg {
+    width:30px;
+    height: 30px;
 }
 .buttonGroup {
     display: flex;
@@ -737,5 +789,16 @@ import cloneDeep from 'lodash/cloneDeep'
 .icon:hover {
     background-color:rgb(103, 113, 126);
     color:rgb(34, 60, 85);
+}
+.lookImg {
+    width: 80%;
+    display: block;
+    margin: auto;
+}
+.particles {
+    position: fixed;
+    width: 100%;
+    top: 50px;
+    bottom: 0;
 }
 </style>

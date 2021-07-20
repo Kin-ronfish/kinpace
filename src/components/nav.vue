@@ -70,6 +70,9 @@ a {
     background: rgba(161, 161, 161, 0.205);
     transition-duration: 500ms;
 }
+.bg1 {
+    background: rgb(54, 54, 54);
+}
 .bg2 {
     background: rgb(27, 63, 85);
 }
