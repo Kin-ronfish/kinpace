@@ -40,9 +40,12 @@ export default {
 </script>
 
 <style scoped>
-@media (min-width: 768px) {
+/**
+* 手机相应样式
+*/
+@media (max-width: 768px) {
     .lin-ul {
-        padding-right: 50px;
+        padding-left: 35px;
     }
 }
 .IconTitle {

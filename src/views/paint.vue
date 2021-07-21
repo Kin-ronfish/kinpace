@@ -1,5 +1,6 @@
 <template>
-    <div class="bg">
+    <div>
+        <img class="bg" :src="require('../assets/img/星空5.jpg')" alt="">
         <vue-particles
             class="particles"
             color="#cbb8ea"
@@ -89,6 +90,16 @@
                             style="text-align: center;"
                             :total="list.length">
                         </el-pagination>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="text-center" style="font-size: 25px; color: #fff;margin-bottom:20px;">作品时间表</div>
+                            <div class="timeList">
+                                <ul style="color:#fff;" v-for="(item, index) in list" :key="index">
+                                    <li>{{item.value}} —— {{item.time}}</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -568,40 +579,40 @@ import cloneDeep from 'lodash/cloneDeep'
                     {
                         "value": "手绘焰灵姬",
                         "time": "2020月3月25日",
-                        "word": "--",
-                        "label": ['古风','人物'],
+                        "word": "来自百越一外柔内刚的女子，身世凄凉，一直受到夜幕使者的暗中操控。",
+                        "label": ['人物','上色','焰灵姬','天行九歌'],
                         "color": [0,5],
                         "img": require('@/assets/img/2020/4.jpg')
                     },
                     {
                         "value": "手绘阿尔卑斯",
                         "time": "2020月4月5日",
-                        "word": "--",
-                        "label": ['古风','人物'],
+                        "word": "重新完善同学给予的任务，经过一段时间的绘画练习，这次的画面比上一次更细腻了。",
+                        "label": ['静物','上色','糖果'],
                         "color": [0,5],
                         "img": require('@/assets/img/2020/5.jpg')
                     },
                     {
                         "value": "手绘月饼",
                         "time": "2020月10月1日",
-                        "word": "--",
-                        "label": ['古风','人物'],
+                        "word": "持续每年中秋的传统，画月饼，今年的中秋恰与国庆相遇，迎来双庆美满。",
+                        "label": ['静物','上色','月饼'],
                         "color": [0,5],
                         "img": require('@/assets/img/2020/8.jpg')
                     },
                     {
                         "value": "手绘蛋糕",
                         "time": "2020月10月13日",
-                        "word": "--",
-                        "label": ['古风','人物'],
+                        "word": "尝试画一块静态糕点，透过屏幕感受它的甜。",
+                        "label": ['静物','上色','蛋糕'],
                         "color": [0,5],
                         "img": require('@/assets/img/2020/9.jpg')
                     },
                     {
                         "value": "手绘蛋糕",
                         "time": "2020月10月30日",
-                        "word": "--",
-                        "label": ['古风','人物'],
+                        "word": "尝试画一块静态糕点，作为毕业的礼物送给自己，在实物中觉得最像的一幅。",
+                        "label": ['静物','上色','蛋糕'],
                         "color": [0,5],
                         "img": require('@/assets/img/2020/10.jpg')
                     },
@@ -691,20 +702,23 @@ import cloneDeep from 'lodash/cloneDeep'
 </script>
 
 <style scoped>
+/**
+* 手机响应样式
+*/
 @media (min-width: 768px) {
     #title, #quto {
         animation-delay: 500ms;
         font-size: 25px;
     }
 }
-.container {
-    background-color: rgba(104, 129, 157, 0.469);
-}
 .bg {
-    background-image: url('../assets/img/星空5.jpg');
-    background-origin: border-box;
-    background-repeat: repeat-y;
-    background-size: contain;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 50px;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 #title, #quto {
     animation-delay: 500ms;
@@ -715,21 +729,27 @@ import cloneDeep from 'lodash/cloneDeep'
     white-space: nowrap;
 }
 .timeList {
-    position: absolute;
-    top:100px;
-    right: 10px;
+    height: 500px;
+    overflow: scroll;
+    background-color: rgba(109, 109, 109, 0.432);
+    padding-top: 15px;
+    border-radius: 5px;
+    margin-bottom: 50px;
+}
+.timeList::-webkit-scrollbar {
+    width: 0;
 }
 .box {
     display: flex;
     margin: 50px auto;
-    width: 20%;
+    width: 30%;
     justify-content: center;
     transition-duration: 1s;
 }
 .box:hover {
     display: flex;
     margin: 50px auto;
-    width: 20%;
+    width: 30%;
     flex-direction: column;
     transition-duration: 500ms;
 }
