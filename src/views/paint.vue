@@ -104,6 +104,18 @@
                 </div>
             </div>
         </div>
+        <el-backtop :bottom="50">
+            <div class="el-icon-arrow-up"
+            style="{
+                height: 100%;
+                width: 100%;
+                background-color: rgba(76, 121, 152);
+                text-align: center;
+                line-height: 40px;
+                color: #fff;
+            }"
+            ></div>
+        </el-backtop>
         <el-dialog width="60%" :title="pageList[imgIndex].value" :visible.sync="dialogTableVisible">
             <el-image class="lookImg" :src="pageList[imgIndex].img"></el-image>
             <div class="text-center">{{ pageList[imgIndex].word }}</div>
@@ -696,6 +708,12 @@ import cloneDeep from 'lodash/cloneDeep'
                 a.download = this.pageList[index].value
                 a.href = url
                 a.click()
+            },
+            goTop() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                })
             }
         }
     }
@@ -731,7 +749,7 @@ import cloneDeep from 'lodash/cloneDeep'
 .timeList {
     height: 500px;
     overflow: scroll;
-    background-color: rgba(109, 109, 109, 0.432);
+    background-color: rgba(149, 164, 174, 0.432);
     padding-top: 15px;
     border-radius: 5px;
     margin-bottom: 50px;
