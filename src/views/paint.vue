@@ -5,7 +5,7 @@
             class="particles"
             color="#cbb8ea"
             :particleOpacity="0.7"
-            :particlesNumber="80"
+            :particlesNumber="50"
             shapeType="circle"
             :particleSize="4"
             :linesWidth="1"
@@ -18,48 +18,49 @@
             clickMode="push"
         >
         </vue-particles>
+        <div style="margin-top:60px;margin-bottom:20px;margin-left:50px;margin-right:50px;" class="carousel slide" id="carousel-260043">
+            <ol class="carousel-indicators">
+                <li class="active" data-slide-to="0" data-target="#carousel-260043">
+                </li>
+                <li data-slide-to="1" data-target="#carousel-260043">
+                </li>
+                <li data-slide-to="2" data-target="#carousel-260043">
+                </li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="item active">
+                <img :style="'width:100%;height:' + windowHeight + 'px;'" alt="" :src="list[36].img" />
+                <div class="carousel-caption">
+                    <h4 id="title" class="animated fadeInUp">{{ list[36].value }}</h4>
+                    <p id="quto" class="animated fadeInLeft">{{ list[36].word }}</p>
+                </div>
+                </div>
+                <div class="item">
+                <img :style="'width:100%;height:' + windowHeight + 'px;'" alt="" :src="list[43].img" />
+                <div class="carousel-caption">
+                    <h4 id="title" class="animated fadeInUp">{{ list[43].value }}</h4>
+                    <p id="quto" class="animated fadeInRight">{{ list[43].word }}</p>
+                </div>
+                </div>
+                <div class="item">
+                <img :style="'width:100%;height:' + windowHeight + 'px;'" alt="" :src="list[45].img" />
+                <div class="carousel-caption">
+                    <h4 id="title" class="animated fadeInUp">{{ list[45].value }}</h4>
+                    <p id="quto" class="animated fadeInDown">{{ list[45].word }}</p>
+                </div>
+                </div>
+            </div> <a class="left carousel-control" href="#carousel-260043" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control" href="#carousel-260043" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+        </div>
+        <div class="glyphicon glyphicon-chevron-down iconCenter animated fadeInDown" @click="go"></div>
         <div class="container">
             <div class="clearfix row">
                 <div class="col-md-12 column">
                     <Nav :num="2" />
-                    <div style="margin-top:60px;margin-bottom:20px;" class="carousel slide" id="carousel-260043">
-                        <ol class="carousel-indicators">
-                            <li class="active" data-slide-to="0" data-target="#carousel-260043">
-                            </li>
-                            <li data-slide-to="1" data-target="#carousel-260043">
-                            </li>
-                            <li data-slide-to="2" data-target="#carousel-260043">
-                            </li>
-                        </ol>
-                        <div class="carousel-inner">
-                            <div class="item active">
-                            <img alt="" :src="list[36].img" />
-                            <div class="carousel-caption">
-                                <h4 id="title" class="animated fadeInUp">{{ list[36].value }}</h4>
-                                <p id="quto" class="animated fadeInLeft">{{ list[36].word }}</p>
-                            </div>
-                            </div>
-                            <div class="item">
-                            <img alt="" :src="list[43].img" />
-                            <div class="carousel-caption">
-                                <h4 id="title" class="animated fadeInUp">{{ list[43].value }}</h4>
-                                <p id="quto" class="animated fadeInRight">{{ list[43].word }}</p>
-                            </div>
-                            </div>
-                            <div class="item">
-                            <img alt="" :src="list[45].img" />
-                            <div class="carousel-caption">
-                                <h4 id="title" class="animated fadeInUp">{{ list[45].value }}</h4>
-                                <p id="quto" class="animated fadeInDown">{{ list[45].word }}</p>
-                            </div>
-                            </div>
-                        </div> <a class="left carousel-control" href="#carousel-260043" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control" href="#carousel-260043" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
-                    </div>
                     <div class="animated fadeInUp box">
                         <img class="boxImg" :src="require('@/assets/Kin.png')" />&nbsp;
                         <div class="myWork">我的作品</div>
                     </div>
-                    <div class="row">
+                    <div class="row" :style="'display:' + imgListShow + ';'">
                         <div class="col-md-4" v-for="(item, index) in pageList" :key="index">
                             <div class="thumbnail animated fadeInUp paintImg">
                                 <img alt="300x200" :src="item.img" />
@@ -107,13 +108,13 @@
         <el-backtop :bottom="50">
             <div class="el-icon-arrow-up"
             style="{
-                height: 100%;
-                width: 100%;
-                background-color: rgba(76, 121, 152);
-                text-align: center;
-                line-height: 40px;
-                color: #fff;
-            }"
+                    height: 100%;
+                    width: 100%;
+                    background-color: rgba(76, 121, 152);
+                    text-align: center;
+                    line-height: 40px;
+                    color: #fff;
+                }"
             ></div>
         </el-backtop>
         <el-dialog width="60%" :title="pageList[imgIndex].value" :visible.sync="dialogTableVisible">
@@ -133,10 +134,17 @@ import cloneDeep from 'lodash/cloneDeep'
                 pageList: this.loadAll().slice(0, 6),
                 dialogTableVisible: false,
                 imgIndex: 0,
+                scrollHeight: 0, // 滚动条位置
+                windowHeight: 0, // 窗口高度
+                imgListShow: 'none',
                 type: ['default', 'primary', 'success', 'info', 'warning', 'danger']
             }
         },
         components: { Nav },
+        mounted() {
+            this.getWindowHight()
+            this.getScrollHeight()
+        },
         methods: {
             loadAll() {
                 return [
@@ -709,11 +717,20 @@ import cloneDeep from 'lodash/cloneDeep'
                 a.href = url
                 a.click()
             },
-            goTop() {
+            go() {
                 window.scrollTo({
-                    top: 0,
+                    top: this.windowHeight,
                     behavior: "smooth"
                 })
+                this.imgListShow = 'visible'
+            },
+            getWindowHight() {
+                this.windowHeight = window.innerHeight - 100
+                console.log(window.innerHeight)
+            },
+            getScrollHeight() {
+                this.scrollHeight = document.documentElement.scrollTop // 获取滚动条与顶部的距离
+                console.log(this.scrollHeight)
             }
         }
     }
@@ -741,6 +758,11 @@ import cloneDeep from 'lodash/cloneDeep'
 #title, #quto {
     animation-delay: 500ms;
 }
+.iconCenter {
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+    animation-duration: 2s;
+}
 .word {
     overflow: hidden;
     text-overflow:ellipsis;
@@ -759,15 +781,16 @@ import cloneDeep from 'lodash/cloneDeep'
 }
 .box {
     display: flex;
-    margin: 50px auto;
-    width: 30%;
+    margin: 20px auto;
+    width: 50%;
     justify-content: center;
     transition-duration: 1s;
 }
 .box:hover {
+    cursor: pointer;
     display: flex;
-    margin: 50px auto;
-    width: 30%;
+    margin: 10px auto;
+    width: 50%;
     flex-direction: column;
     transition-duration: 500ms;
 }
@@ -838,5 +861,11 @@ import cloneDeep from 'lodash/cloneDeep'
     width: 100%;
     top: 50px;
     bottom: 0;
+}
+.iconCenter {
+    text-align: center;
+    width: 100%;
+    color: #fff;
+    cursor: pointer;
 }
 </style>
