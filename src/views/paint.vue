@@ -18,7 +18,7 @@
             clickMode="push"
         >
         </vue-particles>
-        <div style="margin:60px 80px 20px;" class="carousel slide" id="carousel-260043">
+        <div :style="'margin:60px ' + marginDistance + ' 20px;'" class="carousel slide" id="carousel-260043">
             <ol class="carousel-indicators">
                 <li class="active" data-slide-to="0" data-target="#carousel-260043">
                 </li>
@@ -29,21 +29,21 @@
             </ol>
             <div class="carousel-inner">
                 <div class="item active">
-                <img :style="'width:100%;height:' + windowHeight + 'px;'" alt="" :src="list[36].img" />
+                <img :style="'width:' + windowWidth + ';height:' + windowHeight + ';'" :src="list[36].img" />
                 <div class="carousel-caption">
                     <h4 id="title" class="animated fadeInUp">{{ list[36].value }}</h4>
                     <p id="quto" class="animated fadeInLeft">{{ list[36].word }}</p>
                 </div>
                 </div>
                 <div class="item">
-                <img :style="'width:100%;height:' + windowHeight + 'px;'" alt="" :src="list[43].img" />
+                <img :style="'width:' + windowWidth + ';height:' + windowHeight + ';'" :src="list[43].img" />
                 <div class="carousel-caption">
                     <h4 id="title" class="animated fadeInUp">{{ list[43].value }}</h4>
                     <p id="quto" class="animated fadeInRight">{{ list[43].word }}</p>
                 </div>
                 </div>
                 <div class="item">
-                <img :style="'width:100%;height:' + windowHeight + 'px;'" alt="" :src="list[45].img" />
+                <img :style="'width:' + windowWidth + ';height:' + windowHeight + ';'" :src="list[45].img" />
                 <div class="carousel-caption">
                     <h4 id="title" class="animated fadeInUp">{{ list[45].value }}</h4>
                     <p id="quto" class="animated fadeInDown">{{ list[45].word }}</p>
@@ -135,7 +135,9 @@ import cloneDeep from 'lodash/cloneDeep'
                 dialogTableVisible: false,
                 imgIndex: 0,
                 scrollHeight: 0, // 滚动条位置
-                windowHeight: 0, // 窗口高度
+                windowHeight: '', // 窗口高度
+                windowWidth: '', // 窗口宽度
+                marginDistance: '',
                 imgListShow: 'none',
                 type: ['default', 'primary', 'success', 'info', 'warning', 'danger']
             }
@@ -718,8 +720,9 @@ import cloneDeep from 'lodash/cloneDeep'
                 a.click()
             },
             go() {
+                console.log(this.windowHeight)
                 window.scrollTo({
-                    top: this.windowHeight,
+                    top: this.windowHeight.split('p')[0],
                     behavior: "smooth"
                 })
                 setTimeout(()=> {
@@ -727,8 +730,14 @@ import cloneDeep from 'lodash/cloneDeep'
                 },500)
             },
             getWindowHight() {
-                this.windowHeight = window.innerHeight - 100
-                console.log(window.innerHeight)
+                if (window.innerWidth >= 768) {
+                    this.windowHeight = (window.innerHeight - 100) + 'px'
+                    this.windowWidth = '100%'
+                    this.marginDistance = '50px'
+                } else {
+                    this.windowHeight = '100%'
+                    this.windowWidth = '100%'
+                }
             },
             getScrollHeight() {
                 this.scrollHeight = document.documentElement.scrollTop // 获取滚动条与顶部的距离
