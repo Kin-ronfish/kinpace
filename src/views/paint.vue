@@ -18,7 +18,7 @@
             clickMode="push"
         >
         </vue-particles>
-        <div style="margin-top:60px;margin-bottom:20px;margin-left:50px;margin-right:50px;" class="carousel slide" id="carousel-260043">
+        <div style="margin:60px 80px 20px;" class="carousel slide" id="carousel-260043">
             <ol class="carousel-indicators">
                 <li class="active" data-slide-to="0" data-target="#carousel-260043">
                 </li>
@@ -722,7 +722,9 @@ import cloneDeep from 'lodash/cloneDeep'
                     top: this.windowHeight,
                     behavior: "smooth"
                 })
-                this.imgListShow = 'visible'
+                setTimeout(()=> {
+                    this.imgListShow = 'block'
+                },500)
             },
             getWindowHight() {
                 this.windowHeight = window.innerHeight - 100
