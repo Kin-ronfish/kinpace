@@ -60,6 +60,7 @@
                         <img class="boxImg" :src="require('@/assets/Kin.png')" />&nbsp;
                         <div class="myWork">我的作品</div>
                     </div>
+                    <!-- 作品预览列表 -->
                     <div class="row" :style="'display:' + imgListShow + ';'">
                         <div class="col-md-4" v-for="(item, index) in pageList" :key="index">
                             <div class="thumbnail animated fadeInUp paintImg">
@@ -81,43 +82,39 @@
                             </div>
                         </div>
                     </div>
-                    <div style="margin-bottom: 50px;">
+                    <!-- 列表分页 -->
+                    <div class="page animated fadeInUp" :style="'display:' + pageShow + ';'">
                         <el-pagination
                             @current-change="handleCurrentChange"
                             background
                             :page-size="6"
-                            :pager-count="3"
                             layout="prev, pager, next"
-                            style="text-align: center;"
                             :total="list.length">
                         </el-pagination>
                     </div>
+                    <!-- 作品时间表 -->
                     <div class="row">
-                        <div class="col-md-4">
-                            <div class="text-center" style="font-size: 25px; color: #fff;margin-bottom:20px;">作品时间表</div>
-                            <div class="timeList">
+                        <div class="col-md-4 workList" :style="'display:' + workListShow + ';'">
+                            <div class="text-center animated fadeInLeft workListName">作品时间表</div>
+                            <div class="timeList animated fadeInRight">
                                 <ul style="color:#fff;" v-for="(item, index) in list" :key="index">
                                     <li>{{item.value}} —— {{item.time}}</li>
                                 </ul>
                             </div>
+                        </div>
+                        <div class="col-md-8 note" :style="'display:' + noteShow + ';'">
+                            <h4 class="animated fadeInRight">成功建立在失败之后，或出现于失败之中。</h4>
+                            <h4 class="animated fadeInLeft">当你抛弃了感兴趣的东西，还会觉得做什么都有趣吗？</h4>
+                            <h4 class="animated fadeInRight">生活就像一本无字之书，学习让书里的内容更加充实，努力让内容更加精彩。</h4>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <el-backtop :bottom="50">
-            <div class="el-icon-arrow-up"
-            style="{
-                    height: 100%;
-                    width: 100%;
-                    background-color: rgba(76, 121, 152);
-                    text-align: center;
-                    line-height: 40px;
-                    color: #fff;
-                }"
-            ></div>
+            <div class="el-icon-arrow-up" :style="goTop"></div>
         </el-backtop>
-        <el-dialog width="60%" :title="pageList[imgIndex].value" :visible.sync="dialogTableVisible">
+        <el-dialog width="100%" :title="pageList[imgIndex].value" :visible.sync="dialogTableVisible">
             <el-image class="lookImg" :src="pageList[imgIndex].img"></el-image>
             <div class="text-center">{{ pageList[imgIndex].word }}</div>
         </el-dialog>
@@ -138,14 +135,27 @@ import cloneDeep from 'lodash/cloneDeep'
                 windowHeight: '', // 窗口高度
                 windowWidth: '', // 窗口宽度
                 marginDistance: '',
+                scrollTop: 0,
                 imgListShow: 'none',
-                type: ['default', 'primary', 'success', 'info', 'warning', 'danger']
+                pageShow: 'none',
+                workListShow: 'none',
+                noteShow: 'none',
+                type: ['default', 'primary', 'success', 'info', 'warning', 'danger'],
+                goTop: `{
+                    height: 100%;
+                    width: 100%;
+                    background-color: rgba(76, 121, 152);
+                    text-align: center;
+                    line-height: 40px;
+                    color: #fff;
+                }`
             }
         },
         components: { Nav },
         mounted() {
             this.getWindowHight()
             this.getScrollHeight()
+            window.addEventListener('scroll',this.handleScroll)
         },
         methods: {
             loadAll() {
@@ -720,14 +730,14 @@ import cloneDeep from 'lodash/cloneDeep'
                 a.click()
             },
             go() {
-                console.log(this.windowHeight)
-                window.scrollTo({
-                    top: this.windowHeight.split('p')[0],
-                    behavior: "smooth"
-                })
-                setTimeout(()=> {
-                    this.imgListShow = 'block'
+                this.imgListShow = 'block'
+                setTimeout(() => {
+                    window.scrollTo({
+                        top: this.windowHeight.split('p')[0],
+                        behavior: "smooth"
+                    })
                 },500)
+                
             },
             getWindowHight() {
                 if (window.innerWidth >= 768) {
@@ -742,6 +752,21 @@ import cloneDeep from 'lodash/cloneDeep'
             getScrollHeight() {
                 this.scrollHeight = document.documentElement.scrollTop // 获取滚动条与顶部的距离
                 console.log(this.scrollHeight)
+            },
+            handleScroll(){
+                setTimeout(() => {
+                    this.scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+                },100)
+                if (this.scrollTop > 30) {
+                    this.imgListShow = 'block'
+                }
+                if (this.scrollTop > 650) {
+                    this.pageShow = 'block'
+                    this.workListShow = 'block'
+                    setTimeout(() => {
+                        this.noteShow = 'block'
+                    },1000)
+                }
             }
         }
     }
@@ -773,23 +798,14 @@ import cloneDeep from 'lodash/cloneDeep'
     animation-iteration-count: infinite;
     animation-delay: 1s;
     animation-duration: 2s;
+    text-align: center;
+    width: 100%;
+    color: #fff;
+    cursor: pointer;
 }
-.word {
-    overflow: hidden;
-    text-overflow:ellipsis;
-    white-space: nowrap;
-}
-.timeList {
-    height: 500px;
-    overflow: scroll;
-    background-color: rgba(149, 164, 174, 0.432);
-    padding-top: 15px;
-    border-radius: 5px;
-    margin-bottom: 50px;
-}
-.timeList::-webkit-scrollbar {
-    width: 0;
-}
+
+
+/** 作品标题 */
 .box {
     display: flex;
     margin: 20px auto;
@@ -826,14 +842,8 @@ import cloneDeep from 'lodash/cloneDeep'
     width:30px;
     height: 30px;
 }
-.buttonGroup {
-    display: flex;
-    justify-content: space-around;
-}
-.content,
-.time {
-    display: none;
-}
+
+/** 作品预览列表 */
 .paintImg:hover .content {
     display: flex;
     position:absolute;
@@ -862,6 +872,49 @@ import cloneDeep from 'lodash/cloneDeep'
     background-color:rgb(103, 113, 126);
     color:rgb(34, 60, 85);
 }
+.word {
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+
+/** 作品分页 */
+.page {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+/** 作品时间表 */
+.timeList {
+    height: 500px;
+    overflow: scroll;
+    background-color: rgba(149, 164, 174, 0.432);
+    padding-top: 15px;
+    border-radius: 5px;
+    margin-bottom: 50px;
+}
+.timeList::-webkit-scrollbar {
+    width: 0;
+}
+.workListName {
+    animation-delay: 500ms;
+    font-size: 25px;
+    color: #fff;
+    margin-bottom:20px;
+}
+.content,
+.time {
+    display: none;
+}
+.note {
+    color:#fff;
+    margin-top:50px;
+}
+
+
+
+
+
 .lookImg {
     width: 80%;
     display: block;
@@ -873,10 +926,5 @@ import cloneDeep from 'lodash/cloneDeep'
     top: 50px;
     bottom: 0;
 }
-.iconCenter {
-    text-align: center;
-    width: 100%;
-    color: #fff;
-    cursor: pointer;
-}
+
 </style>

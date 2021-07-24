@@ -48,6 +48,11 @@ export default {
         padding-left: 35px;
     }
 }
+@media (min-width: 768px) {
+    .lin-ul {
+        padding-right: 50px;
+    }
+}
 .IconTitle {
     font-size: 20px;
     padding-left: 50px;
