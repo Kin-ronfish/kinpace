@@ -164,448 +164,448 @@ import cloneDeep from 'lodash/cloneDeep'
                         "value": "品茶老人",
                         "time": "2011年",
                         "word": "绘画的第一天，发现兴趣的时刻，感受到绘画给自己带来了乐趣。",
-                        "label": ['古风','人物'],
-                        "color": [0,5],
+                        "label": ['人物','上色','古风'],
+                        "color": [0,1,2],
                         "img": require('@/assets/img/2011/1.jpg')
                     },
                     {
                         "value": "山水画",
                         "time": "2013年",
                         "word": "尝试着将学习的多个部分整合，青山绿水，李白遥望瀑布吟诗作对。",
-                        "label": ['场景','风景', '意向'],
-                        "color": [0,3,4],
+                        "label": ['场景','素描', '意向'],
+                        "color": [0,1,2],
                         "img": require('@/assets/img/2013/1.jpg')
                     },
                     {
                         "value": " 刻画蝴蝶",
                         "time": "2013年",
                         "word": "初中美术课留下一幅比较有印象的画，记录着自己对绘画的喜爱。",
-                        "label": ['雕画','动物'],
-                        "color": [0,5],
+                        "label": ['动物','雕画','蝴蝶'],
+                        "color": [0,1,2],
                         "img": require('@/assets/img/2013/2.jpg')
                     },
                     {
                         "value": "小兰新一",
                         "time": "2013年",
                         "word": "开始接触动漫临摹，在同学家跟他一起完成这幅画的临摹。",
-                        "label": ['小兰','新一','动漫'],
-                        "color": [0,5,2],
+                        "label": ['人物','上色','名侦探'],
+                        "color": [0,1,2],
                         "img": require('@/assets/img/2013/3.jpg')
                     },
                     {
                         "value": "霸气苍龙",
                         "time": "2013年",
                         "word": "--",
-                        "label": ['苍龙','神话'],
-                        "color": [0,5],
+                        "label": ['动物','上色','吉祥物'],
+                        "color": [0,1,2],
                         "img": require('@/assets/img/2013/4.jpg')
                     },
                     {
                         "value": "想象之地",
                         "time": "2013年",
                         "word": "第一次接触水粉画，根据自己的想法画出自己脑海中的一个印象。",
-                        "label": ['水粉','联想'],
-                        "color": [0,5],
+                        "label": ['景物','上色','联想'],
+                        "color": [0,1,2],
                         "img": require('@/assets/img/2013/5.jpg')
                     },
                     {
                         "value": "天边之树",
                         "time": "2013年",
                         "word": "水粉绘画功底还在缓慢提升，画出来的东西比较抽象且缺少美感。",
-                        "label": ['水粉','联想'],
-                        "color": [0,5],
+                        "label": ['景物','上色','联想'],
+                        "color": [0,1,2],
                         "img": require('@/assets/img/2013/6.jpg')
                     },
                     {
                         "value": "家中客厅",
                         "time": "2013年",
                         "word": "坐在客厅的沙发上，眼前正是一个框架结构，于是用笔记录下静态的一面。",
-                        "label": ['彩铅','客厅','静物'],
-                        "color": [0,5,3],
+                        "label": ['景物','上色','客厅'],
+                        "color": [0,1,2],
                         "img": require('@/assets/img/2013/7.jpg')
                     },
                     {
                         "value": "花花世界",
                         "time": "2013年4月",
                         "word": "欣赏花朵的美，来自大自然的清新。",
-                        "label": ['彩铅','花朵','静物'],
-                        "color": [0,5,1],
+                        "label": ['静物','上色','花朵'],
+                        "color": [0,1,2],
                         "img": require('@/assets/img/2013/8.jpg')
                     },
                     {
                         "value": "雄鹰展翅",
                         "time": "2013年4月",
                         "word": "飞得更高，看得更远，划破长空，翱翔天际。",
-                        "label": ['雄鹰','动物'],
-                        "color": [0,5],
+                        "label": ['动物','上色','雄鹰'],
+                        "color": [0,1,2],
                         "img": require('@/assets/img/2013/9.jpg')
                     },
                     {
                         "value": "盘曲的龙",
                         "time": "2013年4月",
                         "word": "--",
-                        "label": ['古风','人物'],
-                        "color": [0,5],
+                        "label": ['动物','上色','吉祥物'],
+                        "color": [0,1,2],
                         "img": require('@/assets/img/2013/10.jpg')
                     },
                     {
                         "value": "七彩凤凰",
                         "time": "2013年4月",
                         "word": "--",
-                        "label": ['古风','人物'],
-                        "color": [0,5],
+                        "label": ['动物','上色','吉祥物'],
+                        "color": [0,1,2],
                         "img": require('@/assets/img/2013/11.jpg')
                     },
                     {
                         "value": "麒麟腾云驾雾",
                         "time": "2013年4月",
                         "word": "--",
-                        "label": ['古风','人物'],
-                        "color": [0,5],
+                        "label": ['动物','上色','吉祥物'],
+                        "color": [0,1,2],
                         "img": require('@/assets/img/2013/12.jpg')
                     },
                     {
                         "value": "热火标志",
                         "time": "2014年",
                         "word": "--",
-                        "label": ['古风','人物'],
-                        "color": [0,5],
+                        "label": ['静物','上色','标志'],
+                        "color": [0,1,2],
                         "img": require('@/assets/img/2014/1.jpg')
                     },
                     {
                         "value": "火箭标志",
                         "time": "2014年",
                         "word": "--",
-                        "label": ['古风','人物'],
-                        "color": [0,5],
+                        "label": ['静物','上色','标志'],
+                        "color": [0,1,2],
                         "img": require('@/assets/img/2014/2.jpg')
                     },
                     {
                         "value": "树",
                         "time": "2014年",
                         "word": "--",
-                        "label": ['古风','人物'],
-                        "color": [0,5],
+                        "label": ['景物','素描','植物'],
+                        "color": [0,1,2],
                         "img": require('@/assets/img/2014/3.jpg')
                     },
                     {
                         "value": "树",
                         "time": "2014年",
                         "word": "--",
-                        "label": ['古风','人物'],
-                        "color": [0,5],
+                        "label": ['景物','素描','植物'],
+                        "color": [0,1,2],
                         "img": require('@/assets/img/2014/4.jpg')
                     },
                     {
                         "value": "树",
                         "time": "2014年",
                         "word": "--",
-                        "label": ['古风','人物'],
-                        "color": [0,5],
+                        "label": ['景物','素描','植物'],
+                        "color": [0,1,2],
                         "img": require('@/assets/img/2014/5.jpg')
                     },
                     {
                         "value": "客厅盆栽",
                         "time": "2014年",
                         "word": "--",
-                        "label": ['古风','人物'],
-                        "color": [0,5],
+                        "label": ['静物','上色','盆栽'],
+                        "color": [0,1,2],
                         "img": require('@/assets/img/2014/6.jpg')
                     },
                     {
                         "value": "嫦娥奔月",
                         "time": "2014年",
                         "word": "中秋画嫦娥",
-                        "label": ['古风','人物'],
-                        "color": [0,5],
+                        "label": ['人物','上色','嫦娥'],
+                        "color": [0,1,2],
                         "img": require('@/assets/img/2014/7.jpg')
                     },
                     {
                         "value": "杜甫",
                         "time": "2014年",
                         "word": "--",
-                        "label": ['古风','人物'],
-                        "color": [0,5],
+                        "label": ['人物','素描','诗人'],
+                        "color": [0,1,2],
                         "img": require('@/assets/img/2014/8.jpg')
                     },
                     {
                         "value": "茶具试绘",
                         "time": "2014年",
                         "word": "--",
-                        "label": ['古风','人物'],
-                        "color": [0,5],
+                        "label": ['静物','上色','茶具'],
+                        "color": [0,1,2],
                         "img": require('@/assets/img/2014/9.jpg')
                     },
                     {
                         "value": "茶具套装",
                         "time": "2014年",
                         "word": "--",
-                        "label": ['古风','人物'],
-                        "color": [0,5],
+                        "label": ['静物','上色','茶具'],
+                        "color": [0,1,2],
                         "img": require('@/assets/img/2014/10.jpg')
                     },
                     {
                         "value": "双花",
                         "time": "2015年",
                         "word": "开始步入真实世界",
-                        "label": ['古风','人物'],
-                        "color": [0,5],
+                        "label": ['静物','上色','花朵'],
+                        "color": [0,1,2],
                         "img": require('@/assets/img/2015/1.jpg')
                     },
                     {
                         "value": "玫瑰花",
                         "time": "2015年",
                         "word": "母亲节送给妈妈的一朵花",
-                        "label": ['古风','人物'],
-                        "color": [0,5],
+                        "label": ['静物','上色','花朵'],
+                        "color": [0,1,2],
                         "img": require('@/assets/img/2015/2.jpg')
                     },
                     {
                         "value": "手绘雪碧",
                         "time": "2015年",
                         "word": "第一次画雪碧",
-                        "label": ['古风','人物'],
-                        "color": [0,5],
+                        "label": ['静物','上色','雪碧'],
+                        "color": [0,1,2],
                         "img": require('@/assets/img/2015/3.jpg')
                     },
                     {
                         "value": "手绘可乐",
                         "time": "2015年",
                         "word": "肥宅快乐水，激爽每一天",
-                        "label": ['古风','人物'],
-                        "color": [0,5],
+                        "label": ['静物','上色','可乐'],
+                        "color": [0,1,2],
                         "img": require('@/assets/img/2015/4.jpg')
                     },
                     {
                         "value": "山水画",
                         "time": "2015年3月6日",
                         "word": "--",
-                        "label": ['古风','人物'],
-                        "color": [0,5],
+                        "label": ['景物','上色','风景'],
+                        "color": [0,1,2],
                         "img": require('@/assets/img/2015/6.jpg')
                     },
                     {
                         "value": "湖边",
                         "time": "2016月3月20日",
                         "word": "学校艺术节第一幅作品，一等奖",
-                        "label": ['古风','人物'],
-                        "color": [0,5],
+                        "label": ['景物','上色','风景'],
+                        "color": [0,1,2],
                         "img": require('@/assets/img/2016/1.jpg')
                     },
                     {
                         "value": "立体魔方",
                         "time": "2016月5月8日",
                         "word": "尝试画三维立体魔方",
-                        "label": ['古风','人物'],
-                        "color": [0,5],
+                        "label": ['静物','上色','魔方'],
+                        "color": [0,1,2],
                         "img": require('@/assets/img/2016/2.jpg')
                     },
                     {
                         "value": "立体魔方",
                         "time": "2016月5月9日",
                         "word": "尝试画三维立体魔方",
-                        "label": ['古风','人物'],
-                        "color": [0,5],
+                        "label": ['静物','上色','魔方'],
+                        "color": [0,1,2],
                         "img": require('@/assets/img/2016/3.jpg')
                     },
                     {
                         "value": "手绘西红柿",
                         "time": "2016月7月",
                         "word": "--",
-                        "label": ['古风','人物'],
-                        "color": [0,5],
+                        "label": ['静物','上色','西红柿'],
+                        "color": [0,1,2],
                         "img": require('@/assets/img/2016/5.jpg')
                     },
                     {
                         "value": "手绘德芙巧克力",
                         "time": "2016月8月2日",
                         "word": "--",
-                        "label": ['古风','人物'],
-                        "color": [0,5],
+                        "label": ['静物','上色','巧克力'],
+                        "color": [0,1],
                         "img": require('@/assets/img/2016/6.jpg')
                     },
                     {
                         "value": "手绘汉堡",
                         "time": "2016月8月15日",
                         "word": "吃肯德基留下的记录",
-                        "label": ['古风','人物'],
-                        "color": [0,5],
+                        "label": ['静物','上色','汉堡'],
+                        "color": [0,1,2],
                         "img": require('@/assets/img/2016/8.jpg')
                     },
                     {
                         "value": "天地壹号",
                         "time": "2016月9月16日",
                         "word": "中秋晚来一罐天地壹号",
-                        "label": ['古风','人物'],
-                        "color": [0,5],
+                        "label": ['静物','上色','天地壹号'],
+                        "color": [0,1,2],
                         "img": require('@/assets/img/2016/11.jpg')
                     },
                     {
                         "value": "喜迎国庆手抄报",
                         "time": "2016月10月1日",
                         "word": "在班级作品分享中受到团支部老师的表扬",
-                        "label": ['古风','人物'],
-                        "color": [0,5],
+                        "label": ['静物','上色','国庆'],
+                        "color": [0,1,2],
                         "img": require('@/assets/img/2016/13.jpg')
                     },
                     {
                         "value": "手绘曼妥思",
                         "time": "2016月12月6日",
                         "word": "年底送给自己一条真实的曼妥思，来年我会更加努力",
-                        "label": ['古风','人物'],
-                        "color": [0,5],
+                        "label": ['静物','上色','糖果'],
+                        "color": [0,1,2],
                         "img": require('@/assets/img/2016/14.jpg')
                     },
                     {
                         "value": "手绘好丽友派",
                         "time": "2017月2月4日",
                         "word": "--",
-                        "label": ['古风','人物'],
-                        "color": [0,5],
+                        "label": ['静物','上色','蛋糕'],
+                        "color": [0,1,2],
                         "img": require('@/assets/img/2017/1.jpg')
                     },
                     {
                         "value": "海边",
                         "time": "2017月3月25日",
                         "word": "学校艺术绝第二幅作品，一等奖",
-                        "label": ['古风','人物'],
-                        "color": [0,5],
+                        "label": ['景物','上色','风景'],
+                        "color": [0,1,2],
                         "img": require('@/assets/img/2017/2.jpg')
                     },
                     {
                         "value": "德芙巧克力",
                         "time": "2017月5月13日",
                         "word": "--",
-                        "label": ['古风','人物'],
-                        "color": [0,5],
+                        "label": ['静物','上色','巧克力'],
+                        "color": [0,1,2],
                         "img": require('@/assets/img/2017/4.jpg')
                     },
                     {
                         "value": "玫瑰花",
                         "time": "2017月7月12日",
                         "word": "母亲节送给妈妈的一束花",
-                        "label": ['古风','人物'],
-                        "color": [0,5],
+                        "label": ['静物','上色','花朵'],
+                        "color": [0,1,2],
                         "img": require('@/assets/img/2017/5.jpg')
                     },
                     {
                         "value": "手绘月饼",
                         "time": "2017月10月1日",
                         "word": "今年中秋画个月饼留个回忆",
-                        "label": ['古风','人物'],
-                        "color": [0,5],
+                        "label": ['静物','上色','月饼'],
+                        "color": [0,1,2],
                         "img": require('@/assets/img/2017/13.jpg')
                     },
                     {
                         "value": "手绘蛋黄派",
                         "time": "2017月10月8日",
                         "word": "--",
-                        "label": ['古风','人物'],
-                        "color": [0,5],
+                        "label": ['静物','上色','蛋糕'],
+                        "color": [0,1,2],
                         "img": require('@/assets/img/2017/14.jpg')
                     },
                     {
                         "value": "手绘阿尔卑斯",
                         "time": "2017月12月31日",
                         "word": "同学给的小礼物，也是小任务",
-                        "label": ['古风','人物'],
-                        "color": [0,5],
+                        "label": ['静物','上色','糖果'],
+                        "color": [0,1,2],
                         "img": require('@/assets/img/2017/15.jpg')
                     },
                     {
                         "value": "手绘维他柠檬茶",
                         "time": "2018月2月25日",
-                        "word": "--",
-                        "label": ['古风','人物'],
-                        "color": [0,5],
+                        "word": "在罐装饮料上有了熟悉的基础，尝试画一罐柠檬茶",
+                        "label": ['静物','上色','柠檬茶'],
+                        "color": [0,1,2],
                         "img": require('@/assets/img/2018/3.jpg')
                     },
                     {
                         "value": "手绘雪碧",
                         "time": "2018月9月6日",
-                        "word": "第二次画雪碧，送给朋友的礼物",
-                        "label": ['古风','人物'],
-                        "color": [0,5],
+                        "word": "第二次画雪碧，送给朋友的礼物，对比上一次有了很大的突破。",
+                        "label": ['静物','上色','雪碧'],
+                        "color": [0,1,2],
                         "img": require('@/assets/img/2018/7.jpg')
                     },
                     {
                         "value": "手绘月饼",
                         "time": "2018月9月23日",
                         "word": "中秋佳节，需要有饼陪伴",
-                        "label": ['古风','人物'],
-                        "color": [0,5],
+                        "label": ['静物','上色','月饼'],
+                        "color": [0,1,2],
                         "img": require('@/assets/img/2018/9.jpg')
                     },
                     {
                         "value": "板绘建筑",
                         "time": "2019月6月24日",
-                        "word": "开始学习PS板绘",
-                        "label": ['古风','人物'],
-                        "color": [0,5],
+                        "word": "第一次接触板绘，先尝试从自己较熟悉景物绘画开始画起。",
+                        "label": ['景物','板绘','建筑'],
+                        "color": [0,1,2],
                         "img": require('@/assets/img/2019/1.jpg')
                     },
                     {
                         "value": "板绘萧炎云韵",
                         "time": "2019月8月25日",
-                        "word": "--",
-                        "label": ['古风','人物'],
-                        "color": [0,5],
+                        "word": "萧炎云韵完美邂逅，在何时还能再次相遇，再次遇见或许就是在云兰宗上敌对的仇人。",
+                        "label": ['人物','板绘','斗破苍穹'],
+                        "color": [0,1,2],
                         "img": require('@/assets/img/2019/5.jpg')
                     },
                     {
                         "value": "板绘美杜莎",
                         "time": "2019月9月8日",
-                        "word": "--",
-                        "label": ['古风','人物'],
-                        "color": [0,5],
+                        "word": "作为蛇人族不可逾越的一代女王，却有着一个双胞胎妹妹，因为蛇人族的家族规定，自己的妹妹在追捕中被一箭射死，经受失亲之痛。",
+                        "label": ['人物','板绘','斗破苍穹'],
+                        "color": [0,1,2],
                         "img": require('@/assets/img/2019/6.jpg')
                     },
                     {
                         "value": "板绘萧炎云韵",
                         "time": "2019月9月8日",
-                        "word": "--",
-                        "label": ['古风','人物'],
-                        "color": [0,5],
+                        "word": "萧炎云韵完美邂逅，在何时还能再次相遇，再次遇见或许就是在云兰宗上敌对的仇人。",
+                        "label": ['人物','板绘','斗破苍穹'],
+                        "color": [0,1,2],
                         "img": require('@/assets/img/2019/7.jpg')
                     },
                     {
                         "value": "手绘月饼",
                         "time": "2019月9月20日",
-                        "word": "今晚的中秋页再宿舍吃着月饼，画着月饼",
-                        "label": ['古风','人物'],
-                        "color": [0,5],
+                        "word": "今晚的中秋也再宿舍吃着月饼，画着月饼，用调试好的3D打印机打个冰皮月饼配着吃。",
+                        "label": ['静物','上色','月饼'],
+                        "color": [0,1,2],
                         "img": require('@/assets/img/2019/8.jpg')
                     },
                     {
                         "value": "手绘士力架",
                         "time": "2019月10月15日",
-                        "word": "--",
-                        "label": ['古风','人物'],
-                        "color": [0,5],
+                        "word": "学习自己喜欢的画师也画个士力架，拍摄一个创意视频。",
+                        "label": ['静物','上色','士力架'],
+                        "color": [0,1,2],
                         "img": require('@/assets/img/2019/11.jpg')
                     },
                     {
                         "value": "手绘一束花",
                         "time": "2019月11月3日",
-                        "word": "--",
-                        "label": ['古风','人物'],
-                        "color": [0,5],
+                        "word": "画一束花作为送给师姐的毕业礼物。",
+                        "label": ['静物','上色','花朵'],
+                        "color": [0,1,2],
                         "img": require('@/assets/img/2019/12.jpg')
                     },
                     {
                         "value": "手绘雪碧",
                         "time": "2019月11月10日",
-                        "word": "--",
-                        "label": ['古风','人物'],
-                        "color": [0,5],
+                        "word": "第三次画雪碧，单独使用水溶性彩铅绘画，由于彩铅本身的特性不太适用此画，效果不如上一幅。",
+                        "label": ['静物','上色','雪碧'],
+                        "color": [0,1,2],
                         "img": require('@/assets/img/2019/13.jpg')
                     },
                     {
                         "value": "手绘&板绘壁纸",
                         "time": "2020月3月4日",
-                        "word": "--",
-                        "label": ['古风','人物'],
-                        "color": [0,5],
+                        "word": "第一次尝试画壁纸，画出来的画面太过粗糙，虽借用PS调整，但还是不像。",
+                        "label": ['人物','上色','壁纸'],
+                        "color": [0,1,2],
                         "img": require('@/assets/img/2020/3.jpg')
                     },
                     {
@@ -613,7 +613,7 @@ import cloneDeep from 'lodash/cloneDeep'
                         "time": "2020月3月25日",
                         "word": "来自百越一外柔内刚的女子，身世凄凉，一直受到夜幕使者的暗中操控。",
                         "label": ['人物','上色','焰灵姬','天行九歌'],
-                        "color": [0,5],
+                        "color": [0,1,2,3],
                         "img": require('@/assets/img/2020/4.jpg')
                     },
                     {
@@ -621,7 +621,7 @@ import cloneDeep from 'lodash/cloneDeep'
                         "time": "2020月4月5日",
                         "word": "重新完善同学给予的任务，经过一段时间的绘画练习，这次的画面比上一次更细腻了。",
                         "label": ['静物','上色','糖果'],
-                        "color": [0,5],
+                        "color": [0,1,2],
                         "img": require('@/assets/img/2020/5.jpg')
                     },
                     {
@@ -629,7 +629,7 @@ import cloneDeep from 'lodash/cloneDeep'
                         "time": "2020月10月1日",
                         "word": "持续每年中秋的传统，画月饼，今年的中秋恰与国庆相遇，迎来双庆美满。",
                         "label": ['静物','上色','月饼'],
-                        "color": [0,5],
+                        "color": [0,1,2],
                         "img": require('@/assets/img/2020/8.jpg')
                     },
                     {
@@ -637,7 +637,7 @@ import cloneDeep from 'lodash/cloneDeep'
                         "time": "2020月10月13日",
                         "word": "尝试画一块静态糕点，透过屏幕感受它的甜。",
                         "label": ['静物','上色','蛋糕'],
-                        "color": [0,5],
+                        "color": [0,1,2],
                         "img": require('@/assets/img/2020/9.jpg')
                     },
                     {
@@ -645,7 +645,7 @@ import cloneDeep from 'lodash/cloneDeep'
                         "time": "2020月10月30日",
                         "word": "尝试画一块静态糕点，作为毕业的礼物送给自己，在实物中觉得最像的一幅。",
                         "label": ['静物','上色','蛋糕'],
-                        "color": [0,5],
+                        "color": [0,1,2],
                         "img": require('@/assets/img/2020/10.jpg')
                     },
                     {
@@ -653,7 +653,7 @@ import cloneDeep from 'lodash/cloneDeep'
                         "time": "2020月11月26日",
                         "word": "送给师弟的礼，外表腼腆的他也喜欢绘画，在了解到他喜欢的漫画，画个海琴烟送给他作为他当组长的礼物。",
                         "label": ['人物','上色','鬼刀'],
-                        "color": [0,5],
+                        "color": [0,1,2],
                         "img": require('@/assets/img/2020/11.jpg')
                     },
                     {
@@ -661,7 +661,7 @@ import cloneDeep from 'lodash/cloneDeep'
                         "time": "2020月11月26日",
                         "word": "送给师妹的礼物，充满娱乐气息的她喜欢弹吉他，画个吉他送给她作为她当组长的礼物。",
                         "label": ['静物','上色','吉他'],
-                        "color": [0,5],
+                        "color": [0,1,2],
                         "img": require('@/assets/img/2020/12.jpg')
                     },
                     {
@@ -669,7 +669,7 @@ import cloneDeep from 'lodash/cloneDeep'
                         "time": "2020月11月27日",
                         "word": "送给师弟的礼物，热爱专研代码，画个电脑送给他作为他当组长的礼物。",
                         "label": ['静物','上色','电脑'],
-                        "color": [0,5],
+                        "color": [0,1,2],
                         "img": require('@/assets/img/2020/13.jpg')
                     },
                     {
@@ -677,7 +677,7 @@ import cloneDeep from 'lodash/cloneDeep'
                         "time": "2021月2月11日",
                         "word": "尝试画壁纸和上色，在人物比例协调上存在一定的出入，导致画面看起来有点变形。",
                         "label": ['人物','上色','壁纸'],
-                        "color": [0,5],
+                        "color": [0,1,2],
                         "img": require('@/assets/img/2021/1.jpg')
                     },
                     {
@@ -685,7 +685,7 @@ import cloneDeep from 'lodash/cloneDeep'
                         "time": "2021月2月13日",
                         "word": "接受阿姐给我的一个小任务，尝试画一个动漫版的小哥，相对真实人物还是比较简单的。",
                         "label": ['人物','动漫','盗墓笔记'],
-                        "color": [0,5],
+                        "color": [0,1,2],
                         "img": require('@/assets/img/2021/2.jpg')
                     },
                     {
@@ -693,7 +693,7 @@ import cloneDeep from 'lodash/cloneDeep'
                         "time": "2021月3月25日",
                         "word": "在公司休息时间，拿起笔画下桌子上的几个小物品，静物素描是绘画基础练习。",
                         "label": ['静物','素描'],
-                        "color": [0,5],
+                        "color": [0,1,2],
                         "img": require('@/assets/img/2021/3.jpg')
                     },
                     {
@@ -701,7 +701,7 @@ import cloneDeep from 'lodash/cloneDeep'
                         "time": "2021月3月27日",
                         "word": "细致素描尝试，试绘壁纸，在素描画中感觉比较好的一幅，但与壁纸仍存在一定差别。",
                         "label": ['人物','素描','壁纸'],
-                        "color": [0,5],
+                        "color": [0,1,2],
                         "img": require('@/assets/img/2021/4.jpg')
                     },
                     {
@@ -709,7 +709,7 @@ import cloneDeep from 'lodash/cloneDeep'
                         "time": "2021月4月20日",
                         "word": "细致素描尝试，试绘大众追捧的明星。没有学习素描基础，画出来有点变形。",
                         "label": ['人物','素描','王一博'],
-                        "color": [0,5],
+                        "color": [0,1,2],
                         "img": require('@/assets/img/2021/5.jpg')
                     }
                 ]
