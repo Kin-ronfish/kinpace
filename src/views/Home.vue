@@ -1,11 +1,12 @@
 <template>
-    <div class="container">
-        <div class="clearfix row">
-        <div class="col-md-12 column">
-          <Nav :num="1" />
-          <div>暂未开发</div>
-        </div>
-      </div>
+    <div>
+      <Nav :num="1" />
+        <video style="width:80%;" controls>
+          <source src="../assets/video/2011-2015.mp4" type="video/mp4">
+        </video>
+      <video style="width:80%;" controls>
+        <source src="../assets/video/2016-2019.mp4" type="video/mp4">
+      </video>
     </div>
 </template>
 
