@@ -27,8 +27,8 @@ export default {
     },
     data() {
         return {
-            titleList: ['主页', '绘画', 'DIY', '生活', '总结'],
-            pathList: ['/', '/paint', '/diy', '/live', '/note']
+            titleList: ['主页', '绘画', 'DIY'],
+            pathList: ['/', '/paint', '/diy']
         }
     },
     methods: {
