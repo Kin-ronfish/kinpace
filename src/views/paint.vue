@@ -64,11 +64,11 @@
                     <div class="row" :style="'display:' + imgListShow + ';'">
                         <div class="col-md-4" v-for="(item, index) in pageList" :key="index">
                             <div class="thumbnail animated fadeInUp paintImg">
-                                <img alt="300x200" :src="item.img" />
+                                <el-image alt="300x200" :src="item.img" :preview-src-list="[item.img]"></el-image>
                                 <div class="content animated fadeInUp">
                                     <span class="icon glyphicon glyphicon-download-alt btn" @click="download(index)"></span>
-                                    <span class="icon glyphicon glyphicon-search btn" @click="look(index)"></span>
-                                    <span class="icon glyphicon glyphicon-link btn"></span>
+                                    <span class="icon glyphicon glyphicon-th-large btn" @click="look(index)"></span>
+                                    <!-- <span class="icon glyphicon glyphicon-link btn"></span> -->
                                 </div>
                                 <div class="time animated fadeInDown">{{item.time}}</div>
                                 <div class="caption">
@@ -103,9 +103,9 @@
                             </div>
                         </div>
                         <div class="col-md-8 note" :style="'display:' + noteShow + ';'">
-                            <h4 class="animated fadeInRight">成功建立在失败之后，或出现于失败之中。</h4>
+                            <h4 class="animated fadeInDown">成功建立在失败之后，或出现于失败之中。</h4>
                             <h4 class="animated fadeInLeft">当你抛弃了感兴趣的东西，还会觉得做什么都有趣吗？</h4>
-                            <h4 class="animated fadeInRight">生活就像一本无字之书，学习让书里的内容更加充实，努力让内容更加精彩。</h4>
+                            <h4 class="animated fadeInUp">生活就像一本无字之书，学习让书里的内容更加充实，努力让内容更加精彩。</h4>
                         </div>
                     </div>
                 </div>
@@ -114,9 +114,16 @@
         <el-backtop :bottom="50">
             <div class="el-icon-arrow-up" :style="goTop"></div>
         </el-backtop>
-        <el-dialog width="100%" :title="pageList[imgIndex].value" :visible.sync="dialogTableVisible">
-            <el-image class="lookImg" :src="pageList[imgIndex].img"></el-image>
-            <div class="text-center">{{ pageList[imgIndex].word }}</div>
+        <el-dialog width="50%" :title="pageList[imgIndex].value" :visible.sync="dialogTableVisible">
+            <div style="display:flex;">
+                <el-image style="width:50%;" class="lookImg" :src="pageList[imgIndex].img"></el-image>
+                <div style="margin:auto;padding:10px;">
+                    <h2>作品名称：{{ pageList[imgIndex].value }}</h2>
+                    <p>留言：{{ pageList[imgIndex].word }}</p>
+                    <small>创作时间：{{ pageList[imgIndex].time }}</small>
+                </div>
+            </div>
+            <!-- <div class="text-center">{{ pageList[imgIndex].word }}</div> -->
         </el-dialog>
     </div>
 </template>
