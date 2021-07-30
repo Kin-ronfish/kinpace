@@ -2,13 +2,15 @@
     <div>
       <Nav :num="1" />
       <div class="container">
+        <div style="margin-top:60px;">2011-2015年作品合辑</div>
         <div>
-          <video style="width:100%;margin-top:60px;" controls>
+          <video style="width:100%;" controls>
             <source src="../assets/video/2011-2015.mp4" type="video/mp4">
           </video>
         </div>
+        <div style="margin-top:20px;">2016-2019年作品合辑</div>
         <div>
-          <video style="width:100%;margin-top:20px;" controls>
+          <video style="width:100%;" controls>
             <source src="../assets/video/2016-2019.mp4" type="video/mp4">
           </video>
         </div>

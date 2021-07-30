@@ -1,7 +1,7 @@
 <template>
     <div>
         <img class="bg" :src="require('../assets/img/星空5.jpg')" alt="">
-        <vue-particles
+        <!-- <vue-particles
             class="particles"
             color="#cbb8ea"
             :particleOpacity="0.7"
@@ -17,7 +17,7 @@
             :clickEffect="true"
             clickMode="push"
         >
-        </vue-particles>
+        </vue-particles> -->
         <div :style="'margin:60px ' + marginDistance + ' 20px;'" class="carousel slide" id="carousel-260043">
             <ol class="carousel-indicators">
                 <li class="active" data-slide-to="0" data-target="#carousel-260043">
@@ -114,16 +114,12 @@
         <el-backtop :bottom="50">
             <div class="el-icon-arrow-up" :style="goTop"></div>
         </el-backtop>
-        <el-dialog width="50%" :title="pageList[imgIndex].value" :visible.sync="dialogTableVisible">
-            <div style="display:flex;">
-                <el-image style="width:50%;" class="lookImg" :src="pageList[imgIndex].img"></el-image>
-                <div style="margin:auto;padding:10px;">
-                    <h2>作品名称：{{ pageList[imgIndex].value }}</h2>
-                    <p>留言：{{ pageList[imgIndex].word }}</p>
-                    <small>创作时间：{{ pageList[imgIndex].time }}</small>
-                </div>
+        <el-dialog width="30%" :title="pageList[imgIndex].value" :visible.sync="dialogTableVisible">
+            <div style="padding:10px;">
+                <div><strong>作品名称：{{ pageList[imgIndex].value }}</strong></div>
+                <div>留言：{{ pageList[imgIndex].word }}</div>
+                <div>创作时间：{{ pageList[imgIndex].time }}</div>
             </div>
-            <!-- <div class="text-center">{{ pageList[imgIndex].word }}</div> -->
         </el-dialog>
     </div>
 </template>
@@ -919,14 +915,6 @@ import cloneDeep from 'lodash/cloneDeep'
 }
 
 
-
-
-
-.lookImg {
-    width: 80%;
-    display: block;
-    margin: auto;
-}
 .particles {
     position: fixed;
     width: 100%;
