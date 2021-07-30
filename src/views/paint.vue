@@ -714,6 +714,22 @@ import cloneDeep from 'lodash/cloneDeep'
                         "label": ['人物','素描','王一博'],
                         "color": [0,1,2],
                         "img": require('@/assets/img/2021/5.jpg')
+                    },
+                    {
+                        "value": "M&M糖果",
+                        "time": "2021月6月26日",
+                        "word": "尝试向绘画大师一样画一包M&M糖果，效果有些差距，但比起第一次模仿他时的作品，还是由很大的进步。",
+                        "label": ['静物','上色','糖果'],
+                        "color": [0,1,2],
+                        "img": require('@/assets/img/2021/6.jpg')
+                    },
+                    {
+                        "value": "华为手机",
+                        "time": "2021月7月10日",
+                        "word": "把自己的手机升级了新的系统，尝试以假乱真，最终还是被识破。",
+                        "label": ['静物','上色','手机','华为'],
+                        "color": [0,1,2,3],
+                        "img": require('@/assets/img/2021/7.jpg')
                     }
                 ]
             },
