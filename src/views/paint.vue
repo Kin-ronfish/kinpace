@@ -61,9 +61,9 @@
                         <div class="myWork">我的作品</div>
                     </div>
                     <!-- 作品预览列表 -->
-                    <div class="row" :style="'display:' + imgListShow + ';'">
+                    <div class="row">
                         <div class="col-md-4" v-for="(item, index) in pageList" :key="index">
-                            <div class="thumbnail animated fadeInUp paintImg">
+                            <div class="thumbnail paintImg">
                                 <el-image alt="300x200" :src="item.img" :preview-src-list="[item.img]"></el-image>
                                 <div class="content animated fadeInUp">
                                     <span class="icon glyphicon glyphicon-download-alt btn" @click="download(index)"></span>
@@ -103,9 +103,13 @@
                             </div>
                         </div>
                         <div class="col-md-8 note" :style="'display:' + noteShow + ';'">
-                            <h4 class="animated fadeInDown">成功建立在失败之后，或出现于失败之中。</h4>
-                            <h4 class="animated fadeInLeft">当你抛弃了感兴趣的东西，还会觉得做什么都有趣吗？</h4>
-                            <h4 class="animated fadeInUp">生活就像一本无字之书，学习让书里的内容更加充实，努力让内容更加精彩。</h4>
+                            <h2 class="animated fadeInDown">成功建立在失败之后，或出现于失败之中。</h2>
+                            <h2 class="animated fadeInDown">当你抛弃了感兴趣的东西，还会觉得做什么都有趣吗？</h2>
+                            <h2 class="animated fadeInDown">生活就像一本无字之书，学习让书里的内容更加充实，努力让内容更加精彩。</h2>
+                            <h2 class="animated fadeInUp">将美好的时光化作真实可见的东西，每当拿起它时，曾经为此的努力依然历历在目。</h2>
+                            <h2 class="animated fadeInUp">时间永不停息，作品永恒不变，</h2>
+                            <h2 class="animated fadeInUp">把短暂的时间化作长久的回忆，</h2>
+                            <h2 class="animated fadeInUp">把美好的回忆保存于作品之中。</h2>
                         </div>
                     </div>
                 </div>
@@ -139,7 +143,6 @@ import cloneDeep from 'lodash/cloneDeep'
                 windowWidth: '', // 窗口宽度
                 marginDistance: '',
                 scrollTop: 0,
-                imgListShow: 'none',
                 pageShow: 'none',
                 workListShow: 'none',
                 noteShow: 'none',
@@ -755,7 +758,7 @@ import cloneDeep from 'lodash/cloneDeep'
                         top: this.windowHeight.split('p')[0],
                         behavior: "smooth"
                     })
-                },500)
+                },100)
                 
             },
             getWindowHight() {
@@ -776,15 +779,12 @@ import cloneDeep from 'lodash/cloneDeep'
                 setTimeout(() => {
                     this.scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
                 },100)
-                if (this.scrollTop > 30) {
-                    this.imgListShow = 'block'
-                }
                 if (this.scrollTop > 650) {
                     this.pageShow = 'block'
                     this.workListShow = 'block'
                     setTimeout(() => {
                         this.noteShow = 'block'
-                    },1000)
+                    },1500)
                 }
             }
         }
