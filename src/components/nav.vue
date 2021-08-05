@@ -1,18 +1,18 @@
 <template>
     <div>
         <!-- 顶部导航栏 -->
-        <nav class="navbar navbar-default navbar-fixed-top" :class="'bg' + num" role="navigation">
+        <nav class="navbar navbar-default navbar-fixed-top bg" role="navigation">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only"></span>
                     <span v-for="index in 3" :key="index" class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand IconTitle" style="cursor:pointer;" @click="handleNav('/')">Kinron</a>
+                <a :href="'#Home'" class="navbar-brand IconTitle" style="cursor:pointer;">Kinron</a>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right lin-ul">
                     <li class="li-font" v-for="(item, index) in titleList" :key="index">
-                        <a style="cursor:pointer;" @click="handleNav(pathList[index])">{{ item }}</a>
+                        <a :href="'#' + item" style="cursor:pointer;">{{ item }}</a>
                     </li>
                 </ul>
             </div>
@@ -22,18 +22,10 @@
 
 <script>
 export default {
-    props: {
-        num: Number
-    },
     data() {
         return {
-            titleList: ['主页', '绘画', 'DIY'],
+            titleList: ['Home', 'Paint', 'Diy', 'Video', 'Note'],
             pathList: ['/', '/paint', '/diy']
-        }
-    },
-    methods: {
-        handleNav(path) {
-            this.$router.push(path)
         }
     }
 }
@@ -78,19 +70,7 @@ a {
     background: rgba(161, 161, 161, 0.205);
     transition-duration: 500ms;
 }
-.bg1 {
+.bg {
     background: rgb(54, 54, 54);
-}
-.bg2 {
-    background: rgb(27, 63, 85);
-}
-.bg3 {
-    background: rgb(61, 85, 126);
-}
-.bg4 {
-    background: rgb(69, 132, 99);
-}
-.bg5 {
-    background: rgb(126, 102, 58);
 }
 </style>
