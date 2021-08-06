@@ -1,5 +1,5 @@
 <template>
-    <div style="margin-top:20px;">
+    <div>
         <h3 id="work" class="text-center paint">
           {{title}}
         </h3>
@@ -32,7 +32,9 @@
                             </div>
                             <h3 style="font-family:'楷体';font-weight:600;">{{item.value}}</h3>
                             <el-image :src=item.img :preview-src-list="[item.img]"></el-image>
-                            <div class="word">{{item.word}}</div>
+                            <el-tooltip :content="item.word" placement="top" effect="light">
+                                <div class="word">{{item.word}}</div>
+                            </el-tooltip>
                         </div>
                     </div>
                     <div class="col-md-2 column timeList animated fadeInRight">
@@ -44,14 +46,25 @@
                     </div>
                 </div>
                 <!-- 列表分页 -->
-                <div class="animated fadeInUp text-center" style="padding:10px;">
-                    <el-pagination
-                        @current-change="handleCurrentChange"
-                        background
-                        :page-size="4"
-                        layout="prev, pager, next"
-                        :total="list.length">
-                    </el-pagination>
+                <div class="animated fadeInUp text-center" style="padding-top:20px;">
+                    <div v-if="width < 768">
+                        <el-pagination
+                            @current-change="handleCurrentChange"
+                            background
+                            :page-size="4"
+                            layout="prev, next"
+                            :total="list.length">
+                        </el-pagination>
+                    </div>
+                    <div v-else>
+                        <el-pagination
+                            @current-change="handleCurrentChange"
+                            background
+                            :page-size="4"
+                            layout="prev, pager, next"
+                            :total="list.length">
+                        </el-pagination>
+                    </div>
                 </div>
             </div>
         </div>
@@ -70,11 +83,14 @@
                 pageList: this.list.slice(0, 4), // 分页,
                 nameList: [],
                 isList: true,
-                hash: {}
+                hash: {},
+                width: ''
             }
         },
         created(){
             this.removeDuplicate()
+            this.width = window.innerWidth
+            console.log(this.width)
         },
         methods: {
             removeDuplicate() { // 去重
@@ -152,6 +168,12 @@
     background-color: #fff;
     padding:10px;
     border-radius: 5px;
+    transition-duration: 500ms;
+}
+.conbox:hover {
+    box-shadow: 1px 1px 8px #aaa;
+    transform: scale(1.01);
+    transition-duration: 500ms;
 }
 .box {
     display: flex;

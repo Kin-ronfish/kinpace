@@ -16,7 +16,7 @@
           :list="DiyList" />
         <div id="Video" style="height:30px;"></div>
         <h3 class="text-center video">Video</h3>
-        <div style="margin-top:60px;font-size:30px;">2011-2015年作品合辑</div>
+        <div style="margin-top:30px;font-size:30px;">2011-2015年作品合辑</div>
         <div>
           <video style="width:100%;" controls>
             <source src="../assets/video/2011-2015.mp4" type="video/mp4">

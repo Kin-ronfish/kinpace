@@ -7,7 +7,7 @@
                     <span class="sr-only"></span>
                     <span v-for="index in 3" :key="index" class="icon-bar"></span>
                 </button>
-                <a :href="'#Home'" class="navbar-brand IconTitle" style="cursor:pointer;">Kinron</a>
+                <a class="navbar-brand IconTitle" style="cursor:pointer;" @click="jump('Home')">Kinron</a>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right lin-ul">

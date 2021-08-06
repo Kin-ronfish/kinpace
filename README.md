@@ -1,4 +1,15 @@
-# kin
+# kinpace
+
+## 技术框架
+> [vue](https://cn.vuejs.org/v2/guide/)
+
+> [element](https://element.eleme.cn/#/zh-CN/component/installation)
+
+> [bootstrap](https://www.bootcss.com/)
+
+> [loadsh](https://www.lodashjs.com/)
+
+> [animate](http://www.animate.net.cn/)
 
 ## Project setup
 ```
