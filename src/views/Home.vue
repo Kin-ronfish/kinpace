@@ -1,16 +1,17 @@
 <template>
-    <div style="background:#eee;">
+    <div>
+      <img class="bg" src="../assets/img/bg.jpg">
       <Nav :num="1" />
-      <div class="container" style="background:#ddd;">
+      <div class="container" style="background:rgba(221, 221, 221, 0.4);">
         <div id="Home"></div>
         <Carousel />
         <div id="Paint" style="height:30px;"></div>
-        <Work 
+        <Work
           :title="'Paintings'"
           :timeList="PaintTimeList"
           :list="PaintList" />
         <div id="Diy" style="height:30px;"></div>
-        <Work 
+        <Work
           :title="'DIYWorks'"
           :timeList="DiyTimeList"
           :list="DiyList" />
@@ -18,25 +19,23 @@
         <h3 class="text-center video">Video</h3>
         <div style="margin-top:30px;font-size:30px;">2011-2015年作品合辑</div>
         <div>
-          <video style="width:100%;" controls>
+        <video style="width:100%;" controls>
             <source src="../assets/video/2011-2015.mp4" type="video/mp4">
-          </video>
+        </video>
         </div>
         <div style="margin-top:20px;font-size:30px;">2016-2019年作品合辑</div>
         <div>
-          <video style="width:100%;" controls>
+        <video style="width:100%;" controls>
             <source src="../assets/video/2016-2019.mp4" type="video/mp4">
-          </video>
+        </video>
         </div>
         <div id="Note" style="height:30px;"></div>
         <h3 class="text-center video">Note</h3>
-        <h4 class="animated fadeInDown">成功建立在失败之后，或出现于失败之中。</h4>
-        <h4 class="animated fadeInDown">当你抛弃了感兴趣的东西，还会觉得做什么都有趣吗？</h4>
-        <h4 class="animated fadeInDown">生活就像一本无字之书，学习让书里的内容更加充实，努力让内容更加精彩。</h4>
-        <h4 class="animated fadeInUp">将美好的时光化作真实可见的东西，每当拿起它时，曾经为此的努力依然历历在目。</h4>
-        <h4 class="animated fadeInUp">时间永不停息，作品永恒不变，</h4>
-        <h4 class="animated fadeInUp">把短暂的时间化作长久的回忆，</h4>
-        <h4 class="animated fadeInUp">把美好的回忆保存于作品之中。</h4>
+        <h4 class="font animated fadeInDown">生活就像一本无字之书，学习让书里的内容更加充实，努力让内容更加精彩。</h4>
+        <h4 class="font animated fadeInUp">将美好的时光化作真实可见的东西，每当拿起它时，曾经为此的努力依然历历在目。</h4>
+        <h4 class="font animated fadeInUp">时间永不停息，作品永恒不变，</h4>
+        <h4 class="font animated fadeInUp">把短暂的时间化作长久的回忆，</h4>
+        <h4 class="font animated fadeInUp">把美好的回忆保存于作品之中。</h4>
       </div>
       <div class="foot">MIT Licensed | Copyright © 2021-present Kinron</div>
       <el-backtop :bottom="50">
@@ -865,14 +864,25 @@ import Work from '../components/work.vue'
                 "color": [0,1,2,3,4],
                 "img": require('@/assets/img/2020/7.jpg')
             }
-          ]
+          ],
         }
       },
+      beforeDestroy () {
+        document.removeEventListener("scroll", this.listenerFunction);
+      },
       components: { Nav, Carousel, Work }
+      
     }
 </script>
 
 <style scoped>
+.bg {
+    position: fixed;
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: -5;
+}
 .video {
   color: #fff;
   background-color: rgb(77, 66, 93);
@@ -883,5 +893,10 @@ import Work from '../components/work.vue'
     padding: 20px;
     background-color: aliceblue;
     margin-top: 20px;;
+}
+.font {
+    color: #fff;
+    font-family: '楷体';
+    font-size: 18px;
 }
 </style>

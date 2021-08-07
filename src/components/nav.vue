@@ -7,7 +7,7 @@
                     <span class="sr-only"></span>
                     <span v-for="index in 3" :key="index" class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand IconTitle" style="cursor:pointer;" @click="jump('Home')">Kinron</a>
+                <a class="navbar-brand IconTitle" style="cursor:pointer;" @click="reload">Kinron</a>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right lin-ul">
@@ -31,11 +31,13 @@ export default {
     methods: {
         jump(item) {
             let height = document.getElementById(item).offsetTop
-            console.log(height)
             window.scrollTo({ 
                 top: height, 
                 behavior: "smooth" 
             })
+        },
+        reload() {
+            location.reload()
         }
     }
 }

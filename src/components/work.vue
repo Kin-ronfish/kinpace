@@ -1,19 +1,20 @@
 <template>
     <div>
-        <h3 id="work" class="text-center paint">
+        <h3 id="work" class="text-center paint animated flipInX">
           {{title}}
         </h3>
         <div class="row clearfix">
             <div class="col-md-12 column">
                 <div class="row clearfix">
-                    <div class="col-md-2 column animated fadeInLeft">
+                    <div class="a2 col-md-2 column animated fadeInLeft">
                         <ul class="list-unstyled">
                             <li class="time" v-for="(item,index) in timeList" :key="index">
                                 <span @click="setTime(item)">{{item}}</span>
                             </li>
                         </ul>
+                        <h4 class="a4 animated zoomIn font">成功建立在失败之后，或出现于失败之中。</h4>
                     </div>
-                    <div class="col-md-8 column">
+                    <div class="a1 col-md-8 column animated fadeIn">
                         <div style="display:flex;justify-content:space-between;align-items:center;">
                             <el-button type="button" size="mini" @click="reset">重置</el-button>
                             <span v-if="isList" class="glyphicon glyphicon-th-list" style="cursor: pointer;font-size:15px;" @click="isList=!isList"></span>
@@ -37,13 +38,14 @@
                             </el-tooltip>
                         </div>
                     </div>
-                    <div class="col-md-2 column timeList animated fadeInRight">
+                    <div class="a3 col-md-2 column timeList animated fadeInRight">
                         <ul class="list-unstyled workListName">
                             <li class="name" v-for="item in nameList" :key="item.key">
                                 <span @click="choseItem(item.value)">{{item.value}}</span>
                             </li>
                         </ul>
                     </div>
+                    <div class="a4 animated zoomIn font">当你抛弃了感兴趣的东西，还会觉得做什么都有趣吗？</div>
                 </div>
                 <!-- 列表分页 -->
                 <div class="animated fadeInUp text-center" style="padding-top:20px;">
@@ -90,7 +92,6 @@
         created(){
             this.removeDuplicate()
             this.width = window.innerWidth
-            console.log(this.width)
         },
         methods: {
             removeDuplicate() { // 去重
@@ -114,7 +115,6 @@
                 a.click()
             },
             setTime(value) {
-                console.log(value)
                 this.pageList = this.list.filter(item => {
                     return item.time.includes(value)
                 })
@@ -123,7 +123,6 @@
                 this.pageList = this.list.slice(0, 4)
             },
             choseItem(value) {
-                console.log(value)
                 this.pageList = this.list.filter(item => {
                     return item.value === value
                 })
@@ -214,5 +213,27 @@
     font-size: 25px;
     color: #fff;
     margin-bottom:20px;
+}
+.font {
+    font-family: '楷体';
+    font-size: 25px;
+    color: #fff;
+    margin: 0 auto;  
+    height: 300px;  
+    writing-mode: vertical-lr;
+    writing-mode: tb-lr;
+}
+/** 动画播放顺序 */
+.a1 {
+    animation-delay: 1s;
+}
+.a2 {
+    animation-delay: 1500ms;
+}
+.a3 {
+    animation-delay: 2s;
+}
+.a4 {
+    animation-delay: 2500ms;
 }
 </style>
