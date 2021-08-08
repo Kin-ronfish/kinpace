@@ -8,8 +8,8 @@
                 <div class="row clearfix">
                     <div class="a2 col-md-2 column animated fadeInLeft">
                         <ul class="list-unstyled">
-                            <li class="time" v-for="(item,index) in timeList" :key="index">
-                                <span @click="setTime(item)">{{item}}</span>
+                            <li class="time" v-for="(item,index) in timeList" :key="index" @click="setTime(item)">
+                                <span>{{item}}</span>
                             </li>
                         </ul>
                         <h4 class="a4 animated zoomIn font">成功建立在失败之后，或出现于失败之中。</h4>
@@ -17,8 +17,8 @@
                     <div class="a1 col-md-8 column animated fadeIn">
                         <div style="display:flex;justify-content:space-between;align-items:center;">
                             <el-button type="button" size="mini" @click="reset">重置</el-button>
-                            <span v-if="isList" class="glyphicon glyphicon-th-list" style="cursor: pointer;font-size:15px;" @click="isList=!isList"></span>
-                            <span v-if="!isList" class="glyphicon glyphicon-th-large" style="cursor: pointer;font-size:15px;" @click="isList=!isList"></span>
+                            <span v-if="!isList" class="glyphicon glyphicon-th-list" style="cursor: pointer;font-size:15px;" @click="isList=!isList"></span>
+                            <span v-if="isList" class="glyphicon glyphicon-th-large" style="cursor: pointer;font-size:15px;" @click="isList=!isList"></span>
                         </div>
                         <div class="conbox" :class="isList?'':'col-md-6 column'" v-for="(item,index) in pageList" :key="item.key">
                             <div class="box">
@@ -40,8 +40,8 @@
                     </div>
                     <div class="a3 col-md-2 column timeList animated fadeInRight">
                         <ul class="list-unstyled workListName">
-                            <li class="name" v-for="item in nameList" :key="item.key">
-                                <span @click="choseItem(item.value)">{{item.value}}</span>
+                            <li class="name" v-for="item in nameList" :key="item.key" @click="choseItem(item.value)">
+                                <span>{{item.value}}</span>
                             </li>
                         </ul>
                     </div>
@@ -104,7 +104,6 @@
             },
             handleCurrentChange(val) {
                 this.pageList = this.list.slice(val * 4 - 4, val * 4)
-                
             },
             download(index) {
                 console.log(this.pageList[index].img)
@@ -166,6 +165,7 @@
     margin-top: 20px;
     background-color: #fff;
     padding:10px;
+    margin: 1rpx;
     border-radius: 5px;
     transition-duration: 500ms;
 }

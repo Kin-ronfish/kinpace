@@ -1,36 +1,24 @@
 <template>
     <div>
       <img class="bg" src="../assets/img/bg.jpg">
-      <Nav :num="1" />
+      <Nav :num="1" @setFlag="getFlag"/>
       <div class="container" style="background:rgba(221, 221, 221, 0.4);">
         <div id="Home"></div>
         <Carousel />
-        <div id="Paint" style="height:30px;"></div>
         <Work
+          :key="componentKey"
+          v-if="componentKey === 0"
           :title="'Paintings'"
           :timeList="PaintTimeList"
           :list="PaintList" />
-        <div id="Diy" style="height:30px;"></div>
         <Work
+          :key="componentKey"
+          v-if="componentKey === 1"
           :title="'DIYWorks'"
           :timeList="DiyTimeList"
           :list="DiyList" />
-        <div id="Video" style="height:30px;"></div>
-        <h3 class="text-center video">Video</h3>
-        <div style="margin-top:30px;font-size:30px;">2011-2015年作品合辑</div>
-        <div>
-        <video style="width:100%;" controls>
-            <source src="../assets/video/2011-2015.mp4" type="video/mp4">
-        </video>
-        </div>
-        <div style="margin-top:20px;font-size:30px;">2016-2019年作品合辑</div>
-        <div>
-        <video style="width:100%;" controls>
-            <source src="../assets/video/2016-2019.mp4" type="video/mp4">
-        </video>
-        </div>
-        <div id="Note" style="height:30px;"></div>
-        <h3 class="text-center video">Note</h3>
+        <Video :key="componentKey" v-if="componentKey === 2" />
+        <h3 class="text-center note">Note</h3>
         <h4 class="font animated fadeInDown">生活就像一本无字之书，学习让书里的内容更加充实，努力让内容更加精彩。</h4>
         <h4 class="font animated fadeInUp">将美好的时光化作真实可见的东西，每当拿起它时，曾经为此的努力依然历历在目。</h4>
         <h4 class="font animated fadeInUp">时间永不停息，作品永恒不变，</h4>
@@ -48,6 +36,7 @@
 import Nav from '../components/nav.vue'
 import Carousel from '../components/carousel.vue'
 import Work from '../components/work.vue'
+import Video from '../components/video.vue'
     export default {
       data() {
         return {
@@ -865,12 +854,16 @@ import Work from '../components/work.vue'
                 "img": require('@/assets/img/2020/7.jpg')
             }
           ],
+          componentKey: 0,
+          loading: true
         }
       },
-      beforeDestroy () {
-        document.removeEventListener("scroll", this.listenerFunction);
-      },
-      components: { Nav, Carousel, Work }
+      components: { Nav, Carousel, Work, Video },
+      methods: {
+        getFlag(value) {
+            this.componentKey = value
+        }
+      }
       
     }
 </script>
@@ -883,16 +876,16 @@ import Work from '../components/work.vue'
     height: 100%;
     z-index: -5;
 }
-.video {
-  color: #fff;
-  background-color: rgb(77, 66, 93);
-  padding: 12px;
-}
 .foot {
     text-align: center;
     padding: 20px;
-    background-color: aliceblue;
+    background-color: rgba(240, 248, 255, 0.6);
     margin-top: 20px;;
+}
+.note {
+  color: #fff;
+  background-color: rgb(77, 66, 93);
+  padding: 12px;
 }
 .font {
     color: #fff;

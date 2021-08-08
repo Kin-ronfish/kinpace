@@ -12,7 +12,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right lin-ul">
                     <li class="li-font" v-for="(item, index) in titleList" :key="index">
-                        <a style="cursor:pointer;" @click="jump(item)">{{ item }}</a>
+                        <a style="cursor:pointer;" @click="setFlag(index)">{{ item }}</a>
                     </li>
                 </ul>
             </div>
@@ -24,17 +24,13 @@
 export default {
     data() {
         return {
-            titleList: ['Home', 'Paint', 'Diy', 'Video', 'Note'],
+            titleList: ['Paint', 'Diy', 'Video'],
             pathList: ['/', '/paint', '/diy']
         }
     },
     methods: {
-        jump(item) {
-            let height = document.getElementById(item).offsetTop
-            window.scrollTo({ 
-                top: height, 
-                behavior: "smooth" 
-            })
+        setFlag(index) {
+            this.$emit('setFlag',index)
         },
         reload() {
             location.reload()
