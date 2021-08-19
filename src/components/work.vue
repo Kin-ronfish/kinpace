@@ -15,10 +15,10 @@
                         <h4 class="a4 animated zoomIn font">成功建立在失败之后，或出现于失败之中。</h4>
                     </div>
                     <div class="a1 col-md-8 column animated fadeIn">
-                        <div style="display:flex;justify-content:space-between;align-items:center;">
-                            <el-button type="button" size="mini" @click="reset">重置</el-button>
-                            <span v-if="!isList" class="glyphicon glyphicon-th-list" style="cursor: pointer;font-size:15px;" @click="isList=!isList"></span>
-                            <span v-if="isList" class="glyphicon glyphicon-th-large" style="cursor: pointer;font-size:15px;" @click="isList=!isList"></span>
+                        <div class="set">
+                            <el-button class="btn" type="button" size="mini" @click="reset">重置</el-button>
+                            <span v-if="!isList" class="icon glyphicon glyphicon-th-list" style="cursor: pointer;font-size:15px;" @click="isList=!isList"></span>
+                            <span v-if="isList" class="icon glyphicon glyphicon-th-large" style="cursor: pointer;font-size:15px;" @click="isList=!isList"></span>
                         </div>
                         <div class="conbox" :class="isList?'':'col-md-6 column'" v-for="(item,index) in pageList" :key="item.key">
                             <div class="box">
@@ -131,6 +131,15 @@
 </script>
 
 <style scoped>
+@media (max-width: 768px) {
+    .time,
+    .timeList,
+    .font,
+    .btn,
+    .icon {
+        display: none;
+    }
+}
 .paint {
   color: #fff;
   background-color: rgb(77, 66, 93);
@@ -235,5 +244,11 @@
 }
 .a4 {
     animation-delay: 2500ms;
+}
+
+.set {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 </style>
