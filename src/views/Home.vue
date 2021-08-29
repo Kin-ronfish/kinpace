@@ -852,6 +852,30 @@ import Video from '../components/video.vue'
                 "label": ['木制','编程','设计原理','流水灯','机械臂'],
                 "color": [0,1,2,3,4],
                 "img": require('@/assets/img/2020/7.jpg')
+            },
+            {
+                "value": "第三代蓝牙音箱",
+                "time": "2021年8月16日",
+                "word": "之前一直觉得单个喇叭的音箱声音不够大，现在加多一个喇叭，画上一些图案，更加好看了。",
+                "label": ['木制','绘画','创意设计','音箱'],
+                "color": [0,1,2,3],
+                "img": require('@/assets/img/2021/8.jpg')
+            },
+            {
+                "value": "蛋炒饭",
+                "time": "2021年8月29日",
+                "word": "在宿舍里体验在家做蛋炒饭的感觉，口感虽没有之前的好，但更有创意了。",
+                "label": ['烹饪','炒饭'],
+                "color": [0,1],
+                "img": require('@/assets/img/2021/9.jpg')
+            },
+            {
+                "value": "意大利面",
+                "time": "2021年8月29日",
+                "word": "在宿舍体验在家做意大利面的感觉，口感比之前更好一些，有些许的进步。",
+                "label": ['烹饪','意大利面'],
+                "color": [0,1],
+                "img": require('@/assets/img/2021/10.jpg')
             }
           ],
           componentKey: 0,
