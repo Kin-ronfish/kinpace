@@ -15,27 +15,52 @@
                         <h4 class="a4 animated zoomIn font">成功建立在失败之后，或出现于失败之中。</h4>
                     </div>
                     <div class="a1 col-md-8 column animated fadeIn">
-                        <div class="set">
-                            <el-button class="btn" type="button" size="mini" @click="reset">重置</el-button>
-                            <span v-if="!isList" class="icon glyphicon glyphicon-th-list" style="cursor: pointer;font-size:15px;" @click="isList=!isList"></span>
-                            <span v-if="isList" class="icon glyphicon glyphicon-th-large" style="cursor: pointer;font-size:15px;" @click="isList=!isList"></span>
+                        <el-button class="btn" type="button" size="mini" @click="reset">重置</el-button>
+                        <!-- 列表分页 -->
+                        <div class="animated fadeInUp text-center">
+                            <div v-if="width < 768">
+                                <el-pagination
+                                    @current-change="handleCurrentChange"
+                                    background
+                                    :page-size="4"
+                                    layout="prev, next"
+                                    :total="list.length">
+                                </el-pagination>
+                            </div>
+                            <div v-else style="margin-top:-30px;">
+                                <el-pagination
+                                    @current-change="handleCurrentChange"
+                                    background
+                                    :page-size="4"
+                                    layout="prev, pager, next"
+                                    :total="list.length">
+                                </el-pagination>
+                            </div>
                         </div>
-                        <div class="conbox" :class="isList?'':'col-md-6 column'" v-for="(item,index) in pageList" :key="item.key">
+                        <div class="conbox" v-for="(item,index) in pageList" :key="item.key">
                             <div class="box">
                                 <div class="content">
-                                    <el-image class="headImg" :src="require('../assets/Kin.png')"></el-image>
+                                    <el-image class="headImg" :src="require('../assets/head.jpg')"></el-image>
                                     <div style="margin-left:15px;">
                                         <div style="font-size:15px;">Kinron</div>
-                                        <div>{{item.time}}</div>
+                                        <div>创作时间：{{item.time}}</div>
                                     </div>
                                 </div>
                                 <div class="el-icon-download" style="cursor: pointer;font-size:20px;" @click="download(index)"></div>
                             </div>
-                            <h3 style="font-family:'楷体';font-weight:600;">{{item.value}}</h3>
+                            <div class="box_title">
+                                <div>
+                                    <h3 style="font-family:'楷体';font-weight:blod;margin-top:0;">{{item.value}}</h3>
+                                </div>
+                                <div>
+                                    <span class="label" :class="'label-' + color[index]" v-for="(value, index) in item.label" :key="index">
+                                        {{value}}    
+                                    </span>
+                                </div>
+                            </div>
+                            
                             <el-image :src=item.img :preview-src-list="[item.img]"></el-image>
-                            <el-tooltip :content="item.word" placement="top" effect="light">
-                                <div class="word">{{item.word}}</div>
-                            </el-tooltip>
+                            <div class="word">此刻的想法：{{item.word}}</div>
                         </div>
                     </div>
                     <div class="a3 col-md-2 column timeList animated fadeInRight">
@@ -84,9 +109,16 @@
             return {
                 pageList: this.list.slice(0, 4), // 分页,
                 nameList: [],
-                isList: true,
                 hash: {},
-                width: ''
+                width: '',
+                color: {
+                    0: 'default',
+                    1: 'primary',
+                    2: 'success',
+                    3: 'info',
+                    4: 'warning',
+                    5: 'danger'
+                }
             }
         },
         created(){
@@ -205,9 +237,6 @@
 .word {
     color: #aaa;
     font-size: 20px;
-    overflow: hidden;
-    text-overflow:ellipsis;
-    white-space: nowrap;
 }
 /** 作品时间表 */
 .timeList {
@@ -245,10 +274,11 @@
 .a4 {
     animation-delay: 2500ms;
 }
-
-.set {
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+.box_title {
+    display: flex;
+    justify-content: space-between;
+}
+.label {
+    margin-right: 5px;
 }
 </style>

@@ -3,8 +3,8 @@
       <img class="bg" src="../assets/img/bg.jpg">
       <Nav :num="1" @setFlag="getFlag"/>
       <div class="container" style="background:rgba(221, 221, 221, 0.4);">
-        <div id="Home"></div>
         <Carousel />
+        <div id="Home"></div>
         <Work
           :key="componentKey"
           v-if="componentKey === 0"
@@ -18,12 +18,6 @@
           :timeList="DiyTimeList"
           :list="DiyList" />
         <Video :key="componentKey" v-if="componentKey === 2" />
-        <h3 class="text-center note">Note</h3>
-        <h4 class="font animated fadeInDown">生活就像一本无字之书，学习让书里的内容更加充实，努力让内容更加精彩。</h4>
-        <h4 class="font animated fadeInUp">将美好的时光化作真实可见的东西，每当拿起它时，曾经为此的努力依然历历在目。</h4>
-        <h4 class="font animated fadeInUp">时间永不停息，作品永恒不变，</h4>
-        <h4 class="font animated fadeInUp">把短暂的时间化作长久的回忆，</h4>
-        <h4 class="font animated fadeInUp">把美好的回忆保存于作品之中。</h4>
       </div>
       <div class="foot">MIT Licensed | Copyright © 2021-present Kinron</div>
       <el-backtop :bottom="50">
@@ -45,7 +39,7 @@ import Video from '../components/video.vue'
           goTop: `{
             height: 100%;
             width: 100%;
-            background-color: rgb(87, 110, 125);
+            background-color: rgb(114, 79, 165);
             text-align: center;
             line-height: 40px;
             color: #fff;
@@ -56,7 +50,6 @@ import Video from '../components/video.vue'
                 "time": "2011年",
                 "word": "绘画的第一天，发现兴趣的时刻，感受到绘画给自己带来了乐趣。",
                 "label": ['人物','上色','古风'],
-                "color": [0,1,2],
                 "img": require('@/assets/img/2011/1.jpg')
             },
             {
@@ -64,7 +57,6 @@ import Video from '../components/video.vue'
                 "time": "2013年",
                 "word": "尝试着将学习的多个部分整合，青山绿水，李白遥望瀑布吟诗作对。",
                 "label": ['场景','素描', '意向'],
-                "color": [0,1,2],
                 "img": require('@/assets/img/2013/1.jpg')
             },
             {
@@ -72,7 +64,6 @@ import Video from '../components/video.vue'
                 "time": "2013年",
                 "word": "初中美术课留下一幅比较有印象的画，记录着自己对绘画的喜爱。",
                 "label": ['动物','雕画','蝴蝶'],
-                "color": [0,1,2],
                 "img": require('@/assets/img/2013/2.jpg')
             },
             {
@@ -80,7 +71,6 @@ import Video from '../components/video.vue'
                 "time": "2013年",
                 "word": "开始接触动漫临摹，在同学家跟他一起完成这幅画的临摹。",
                 "label": ['人物','上色','名侦探'],
-                "color": [0,1,2],
                 "img": require('@/assets/img/2013/3.jpg')
             },
             {
@@ -88,7 +78,6 @@ import Video from '../components/video.vue'
                 "time": "2013年",
                 "word": "--",
                 "label": ['动物','上色','吉祥物'],
-                "color": [0,1,2],
                 "img": require('@/assets/img/2013/4.jpg')
             },
             {
@@ -96,7 +85,6 @@ import Video from '../components/video.vue'
                 "time": "2013年",
                 "word": "第一次接触水粉画，根据自己的想法画出自己脑海中的一个印象。",
                 "label": ['景物','上色','联想'],
-                "color": [0,1,2],
                 "img": require('@/assets/img/2013/5.jpg')
             },
             {
@@ -104,7 +92,6 @@ import Video from '../components/video.vue'
                 "time": "2013年",
                 "word": "水粉绘画功底还在缓慢提升，画出来的东西比较抽象且缺少美感。",
                 "label": ['景物','上色','联想'],
-                "color": [0,1,2],
                 "img": require('@/assets/img/2013/6.jpg')
             },
             {
@@ -112,7 +99,6 @@ import Video from '../components/video.vue'
                 "time": "2013年",
                 "word": "坐在客厅的沙发上，眼前正是一个框架结构，于是用笔记录下静态的一面。",
                 "label": ['景物','上色','客厅'],
-                "color": [0,1,2],
                 "img": require('@/assets/img/2013/7.jpg')
             },
             {
@@ -120,7 +106,6 @@ import Video from '../components/video.vue'
                 "time": "2013年4月",
                 "word": "欣赏花朵的美，来自大自然的清新。",
                 "label": ['静物','上色','花朵'],
-                "color": [0,1,2],
                 "img": require('@/assets/img/2013/8.jpg')
             },
             {
@@ -128,7 +113,6 @@ import Video from '../components/video.vue'
                 "time": "2013年4月",
                 "word": "飞得更高，看得更远，划破长空，翱翔天际。",
                 "label": ['动物','上色','雄鹰'],
-                "color": [0,1,2],
                 "img": require('@/assets/img/2013/9.jpg')
             },
             {
@@ -136,7 +120,6 @@ import Video from '../components/video.vue'
                 "time": "2013年4月",
                 "word": "--",
                 "label": ['动物','上色','吉祥物'],
-                "color": [0,1,2],
                 "img": require('@/assets/img/2013/10.jpg')
             },
             {
@@ -144,7 +127,6 @@ import Video from '../components/video.vue'
                 "time": "2013年4月",
                 "word": "--",
                 "label": ['动物','上色','吉祥物'],
-                "color": [0,1,2],
                 "img": require('@/assets/img/2013/11.jpg')
             },
             {
@@ -152,7 +134,6 @@ import Video from '../components/video.vue'
                 "time": "2013年4月",
                 "word": "--",
                 "label": ['动物','上色','吉祥物'],
-                "color": [0,1,2],
                 "img": require('@/assets/img/2013/12.jpg')
             },
             {
@@ -160,7 +141,6 @@ import Video from '../components/video.vue'
                 "time": "2014年",
                 "word": "--",
                 "label": ['静物','上色','标志'],
-                "color": [0,1,2],
                 "img": require('@/assets/img/2014/1.jpg')
             },
             {
@@ -168,7 +148,6 @@ import Video from '../components/video.vue'
                 "time": "2014年",
                 "word": "--",
                 "label": ['静物','上色','标志'],
-                "color": [0,1,2],
                 "img": require('@/assets/img/2014/2.jpg')
             },
             {
@@ -176,7 +155,6 @@ import Video from '../components/video.vue'
                 "time": "2014年",
                 "word": "--",
                 "label": ['景物','素描','植物'],
-                "color": [0,1,2],
                 "img": require('@/assets/img/2014/3.jpg')
             },
             {
@@ -184,7 +162,6 @@ import Video from '../components/video.vue'
                 "time": "2014年",
                 "word": "--",
                 "label": ['景物','素描','植物'],
-                "color": [0,1,2],
                 "img": require('@/assets/img/2014/4.jpg')
             },
             {
@@ -192,7 +169,6 @@ import Video from '../components/video.vue'
                 "time": "2014年",
                 "word": "--",
                 "label": ['景物','素描','植物'],
-                "color": [0,1,2],
                 "img": require('@/assets/img/2014/5.jpg')
             },
             {
@@ -200,7 +176,6 @@ import Video from '../components/video.vue'
                 "time": "2014年",
                 "word": "--",
                 "label": ['静物','上色','盆栽'],
-                "color": [0,1,2],
                 "img": require('@/assets/img/2014/6.jpg')
             },
             {
@@ -208,7 +183,6 @@ import Video from '../components/video.vue'
                 "time": "2014年",
                 "word": "中秋画嫦娥",
                 "label": ['人物','上色','嫦娥'],
-                "color": [0,1,2],
                 "img": require('@/assets/img/2014/7.jpg')
             },
             {
@@ -216,7 +190,6 @@ import Video from '../components/video.vue'
                 "time": "2014年",
                 "word": "--",
                 "label": ['人物','素描','诗人'],
-                "color": [0,1,2],
                 "img": require('@/assets/img/2014/8.jpg')
             },
             {
@@ -224,7 +197,6 @@ import Video from '../components/video.vue'
                 "time": "2014年",
                 "word": "--",
                 "label": ['静物','上色','茶具'],
-                "color": [0,1,2],
                 "img": require('@/assets/img/2014/9.jpg')
             },
             {
@@ -232,7 +204,6 @@ import Video from '../components/video.vue'
                 "time": "2014年",
                 "word": "--",
                 "label": ['静物','上色','茶具'],
-                "color": [0,1,2],
                 "img": require('@/assets/img/2014/10.jpg')
             },
             {
@@ -240,7 +211,6 @@ import Video from '../components/video.vue'
                 "time": "2015年",
                 "word": "开始步入真实世界",
                 "label": ['静物','上色','花朵'],
-                "color": [0,1,2],
                 "img": require('@/assets/img/2015/1.jpg')
             },
             {
@@ -248,7 +218,6 @@ import Video from '../components/video.vue'
                 "time": "2015年",
                 "word": "母亲节送给妈妈的一朵花",
                 "label": ['静物','上色','花朵'],
-                "color": [0,1,2],
                 "img": require('@/assets/img/2015/2.jpg')
             },
             {
@@ -256,7 +225,6 @@ import Video from '../components/video.vue'
                 "time": "2015年",
                 "word": "第一次画雪碧",
                 "label": ['静物','上色','雪碧'],
-                "color": [0,1,2],
                 "img": require('@/assets/img/2015/3.jpg')
             },
             {
@@ -264,7 +232,6 @@ import Video from '../components/video.vue'
                 "time": "2015年",
                 "word": "肥宅快乐水，激爽每一天",
                 "label": ['静物','上色','可乐'],
-                "color": [0,1,2],
                 "img": require('@/assets/img/2015/4.jpg')
             },
             {
@@ -272,7 +239,6 @@ import Video from '../components/video.vue'
                 "time": "2015年3月6日",
                 "word": "--",
                 "label": ['景物','上色','风景'],
-                "color": [0,1,2],
                 "img": require('@/assets/img/2015/6.jpg')
             },
             {
@@ -280,7 +246,6 @@ import Video from '../components/video.vue'
                 "time": "2016月3月20日",
                 "word": "学校艺术节第一幅作品，一等奖",
                 "label": ['景物','上色','风景'],
-                "color": [0,1,2],
                 "img": require('@/assets/img/2016/1.jpg')
             },
             {
@@ -288,7 +253,6 @@ import Video from '../components/video.vue'
                 "time": "2016月5月8日",
                 "word": "尝试画三维立体魔方",
                 "label": ['静物','上色','魔方'],
-                "color": [0,1,2],
                 "img": require('@/assets/img/2016/2.jpg')
             },
             {
@@ -296,7 +260,6 @@ import Video from '../components/video.vue'
                 "time": "2016月5月9日",
                 "word": "尝试画三维立体魔方",
                 "label": ['静物','上色','魔方'],
-                "color": [0,1,2],
                 "img": require('@/assets/img/2016/3.jpg')
             },
             {
@@ -304,7 +267,6 @@ import Video from '../components/video.vue'
                 "time": "2016月7月",
                 "word": "--",
                 "label": ['静物','上色','西红柿'],
-                "color": [0,1,2],
                 "img": require('@/assets/img/2016/5.jpg')
             },
             {
@@ -312,7 +274,6 @@ import Video from '../components/video.vue'
                 "time": "2016月8月2日",
                 "word": "--",
                 "label": ['静物','上色','巧克力'],
-                "color": [0,1],
                 "img": require('@/assets/img/2016/6.jpg')
             },
             {
@@ -320,7 +281,6 @@ import Video from '../components/video.vue'
                 "time": "2016月8月15日",
                 "word": "吃肯德基留下的记录",
                 "label": ['静物','上色','汉堡'],
-                "color": [0,1,2],
                 "img": require('@/assets/img/2016/8.jpg')
             },
             {
@@ -328,7 +288,6 @@ import Video from '../components/video.vue'
                 "time": "2016月9月16日",
                 "word": "中秋晚来一罐天地壹号",
                 "label": ['静物','上色','天地壹号'],
-                "color": [0,1,2],
                 "img": require('@/assets/img/2016/11.jpg')
             },
             {
@@ -336,7 +295,6 @@ import Video from '../components/video.vue'
                 "time": "2016月10月1日",
                 "word": "在班级作品分享中受到团支部老师的表扬",
                 "label": ['静物','上色','国庆'],
-                "color": [0,1,2],
                 "img": require('@/assets/img/2016/13.jpg')
             },
             {
@@ -344,7 +302,6 @@ import Video from '../components/video.vue'
                 "time": "2016月12月6日",
                 "word": "年底送给自己一条真实的曼妥思，来年我会更加努力",
                 "label": ['静物','上色','糖果'],
-                "color": [0,1,2],
                 "img": require('@/assets/img/2016/14.jpg')
             },
             {
@@ -352,7 +309,6 @@ import Video from '../components/video.vue'
                 "time": "2017月2月4日",
                 "word": "--",
                 "label": ['静物','上色','蛋糕'],
-                "color": [0,1,2],
                 "img": require('@/assets/img/2017/1.jpg')
             },
             {
@@ -360,7 +316,6 @@ import Video from '../components/video.vue'
                 "time": "2017月3月25日",
                 "word": "学校艺术绝第二幅作品，一等奖",
                 "label": ['景物','上色','风景'],
-                "color": [0,1,2],
                 "img": require('@/assets/img/2017/2.jpg')
             },
             {
@@ -368,7 +323,6 @@ import Video from '../components/video.vue'
                 "time": "2017月5月13日",
                 "word": "--",
                 "label": ['静物','上色','巧克力'],
-                "color": [0,1,2],
                 "img": require('@/assets/img/2017/4.jpg')
             },
             {
@@ -376,7 +330,6 @@ import Video from '../components/video.vue'
                 "time": "2017月7月12日",
                 "word": "母亲节送给妈妈的一束花",
                 "label": ['静物','上色','花朵'],
-                "color": [0,1,2],
                 "img": require('@/assets/img/2017/5.jpg')
             },
             {
@@ -384,7 +337,6 @@ import Video from '../components/video.vue'
                 "time": "2017月10月1日",
                 "word": "今年中秋画个月饼留个回忆",
                 "label": ['静物','上色','月饼'],
-                "color": [0,1,2],
                 "img": require('@/assets/img/2017/13.jpg')
             },
             {
@@ -392,7 +344,6 @@ import Video from '../components/video.vue'
                 "time": "2017月10月8日",
                 "word": "--",
                 "label": ['静物','上色','蛋糕'],
-                "color": [0,1,2],
                 "img": require('@/assets/img/2017/14.jpg')
             },
             {
@@ -400,7 +351,6 @@ import Video from '../components/video.vue'
                 "time": "2017月12月31日",
                 "word": "同学给的小礼物，也是小任务",
                 "label": ['静物','上色','糖果'],
-                "color": [0,1,2],
                 "img": require('@/assets/img/2017/15.jpg')
             },
             {
@@ -408,7 +358,6 @@ import Video from '../components/video.vue'
                 "time": "2018月2月25日",
                 "word": "在罐装饮料上有了熟悉的基础，尝试画一罐柠檬茶",
                 "label": ['静物','上色','柠檬茶'],
-                "color": [0,1,2],
                 "img": require('@/assets/img/2018/3.jpg')
             },
             {
@@ -416,7 +365,6 @@ import Video from '../components/video.vue'
                 "time": "2018月9月6日",
                 "word": "第二次画雪碧，送给朋友的礼物，对比上一次有了很大的突破。",
                 "label": ['静物','上色','雪碧'],
-                "color": [0,1,2],
                 "img": require('@/assets/img/2018/7.jpg')
             },
             {
@@ -424,7 +372,6 @@ import Video from '../components/video.vue'
                 "time": "2018月9月23日",
                 "word": "中秋佳节，需要有饼陪伴",
                 "label": ['静物','上色','月饼'],
-                "color": [0,1,2],
                 "img": require('@/assets/img/2018/9.jpg')
             },
             {
@@ -432,7 +379,6 @@ import Video from '../components/video.vue'
                 "time": "2019月6月24日",
                 "word": "第一次接触板绘，先尝试从自己较熟悉景物绘画开始画起。",
                 "label": ['景物','板绘','建筑'],
-                "color": [0,1,2],
                 "img": require('@/assets/img/2019/1.jpg')
             },
             {
@@ -440,7 +386,6 @@ import Video from '../components/video.vue'
                 "time": "2019月8月25日",
                 "word": "萧炎云韵完美邂逅，在何时还能再次相遇，再次遇见或许就是在云兰宗上敌对的仇人。",
                 "label": ['人物','板绘','斗破苍穹'],
-                "color": [0,1,2],
                 "img": require('@/assets/img/2019/5.jpg')
             },
             {
@@ -448,7 +393,6 @@ import Video from '../components/video.vue'
                 "time": "2019月9月8日",
                 "word": "作为蛇人族不可逾越的一代女王，却有着一个双胞胎妹妹，因为蛇人族的家族规定，自己的妹妹在追捕中被一箭射死，经受失亲之痛。",
                 "label": ['人物','板绘','斗破苍穹'],
-                "color": [0,1,2],
                 "img": require('@/assets/img/2019/6.jpg')
             },
             {
@@ -456,7 +400,6 @@ import Video from '../components/video.vue'
                 "time": "2019月9月8日",
                 "word": "萧炎云韵完美邂逅，在何时还能再次相遇，再次遇见或许就是在云兰宗上敌对的仇人。",
                 "label": ['人物','板绘','斗破苍穹'],
-                "color": [0,1,2],
                 "img": require('@/assets/img/2019/7.jpg')
             },
             {
@@ -464,7 +407,6 @@ import Video from '../components/video.vue'
                 "time": "2019月9月20日",
                 "word": "今晚的中秋也再宿舍吃着月饼，画着月饼，用调试好的3D打印机打个冰皮月饼配着吃。",
                 "label": ['静物','上色','月饼'],
-                "color": [0,1,2],
                 "img": require('@/assets/img/2019/8.jpg')
             },
             {
@@ -472,7 +414,6 @@ import Video from '../components/video.vue'
                 "time": "2019月10月15日",
                 "word": "学习自己喜欢的画师也画个士力架，拍摄一个创意视频。",
                 "label": ['静物','上色','士力架'],
-                "color": [0,1,2],
                 "img": require('@/assets/img/2019/11.jpg')
             },
             {
@@ -480,7 +421,6 @@ import Video from '../components/video.vue'
                 "time": "2019月11月3日",
                 "word": "画一束花作为送给师姐的毕业礼物。",
                 "label": ['静物','上色','花朵'],
-                "color": [0,1,2],
                 "img": require('@/assets/img/2019/12.jpg')
             },
             {
@@ -488,7 +428,6 @@ import Video from '../components/video.vue'
                 "time": "2019月11月10日",
                 "word": "第三次画雪碧，单独使用水溶性彩铅绘画，由于彩铅本身的特性不太适用此画，效果不如上一幅。",
                 "label": ['静物','上色','雪碧'],
-                "color": [0,1,2],
                 "img": require('@/assets/img/2019/13.jpg')
             },
             {
@@ -496,7 +435,6 @@ import Video from '../components/video.vue'
                 "time": "2020月3月4日",
                 "word": "第一次尝试画壁纸，画出来的画面太过粗糙，虽借用PS调整，但还是不像。",
                 "label": ['人物','上色','壁纸'],
-                "color": [0,1,2],
                 "img": require('@/assets/img/2020/3.jpg')
             },
             {
@@ -504,7 +442,6 @@ import Video from '../components/video.vue'
                 "time": "2020月3月25日",
                 "word": "来自百越一外柔内刚的女子，身世凄凉，一直受到夜幕使者的暗中操控。",
                 "label": ['人物','上色','焰灵姬','天行九歌'],
-                "color": [0,1,2,3],
                 "img": require('@/assets/img/2020/4.jpg')
             },
             {
@@ -512,7 +449,6 @@ import Video from '../components/video.vue'
                 "time": "2020月4月5日",
                 "word": "重新完善同学给予的任务，经过一段时间的绘画练习，这次的画面比上一次更细腻了。",
                 "label": ['静物','上色','糖果'],
-                "color": [0,1,2],
                 "img": require('@/assets/img/2020/5.jpg')
             },
             {
@@ -520,7 +456,6 @@ import Video from '../components/video.vue'
                 "time": "2020月10月1日",
                 "word": "持续每年中秋的传统，画月饼，今年的中秋恰与国庆相遇，迎来双庆美满。",
                 "label": ['静物','上色','月饼'],
-                "color": [0,1,2],
                 "img": require('@/assets/img/2020/8.jpg')
             },
             {
@@ -528,7 +463,6 @@ import Video from '../components/video.vue'
                 "time": "2020月10月13日",
                 "word": "尝试画一块静态糕点，透过屏幕感受它的甜。",
                 "label": ['静物','上色','蛋糕'],
-                "color": [0,1,2],
                 "img": require('@/assets/img/2020/9.jpg')
             },
             {
@@ -536,7 +470,6 @@ import Video from '../components/video.vue'
                 "time": "2020月10月30日",
                 "word": "尝试画一块静态糕点，作为毕业的礼物送给自己，在实物中觉得最像的一幅。",
                 "label": ['静物','上色','蛋糕'],
-                "color": [0,1,2],
                 "img": require('@/assets/img/2020/10.jpg')
             },
             {
@@ -544,7 +477,6 @@ import Video from '../components/video.vue'
                 "time": "2020月11月26日",
                 "word": "送给师弟的礼，外表腼腆的他也喜欢绘画，在了解到他喜欢的漫画，画个海琴烟送给他作为他当组长的礼物。",
                 "label": ['人物','上色','鬼刀'],
-                "color": [0,1,2],
                 "img": require('@/assets/img/2020/11.jpg')
             },
             {
@@ -552,7 +484,6 @@ import Video from '../components/video.vue'
                 "time": "2020月11月26日",
                 "word": "送给师妹的礼物，充满娱乐气息的她喜欢弹吉他，画个吉他送给她作为她当组长的礼物。",
                 "label": ['静物','上色','吉他'],
-                "color": [0,1,2],
                 "img": require('@/assets/img/2020/12.jpg')
             },
             {
@@ -560,7 +491,6 @@ import Video from '../components/video.vue'
                 "time": "2020月11月27日",
                 "word": "送给师弟的礼物，热爱专研代码，画个电脑送给他作为他当组长的礼物。",
                 "label": ['静物','上色','电脑'],
-                "color": [0,1,2],
                 "img": require('@/assets/img/2020/13.jpg')
             },
             {
@@ -568,7 +498,6 @@ import Video from '../components/video.vue'
                 "time": "2021月2月11日",
                 "word": "尝试画壁纸和上色，在人物比例协调上存在一定的出入，导致画面看起来有点变形。",
                 "label": ['人物','上色','壁纸'],
-                "color": [0,1,2],
                 "img": require('@/assets/img/2021/1.jpg')
             },
             {
@@ -576,7 +505,6 @@ import Video from '../components/video.vue'
                 "time": "2021月2月13日",
                 "word": "接受阿姐给我的一个小任务，尝试画一个动漫版的小哥，相对真实人物还是比较简单的。",
                 "label": ['人物','动漫','盗墓笔记'],
-                "color": [0,1,2],
                 "img": require('@/assets/img/2021/2.jpg')
             },
             {
@@ -584,7 +512,6 @@ import Video from '../components/video.vue'
                 "time": "2021月3月25日",
                 "word": "在公司休息时间，拿起笔画下桌子上的几个小物品，静物素描是绘画基础练习。",
                 "label": ['静物','素描'],
-                "color": [0,1,2],
                 "img": require('@/assets/img/2021/3.jpg')
             },
             {
@@ -592,7 +519,6 @@ import Video from '../components/video.vue'
                 "time": "2021月3月27日",
                 "word": "细致素描尝试，试绘壁纸，在素描画中感觉比较好的一幅，但与壁纸仍存在一定差别。",
                 "label": ['人物','素描','壁纸'],
-                "color": [0,1,2],
                 "img": require('@/assets/img/2021/4.jpg')
             },
             {
@@ -600,7 +526,6 @@ import Video from '../components/video.vue'
                 "time": "2021月4月20日",
                 "word": "细致素描尝试，试绘大众追捧的明星。没有学习素描基础，画出来有点变形。",
                 "label": ['人物','素描','王一博'],
-                "color": [0,1,2],
                 "img": require('@/assets/img/2021/5.jpg')
             },
             {
@@ -608,7 +533,6 @@ import Video from '../components/video.vue'
                 "time": "2021月6月26日",
                 "word": "尝试向绘画大师一样画一包M&M糖果，效果有些差距，但比起第一次模仿他时的作品，还是由很大的进步。",
                 "label": ['静物','上色','糖果'],
-                "color": [0,1,2],
                 "img": require('@/assets/img/2021/6.jpg')
             },
             {
@@ -616,7 +540,6 @@ import Video from '../components/video.vue'
                 "time": "2021月7月10日",
                 "word": "把自己的手机升级了新的系统，尝试以假乱真，最终还是被识破。",
                 "label": ['静物','上色','手机','华为'],
-                "color": [0,1,2,3],
                 "img": require('@/assets/img/2021/7.jpg')
             }
           ],
@@ -626,7 +549,6 @@ import Video from '../components/video.vue'
                 "time": "2015年",
                 "word": "第一次开始木制DIY",
                 "label": ['木模','模型','飞机'],
-                "color": [0,1,2],
                 "img": require('@/assets/img/2015/5.jpg')
             },
             {
@@ -634,7 +556,6 @@ import Video from '../components/video.vue'
                 "time": "2016年6月11日",
                 "word": "第一次尝试做纸膜，通过上色让建筑更加逼真",
                 "label": ['纸板','建筑','凉亭'],
-                "color": [0,1,2],
                 "img": require('@/assets/img/2016/4.jpg')
             },
             {
@@ -642,7 +563,6 @@ import Video from '../components/video.vue'
                 "time": "2016年8月3日",
                 "word": "尝试通过简单的电路做一个DIY纸板压缩小风扇",
                 "label": ['纸板','模型','电路','风扇'],
-                "color": [0,1,2,3],
                 "img": require('@/assets/img/2016/7.jpg')
             },
             {
@@ -650,7 +570,6 @@ import Video from '../components/video.vue'
                 "time": "2016年9月1日",
                 "word": "DIY一个御膳房，此时对摩登城市极为感兴趣，想通过纸模打造一个古风城镇。",
                 "label": ['纸板','模型','古风','御膳房'],
-                "color": [0,1,2,3],
                 "img": require('@/assets/img/2016/9.jpg')
             },
             {
@@ -658,7 +577,6 @@ import Video from '../components/video.vue'
                 "time": "2016年9月",
                 "word": "尝试做一把可以发射纸弹的手枪，在现实中体验射击的感觉。",
                 "label": ['纸板','设计原理','手枪'],
-                "color": [0,1,2],
                 "img": require('@/assets/img/2016/10.jpg')
             },
             {
@@ -666,7 +584,6 @@ import Video from '../components/video.vue'
                 "time": "2016年9月28日",
                 "word": "尝试做一盘一直想做的意大利面，品尝一下自己的手艺。",
                 "label": ['烹饪','意面'],
-                "color": [0,1],
                 "img": require('@/assets/img/2016/12.jpg')
             },
             {
@@ -674,7 +591,6 @@ import Video from '../components/video.vue'
                 "time": "2017年8月",
                 "word": "在楚乔传中非常喜欢宇文玥的弓弩，于是也做了一把，同样也体验到射击的感觉。",
                 "label": ['纸板','设计原理','弓弩'],
-                "color": [0,1,2],
                 "img": require('@/assets/img/2017/6.jpg')
             },
             {
@@ -682,7 +598,6 @@ import Video from '../components/video.vue'
                 "time": "2017年8月",
                 "word": "考虑到弓弩的弹射系数是固定的，尝试做一个可自由控制弹力的弓",
                 "label": ['纸板','设计原理','弓'],
-                "color": [0,1,2],
                 "img": require('@/assets/img/2017/7.jpg')
             },
             {
@@ -690,7 +605,6 @@ import Video from '../components/video.vue'
                 "time": "2017年8月24日",
                 "word": "尝试自己下厨做炒饭",
                 "label": ['烹饪','炒饭'],
-                "color": [0,1],
                 "img": require('@/assets/img/2017/8.jpg')
             },
             {
@@ -698,7 +612,6 @@ import Video from '../components/video.vue'
                 "time": "2017年8月25日",
                 "word": "尝试自己下厨做炒饭",
                 "label": ['烹饪','炒饭'],
-                "color": [0,1],
                 "img": require('@/assets/img/2017/9.jpg')
             },
             {
@@ -706,7 +619,6 @@ import Video from '../components/video.vue'
                 "time": "2017年8月26日",
                 "word": "尝试自己下厨做炒饭",
                 "label": ['烹饪','炒饭'],
-                "color": [0,1],
                 "img": require('@/assets/img/2017/10.jpg')
             },
             {
@@ -714,7 +626,6 @@ import Video from '../components/video.vue'
                 "time": "2017年8月28日",
                 "word": "尝试自己下厨做炒饭",
                 "label": ['烹饪','炒饭'],
-                "color": [0,1],
                 "img": require('@/assets/img/2017/11.jpg')
             },
             {
@@ -722,7 +633,6 @@ import Video from '../components/video.vue'
                 "time": "2017年8月29日",
                 "word": "尝试自己下厨做炒饭",
                 "label": ['烹饪','炒饭'],
-                "color": [0,1],
                 "img": require('@/assets/img/2017/12.jpg')
             },
             {
@@ -730,7 +640,6 @@ import Video from '../components/video.vue'
                 "time": "2018年2月12日",
                 "word": "尝试自己下厨做炒饭",
                 "label": ['烹饪','炒饭'],
-                "color": [0,1],
                 "img": require('@/assets/img/2018/1.jpg')
             },
             {
@@ -738,7 +647,6 @@ import Video from '../components/video.vue'
                 "time": "2018年2月14日",
                 "word": "尝试做一款螺旋式的意大利面",
                 "label": ['烹饪','意面'],
-                "color": [0,1],
                 "img": require('@/assets/img/2018/2.jpg')
             },
             {
@@ -746,7 +654,6 @@ import Video from '../components/video.vue'
                 "time": "2018年4月6日",
                 "word": "尝试做一支双头可写的水铅笔",
                 "label": ['纸板','水笔','铅笔'],
-                "color": [0,1,2],
                 "img": require('@/assets/img/2018/4.jpg')
             },
             {
@@ -754,7 +661,6 @@ import Video from '../components/video.vue'
                 "time": "2018年4月6日",
                 "word": "在原有第一代的小风扇进行压缩处理，变得更小巧",
                 "label": ['纸板','电路','风扇'],
-                "color": [0,1,2],
                 "img": require('@/assets/img/2018/5.jpg')
             },
             {
@@ -762,7 +668,6 @@ import Video from '../components/video.vue'
                 "time": "2018年9月3日",
                 "word": "这是做的比较好吃的一份海鲜番茄意大利面",
                 "label": ['烹饪','意面'],
-                "color": [0,1],
                 "img": require('@/assets/img/2018/6.jpg')
             },
             {
@@ -770,7 +675,6 @@ import Video from '../components/video.vue'
                 "time": "2018年9月20日",
                 "word": "在原有的第一代弓弩上添加比例较多的木头，稳定性提升了很多。",
                 "label": ['纸板','木板','设计原理','弓弩'],
-                "color": [0,1,2,3],
                 "img": require('@/assets/img/2018/8.jpg')
             },
             {
@@ -778,7 +682,6 @@ import Video from '../components/video.vue'
                 "time": "2019年7月26日",
                 "word": "对科技DIY逐渐产生浓厚兴趣，尝试制作一个纸板蓝牙音箱。",
                 "label": ['纸板','电路','设计原理','音箱'],
-                "color": [0,1,2,3],
                 "img": require('@/assets/img/2019/2.jpg')
             },
             {
@@ -786,7 +689,6 @@ import Video from '../components/video.vue'
                 "time": "2019年7月31日",
                 "word": "在接触了arduino开发板后，了解到机械臂带来的科技感，于是自学了arduino语言，做出了一台纸板机械臂。",
                 "label": ['纸板','电路','编程','机械臂'],
-                "color": [0,1,2,3],
                 "img": require('@/assets/img/2019/3.jpg')
             },
             {
@@ -794,7 +696,6 @@ import Video from '../components/video.vue'
                 "time": "2019年8月7日",
                 "word": "今年的巅峰之作，尝试做一台可打印的3D打印机，自学arduino语言和C语言，设计打印机雏形，根据一些零散的图来完成打印机的整机设计，组装，开源代码调试。",
                 "label": ['木板','电路','编程','设计原理','3D'],
-                "color": [0,1,2,3,4,5],
                 "img": require('@/assets/img/2019/4.jpg')
             },
             {
@@ -802,7 +703,6 @@ import Video from '../components/video.vue'
                 "time": "2019年9月20日",
                 "word": "在第一版机械臂设计中，通过跟换制作的材料，运动的稳定性提升了，加上了自学算法的导入，能实现机械臂的自学运动。",
                 "label": ['塑料','电路','编程','机械臂'],
-                "color": [0,1,2,3],
                 "img": require('@/assets/img/2019/9.jpg')
             },
             {
@@ -810,7 +710,6 @@ import Video from '../components/video.vue'
                 "time": "2019年10月2日",
                 "word": "根据上一台3D打印机存在的问题，进行多方面的调整设计，改变原有的框架，调整了代码的参数，打印机的稳定性及打印精度有了很大的提升。",
                 "label": ['木板','电路','编程','设计原理','3D'],
-                "color": [0,1,2,3,4,5],
                 "img": require('@/assets/img/2019/10.jpg')
             },
             {
@@ -818,7 +717,6 @@ import Video from '../components/video.vue'
                 "time": "2019年11月19日",
                 "word": "根据网上一些迷你打印机的制作视频，尝试做一台迷你的手写打印机",
                 "label": ['木板','电路','编程','设计原理','写字机'],
-                "color": [0,1,2,3,4,5],
                 "img": require('@/assets/img/2019/14.jpg')
             },
             {
@@ -826,7 +724,6 @@ import Video from '../components/video.vue'
                 "time": "2020年2月12日",
                 "word": "网上一个牛人可以通过一根毛线弹出一首歌，我尝试用几根风筝线做一个小古筝。",
                 "label": ['木板','创意','古筝'],
-                "color": [0,1,2],
                 "img": require('@/assets/img/2020/1.jpg')
             },
             {
@@ -834,7 +731,6 @@ import Video from '../components/video.vue'
                 "time": "2020年2月15日",
                 "word": "原有的纸板沙鹰射程有限，现在采用木制的和更换成弹簧，弹力明显提高很多。",
                 "label": ['木制','创意','小枪'],
-                "color": [0,1,2],
                 "img": require('@/assets/img/2020/2.jpg')
             },
             {
@@ -842,7 +738,6 @@ import Video from '../components/video.vue'
                 "time": "2020年4月19日",
                 "word": "在第一代小古筝上画出一幅墨梅图，显得更有诗意的韵味。",
                 "label": ['木制','手绘','创意','古筝'],
-                "color": [0,1,2,3],
                 "img": require('@/assets/img/2020/6.jpg')
             },
             {
@@ -850,7 +745,6 @@ import Video from '../components/video.vue'
                 "time": "2020年6月9日",
                 "word": "经过前两代的改进与完善，第三代机械臂整合了更多的功能，运行起来更有科技感了。",
                 "label": ['木制','编程','设计原理','流水灯','机械臂'],
-                "color": [0,1,2,3,4],
                 "img": require('@/assets/img/2020/7.jpg')
             },
             {
@@ -858,7 +752,6 @@ import Video from '../components/video.vue'
                 "time": "2021年8月16日",
                 "word": "之前一直觉得单个喇叭的音箱声音不够大，现在加多一个喇叭，画上一些图案，更加好看了。",
                 "label": ['木制','绘画','创意设计','音箱'],
-                "color": [0,1,2,3],
                 "img": require('@/assets/img/2021/8.jpg')
             },
             {
@@ -866,7 +759,6 @@ import Video from '../components/video.vue'
                 "time": "2021年8月29日",
                 "word": "在宿舍里体验在家做蛋炒饭的感觉，口感虽没有之前的好，但更有创意了。",
                 "label": ['烹饪','炒饭'],
-                "color": [0,1],
                 "img": require('@/assets/img/2021/9.jpg')
             },
             {
@@ -874,7 +766,6 @@ import Video from '../components/video.vue'
                 "time": "2021年8月29日",
                 "word": "在宿舍体验在家做意大利面的感觉，口感比之前更好一些，有些许的进步。",
                 "label": ['烹饪','意大利面'],
-                "color": [0,1],
                 "img": require('@/assets/img/2021/10.jpg')
             }
           ],
