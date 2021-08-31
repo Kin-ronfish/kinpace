@@ -16,27 +16,6 @@
                     </div>
                     <div class="a1 col-md-8 column animated fadeIn">
                         <el-button class="btn" type="button" size="mini" @click="reset">重置</el-button>
-                        <!-- 列表分页 -->
-                        <div class="animated fadeInUp text-center">
-                            <div v-if="width < 768">
-                                <el-pagination
-                                    @current-change="handleCurrentChange"
-                                    background
-                                    :page-size="4"
-                                    layout="prev, next"
-                                    :total="list.length">
-                                </el-pagination>
-                            </div>
-                            <div v-else style="margin-top:-30px;">
-                                <el-pagination
-                                    @current-change="handleCurrentChange"
-                                    background
-                                    :page-size="4"
-                                    layout="prev, pager, next"
-                                    :total="list.length">
-                                </el-pagination>
-                            </div>
-                        </div>
                         <div class="conbox" v-for="(item,index) in pageList" :key="item.key">
                             <div class="box">
                                 <div class="content">
@@ -50,7 +29,7 @@
                             </div>
                             <div class="box_title">
                                 <div>
-                                    <h3 style="font-family:'楷体';font-weight:blod;margin-top:0;">{{item.value}}</h3>
+                                    <div class="work_title">{{item.value}}</div>
                                 </div>
                                 <div>
                                     <span class="label" :class="'label-' + color[index]" v-for="(value, index) in item.label" :key="index">
@@ -135,6 +114,11 @@
                 })
             },
             handleCurrentChange(val) {
+                let height = document.getElementById('Home').offsetTop
+                window.scrollTo({ 
+                    top: height+20, 
+                    behavior: "smooth" 
+                })
                 this.pageList = this.list.slice(val * 4 - 4, val * 4)
             },
             download(index) {
@@ -167,9 +151,28 @@
     .time,
     .timeList,
     .font,
-    .btn,
-    .icon {
+    .btn {
         display: none;
+    }
+    .word {
+        color: #aaa;
+        font-size: 15px;
+    }
+    .work_title {
+        font-family:'楷体';
+        font-weight: blod;
+        font-size: 20px;
+    }
+}
+@media (min-width:768px) {
+    .word {
+        color: #aaa;
+        font-size: 20px;
+    }
+    .work_title {
+        font-family:'楷体';
+        font-weight: blod;
+        font-size: 30px;
     }
 }
 .paint {
@@ -234,10 +237,7 @@
     display: flex;
     align-items: center;
 }
-.word {
-    color: #aaa;
-    font-size: 20px;
-}
+
 /** 作品时间表 */
 .timeList {
     height: 400px;

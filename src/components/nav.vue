@@ -21,20 +21,23 @@
             :visible.sync="drawer"
             :size="size"
             direction="ltr"
+            :withHeader="false"
             :show-close="false">
-            <div class="content">
-                <el-image class="headImg aminated rotateIn a1" :src="require('../assets/head.jpg')"></el-image>
-                <div class="word aminated rotateInUpLeft a2">Kinron</div>
-            </div>
-            <div class="word_box">
-                <div class="quto a3 aminated fadeInUp">
-                    微笑面对生活，生活基于甘甜。
+            <div class="bg0">
+                <div class="content">
+                    <el-image class="headImg aminated rotateIn a1" :src="require('../assets/head.jpg')"></el-image>
+                    <div class="word aminated rotateInUpLeft a2">Kinron</div>
                 </div>
-                <div class="quto a4 aminated fadeInUp">
-                    生活就像一本无字之书，学习让书里的内容更加充实，努力让内容更加精彩。
-                </div>
-                <div class="quto a5 aminated fadeInUp">
-                    将美好的时光化作真实可见的东西，每当拿起它时，曾经为此的努力依然历历在目。
+                <div class="word_box">
+                    <div class="quto a3 aminated fadeInUp">
+                        微笑面对生活，生活给予甘甜。
+                    </div>
+                    <div class="quto a4 aminated fadeInUp">
+                        生活就像一本无字之书，学习让书里的内容更加充实，努力让内容更加精彩。
+                    </div>
+                    <div class="quto a5 aminated fadeInUp">
+                        将美好的时光化作真实可见的东西，每当拿起它时，曾经为此的努力依然历历在目。
+                    </div>
                 </div>
             </div>
         </el-drawer>
@@ -53,13 +56,12 @@ export default {
     },
     created(){
         if(window.innerWidth < 768) {
-            this.size = '45%'
+            this.size = '60%'
         }
     },
     methods: {
         setFlag(index) {
             let height = document.getElementById('Home').offsetTop
-            console.log(height)
             window.scrollTo({ 
                 top: height-50, 
                 behavior: "smooth" 
@@ -82,18 +84,25 @@ export default {
         padding-left: 35px;
     }
     .headImg {
+        margin-top: 80px;
         width: 60px;
         height: 60px;
         border-radius: 50%;
         background-color: rgb(219, 221, 236);
         border: 2px solid #fff;
         box-shadow: 3px 3px 5px rgb(204, 201, 201);
-        transition-duration: 1s;
+        transition-duration: 500ms;
     }
     .headImg:hover {
         width: 50px;
         height: 50px;
-        transition-duration: 1s;
+        transition-duration: 500ms;
+    }
+    .quto {
+        color: #ccc;
+        font-family: '楷体';
+        font-size: 14px;
+        text-indent: 30px;
     }
 }
 @media (min-width: 768px) {
@@ -101,19 +110,26 @@ export default {
         padding-right: 50px;
     }
     .headImg {
+        margin-top: 80px;
         width: 100px;
         height: 100px;
         border-radius: 50%;
         background-color: rgb(219, 221, 236);
         border: 5px solid #fff;
         box-shadow: 3px 3px 5px rgb(204, 201, 201);
-        transition-duration: 1s;
+        transition-duration: 500ms;
     }
     .headImg:hover {
-        width: 70px;
-        height: 70px;
+        width: 90px;
+        height: 90px;
         transform: scale(1.1);
-        transition-duration: 1s;
+        transition-duration: 500ms;
+    }
+    .quto {
+        color: #ccc;
+        font-family: '楷体';
+        font-size: 18px;
+        text-indent: 35px;
     }
 }
 .IconTitle {
@@ -144,7 +160,16 @@ a {
 .bg {
     background: rgb(54, 54, 54);
 }
-
+.bg0 {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url('../assets/img/bg0.jpg');
+    background-position: center;
+    background-size: cover;
+}
 .content {
     display: flex;
     align-items: center;
@@ -154,10 +179,11 @@ a {
 .word {
     font-size:20px;
     margin-top:10px;
+    color: #eee;
 }
 .a1 {
-    animation-delay: 500ms;
-    animation-duration: 1500ms;
+    animation-delay: 300ms;
+    animation-duration: 1300ms;
 }
 .a2 {
     animation-delay: 1s;
@@ -174,10 +200,5 @@ a {
 .word_box {
     padding: 5px 20px;
 }
-.quto {
-    color: #bbb;
-    font-family: '楷体';
-    font-size: 18px;
-    text-indent: 35px;
-}
+
 </style>
