@@ -48,7 +48,7 @@
 export default {
     data() {
         return {
-            titleList: ['Paint', 'Diy', 'Video'],
+            titleList: ['Paint', 'Diy', 'Video', 'TimeLine'],
             pathList: ['/', '/paint', '/diy'],
             drawer: false,
             size: '30%'
@@ -76,6 +76,10 @@ export default {
 </script>
 
 <style scoped>
+@font-face {
+    font-family: myfont;
+    src: url('../assets/font/CHOPS.TTF');
+}
 /**
 * 手机相应样式
 */
@@ -90,7 +94,7 @@ export default {
         border-radius: 50%;
         background-color: rgb(219, 221, 236);
         border: 2px solid #fff;
-        box-shadow: 3px 3px 5px rgb(204, 201, 201);
+        box-shadow: 2px 2px 3px rgb(204, 201, 201);
         transition-duration: 500ms;
     }
     .headImg:hover {
@@ -99,7 +103,7 @@ export default {
         transition-duration: 500ms;
     }
     .quto {
-        color: #ccc;
+        color: #ddd;
         font-family: '楷体';
         font-size: 14px;
         text-indent: 30px;
@@ -126,19 +130,20 @@ export default {
         transition-duration: 500ms;
     }
     .quto {
-        color: #ccc;
+        color: #ddd;
         font-family: '楷体';
         font-size: 18px;
         text-indent: 35px;
     }
 }
 .IconTitle {
-    font-size: 20px;
+    font-size: 25px;
+    font-family: 'myfont';
     padding-left: 50px;
     transition-duration: 500ms;
 }
 .IconTitle:hover {
-    font-size: 23px;
+    font-size: 28px;
     transition-duration: 500ms;
     text-shadow: 1px 1px 3px rgb(199, 222, 241);
 }
@@ -149,7 +154,8 @@ a {
     color: rgb(202, 181, 213) !important;
 }
 .li-font {
-    font-size: 18px;
+    font-size: 20px;
+    font-family: 'myfont';
     transition-duration: 500ms;
 }
 .li-font:hover {
@@ -178,6 +184,7 @@ a {
 }
 .word {
     font-size:20px;
+    font-family: 'myfont';
     margin-top:10px;
     color: #eee;
 }
@@ -200,5 +207,4 @@ a {
 .word_box {
     padding: 5px 20px;
 }
-
 </style>

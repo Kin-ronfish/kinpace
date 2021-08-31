@@ -7,7 +7,7 @@
             <div class="col-md-12 column">
                 <div class="row clearfix">
                     <div class="a2 col-md-2 column animated fadeInLeft">
-                        <ul class="list-unstyled">
+                        <ul v-if="!model" class="list-unstyled">
                             <li class="time" v-for="(item,index) in timeList" :key="index" @click="setTime(item)">
                                 <span>{{item}}</span>
                             </li>
@@ -29,7 +29,10 @@
                             </div>
                             <div class="box_title">
                                 <div>
-                                    <div class="work_title">{{item.value}}</div>
+                                    <div class="work_title">
+                                        <div v-if="item.url" data-toggle="tooltip" title="视频原址" @click="openUrl(item.url)">{{item.value}}</div>
+                                        <div v-else data-toggle="tooltip" title="暂无视频">{{item.value}}</div>
+                                    </div>
                                 </div>
                                 <div>
                                     <span class="label" :class="'label-' + color[index]" v-for="(value, index) in item.label" :key="index">
@@ -37,12 +40,11 @@
                                     </span>
                                 </div>
                             </div>
-                            
                             <el-image :src=item.img :preview-src-list="[item.img]"></el-image>
                             <div class="word">此刻的想法：{{item.word}}</div>
                         </div>
                     </div>
-                    <div class="a3 col-md-2 column timeList animated fadeInRight">
+                    <div v-if="!model" class="a3 col-md-2 column timeList animated fadeInRight">
                         <ul class="list-unstyled workListName">
                             <li class="name" v-for="item in nameList" :key="item.key" @click="choseItem(item.value)">
                                 <span>{{item.value}}</span>
@@ -97,7 +99,8 @@
                     3: 'info',
                     4: 'warning',
                     5: 'danger'
-                }
+                },
+                model: false
             }
         },
         created(){
@@ -141,12 +144,19 @@
                 this.pageList = this.list.filter(item => {
                     return item.value === value
                 })
+            },
+            openUrl(url) {
+                window.open(url)
             }
         }
     }
 </script>
 
 <style scoped>
+@font-face {
+    font-family: myfont1;
+    src: url('../assets/font/renaissance.ttf');
+}
 @media (max-width: 768px) {
     .time,
     .timeList,
@@ -157,35 +167,44 @@
     .word {
         color: #aaa;
         font-size: 15px;
+        font-family: '楷体';
     }
     .work_title {
-        font-family:'楷体';
+        font-family: '楷体';
         font-weight: blod;
         font-size: 20px;
+        color: #000;
+        text-decoration: none;
     }
 }
 @media (min-width:768px) {
     .word {
         color: #aaa;
         font-size: 20px;
+        font-family: '楷体';
     }
     .work_title {
-        font-family:'楷体';
+        cursor: pointer;
+        font-family: '楷体';
         font-weight: blod;
         font-size: 30px;
+        color: #000;
+        text-decoration: none;
     }
 }
 .paint {
   color: #fff;
   background-color: rgb(77, 66, 93);
+  font-size: 25px;
   padding: 12px;
 }
 .time {
     text-align: center;
+    font-family: 'myfont1';
     color: rgb(132, 132, 238);
     transition-duration: 400ms;
     background-color: rgb(201, 217, 246);
-    font-size: 20px;
+    font-size: 25px;
     padding: 5px;
 }
 .time:hover {
@@ -197,7 +216,7 @@
 .name {
     text-align: center;
     background-color: rgb(182, 162, 216);
-    font-size: 20px;
+    font-size: 25px;
     padding: 5px;
 }
 .name:hover {
@@ -280,5 +299,9 @@
 }
 .label {
     margin-right: 5px;
+}
+.btnGroup {
+    display: flex;
+    justify-content: space-between;
 }
 </style>

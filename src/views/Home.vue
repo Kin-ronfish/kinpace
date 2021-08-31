@@ -3,7 +3,7 @@
       <img class="bg" src="../assets/img/bg.jpg">
       <Nav :num="1" @setFlag="getFlag"/>
       <div class="container" style="background:rgba(221, 221, 221, 0.4);">
-        <Carousel />
+        <div v-if="componentKey != 3"><Carousel /></div>
         <div id="Home"></div>
         <Work
           :key="componentKey"
@@ -18,6 +18,7 @@
           :timeList="DiyTimeList"
           :list="DiyList" />
         <Video :key="componentKey" v-if="componentKey === 2" />
+        <time-line :key="componentKey" v-if="componentKey === 3" />
       </div>
       <div class="foot">MIT Licensed | Copyright © 2021-present Kinron</div>
       <el-backtop :bottom="50">
@@ -31,6 +32,7 @@ import Nav from '../components/nav.vue'
 import Carousel from '../components/carousel.vue'
 import Work from '../components/work.vue'
 import Video from '../components/video.vue'
+import TimeLine from '../components/timeLine.vue'
     export default {
       data() {
         return {
@@ -365,14 +367,16 @@ import Video from '../components/video.vue'
                 "time": "2018月9月6日",
                 "word": "第二次画雪碧，送给朋友的礼物，对比上一次有了很大的突破。",
                 "label": ['静物','上色','雪碧'],
-                "img": require('@/assets/img/2018/7.jpg')
+                "img": require('@/assets/img/2018/7.jpg'),
+                "url": 'https://www.bilibili.com/video/BV1ut411w7Wj'
             },
             {
                 "value": "手绘月饼",
                 "time": "2018月9月23日",
                 "word": "中秋佳节，需要有饼陪伴",
                 "label": ['静物','上色','月饼'],
-                "img": require('@/assets/img/2018/9.jpg')
+                "img": require('@/assets/img/2018/9.jpg'),
+                "url": 'https://user.qzone.qq.com/1415009447/main'
             },
             {
                 "value": "板绘建筑",
@@ -386,35 +390,40 @@ import Video from '../components/video.vue'
                 "time": "2019月8月25日",
                 "word": "萧炎云韵完美邂逅，在何时还能再次相遇，再次遇见或许就是在云兰宗上敌对的仇人。",
                 "label": ['人物','板绘','斗破苍穹'],
-                "img": require('@/assets/img/2019/5.jpg')
+                "img": require('@/assets/img/2019/5.jpg'),
+                "url": 'https://www.bilibili.com/video/BV1e4411z7bp'
             },
             {
                 "value": "板绘美杜莎",
                 "time": "2019月9月8日",
                 "word": "作为蛇人族不可逾越的一代女王，却有着一个双胞胎妹妹，因为蛇人族的家族规定，自己的妹妹在追捕中被一箭射死，经受失亲之痛。",
                 "label": ['人物','板绘','斗破苍穹'],
-                "img": require('@/assets/img/2019/6.jpg')
+                "img": require('@/assets/img/2019/6.jpg'),
+                "url": 'https://www.bilibili.com/video/BV1g4411r7vv'
             },
             {
                 "value": "板绘萧炎云韵",
                 "time": "2019月9月8日",
                 "word": "萧炎云韵完美邂逅，在何时还能再次相遇，再次遇见或许就是在云兰宗上敌对的仇人。",
                 "label": ['人物','板绘','斗破苍穹'],
-                "img": require('@/assets/img/2019/7.jpg')
+                "img": require('@/assets/img/2019/7.jpg'),
+                "url": 'https://www.bilibili.com/video/BV1e4411q7GX'
             },
             {
                 "value": "手绘月饼",
                 "time": "2019月9月20日",
                 "word": "今晚的中秋也再宿舍吃着月饼，画着月饼，用调试好的3D打印机打个冰皮月饼配着吃。",
                 "label": ['静物','上色','月饼'],
-                "img": require('@/assets/img/2019/8.jpg')
+                "img": require('@/assets/img/2019/8.jpg'),
+                "url": 'https://www.bilibili.com/video/BV1nJ411N73G'
             },
             {
                 "value": "手绘士力架",
                 "time": "2019月10月15日",
                 "word": "学习自己喜欢的画师也画个士力架，拍摄一个创意视频。",
                 "label": ['静物','上色','士力架'],
-                "img": require('@/assets/img/2019/11.jpg')
+                "img": require('@/assets/img/2019/11.jpg'),
+                "url": 'https://www.bilibili.com/video/BV1wE411y7Kz'
             },
             {
                 "value": "手绘一束花",
@@ -442,28 +451,32 @@ import Video from '../components/video.vue'
                 "time": "2020月3月25日",
                 "word": "来自百越一外柔内刚的女子，身世凄凉，一直受到夜幕使者的暗中操控。",
                 "label": ['人物','上色','焰灵姬','天行九歌'],
-                "img": require('@/assets/img/2020/4.jpg')
+                "img": require('@/assets/img/2020/4.jpg'),
+                "url": 'https://www.bilibili.com/video/BV1ie411x7Ui'
             },
             {
                 "value": "手绘阿尔卑斯",
                 "time": "2020月4月5日",
                 "word": "重新完善同学给予的任务，经过一段时间的绘画练习，这次的画面比上一次更细腻了。",
                 "label": ['静物','上色','糖果'],
-                "img": require('@/assets/img/2020/5.jpg')
+                "img": require('@/assets/img/2020/5.jpg'),
+                "url": 'https://www.bilibili.com/video/BV1bz411b7Jq'
             },
             {
                 "value": "手绘月饼",
                 "time": "2020月10月1日",
                 "word": "持续每年中秋的传统，画月饼，今年的中秋恰与国庆相遇，迎来双庆美满。",
                 "label": ['静物','上色','月饼'],
-                "img": require('@/assets/img/2020/8.jpg')
+                "img": require('@/assets/img/2020/8.jpg'),
+                "url": 'https://www.bilibili.com/video/BV19y4y1k7VW'
             },
             {
                 "value": "手绘蛋糕",
                 "time": "2020月10月13日",
                 "word": "尝试画一块静态糕点，透过屏幕感受它的甜。",
                 "label": ['静物','上色','蛋糕'],
-                "img": require('@/assets/img/2020/9.jpg')
+                "img": require('@/assets/img/2020/9.jpg'),
+                "url": 'https://www.bilibili.com/video/BV1dZ4y1V7nw'
             },
             {
                 "value": "手绘蛋糕",
@@ -475,21 +488,21 @@ import Video from '../components/video.vue'
             {
                 "value": "手绘海琴烟",
                 "time": "2020月11月26日",
-                "word": "送给师弟的礼，外表腼腆的他也喜欢绘画，在了解到他喜欢的漫画，画个海琴烟送给他作为他当组长的礼物。",
+                "word": "送给师弟的礼物，作为他担任组长的小礼物。",
                 "label": ['人物','上色','鬼刀'],
                 "img": require('@/assets/img/2020/11.jpg')
             },
             {
                 "value": "手绘吉他",
                 "time": "2020月11月26日",
-                "word": "送给师妹的礼物，充满娱乐气息的她喜欢弹吉他，画个吉他送给她作为她当组长的礼物。",
+                "word": "送给师妹的礼物，作为她担任组长的小礼物。",
                 "label": ['静物','上色','吉他'],
                 "img": require('@/assets/img/2020/12.jpg')
             },
             {
                 "value": "手绘笔记本电脑",
                 "time": "2020月11月27日",
-                "word": "送给师弟的礼物，热爱专研代码，画个电脑送给他作为他当组长的礼物。",
+                "word": "送给师弟的礼物，作为他担任组长的小礼物。",
                 "label": ['静物','上色','电脑'],
                 "img": require('@/assets/img/2020/13.jpg')
             },
@@ -533,14 +546,16 @@ import Video from '../components/video.vue'
                 "time": "2021月6月26日",
                 "word": "尝试向绘画大师一样画一包M&M糖果，效果有些差距，但比起第一次模仿他时的作品，还是由很大的进步。",
                 "label": ['静物','上色','糖果'],
-                "img": require('@/assets/img/2021/6.jpg')
+                "img": require('@/assets/img/2021/6.jpg'),
+                "url": 'https://www.bilibili.com/video/BV1Jf4y1b757'
             },
             {
                 "value": "华为手机",
                 "time": "2021月7月10日",
                 "word": "把自己的手机升级了新的系统，尝试以假乱真，最终还是被识破。",
                 "label": ['静物','上色','手机','华为'],
-                "img": require('@/assets/img/2021/7.jpg')
+                "img": require('@/assets/img/2021/7.jpg'),
+                "url": 'https://www.bilibili.com/video/BV1o64y147z2'
             }
           ],
           DiyList: [
@@ -682,42 +697,48 @@ import Video from '../components/video.vue'
                 "time": "2019年7月26日",
                 "word": "对科技DIY逐渐产生浓厚兴趣，尝试制作一个纸板蓝牙音箱。",
                 "label": ['纸板','电路','设计原理','音箱'],
-                "img": require('@/assets/img/2019/2.jpg')
+                "img": require('@/assets/img/2019/2.jpg'),
+                "url": 'https://www.bilibili.com/video/BV1P4411X7D2'
             },
             {
                 "value": "纸板机械臂",
                 "time": "2019年7月31日",
                 "word": "在接触了arduino开发板后，了解到机械臂带来的科技感，于是自学了arduino语言，做出了一台纸板机械臂。",
                 "label": ['纸板','电路','编程','机械臂'],
-                "img": require('@/assets/img/2019/3.jpg')
+                "img": require('@/assets/img/2019/3.jpg'),
+                "url": 'https://www.bilibili.com/video/BV1u4411Q78u'
             },
             {
                 "value": "3D打印机",
                 "time": "2019年8月7日",
                 "word": "今年的巅峰之作，尝试做一台可打印的3D打印机，自学arduino语言和C语言，设计打印机雏形，根据一些零散的图来完成打印机的整机设计，组装，开源代码调试。",
                 "label": ['木板','电路','编程','设计原理','3D'],
-                "img": require('@/assets/img/2019/4.jpg')
+                "img": require('@/assets/img/2019/4.jpg'),
+                "url": 'https://www.bilibili.com/video/BV1m4411U7jL'
             },
             {
                 "value": "塑料机械臂",
                 "time": "2019年9月20日",
                 "word": "在第一版机械臂设计中，通过跟换制作的材料，运动的稳定性提升了，加上了自学算法的导入，能实现机械臂的自学运动。",
                 "label": ['塑料','电路','编程','机械臂'],
-                "img": require('@/assets/img/2019/9.jpg')
+                "img": require('@/assets/img/2019/9.jpg'),
+                "url": 'https://www.bilibili.com/video/BV1dJ41137wQ'
             },
             {
                 "value": "3D打印机2",
                 "time": "2019年10月2日",
                 "word": "根据上一台3D打印机存在的问题，进行多方面的调整设计，改变原有的框架，调整了代码的参数，打印机的稳定性及打印精度有了很大的提升。",
                 "label": ['木板','电路','编程','设计原理','3D'],
-                "img": require('@/assets/img/2019/10.jpg')
+                "img": require('@/assets/img/2019/10.jpg'),
+                "url": 'https://www.bilibili.com/video/BV1JE411Q72P'
             },
             {
                 "value": "手写打印机",
                 "time": "2019年11月19日",
                 "word": "根据网上一些迷你打印机的制作视频，尝试做一台迷你的手写打印机",
                 "label": ['木板','电路','编程','设计原理','写字机'],
-                "img": require('@/assets/img/2019/14.jpg')
+                "img": require('@/assets/img/2019/14.jpg'),
+                "url": 'https://www.bilibili.com/video/BV1kJ41117kh'
             },
             {
                 "value": "小古筝",
@@ -738,14 +759,16 @@ import Video from '../components/video.vue'
                 "time": "2020年4月19日",
                 "word": "在第一代小古筝上画出一幅墨梅图，显得更有诗意的韵味。",
                 "label": ['木制','手绘','创意','古筝'],
-                "img": require('@/assets/img/2020/6.jpg')
+                "img": require('@/assets/img/2020/6.jpg'),
+                "url": 'https://www.bilibili.com/video/BV1be411s7jy'
             },
             {
                 "value": "木制机械臂",
                 "time": "2020年6月9日",
                 "word": "经过前两代的改进与完善，第三代机械臂整合了更多的功能，运行起来更有科技感了。",
                 "label": ['木制','编程','设计原理','流水灯','机械臂'],
-                "img": require('@/assets/img/2020/7.jpg')
+                "img": require('@/assets/img/2020/7.jpg'),
+                "url": 'https://www.bilibili.com/video/BV1Zz4y197B8'
             },
             {
                 "value": "第三代蓝牙音箱",
@@ -773,7 +796,7 @@ import Video from '../components/video.vue'
           loading: true
         }
       },
-      components: { Nav, Carousel, Work, Video },
+      components: { Nav, Carousel, Work, Video, TimeLine },
       methods: {
         getFlag(value) {
             this.componentKey = value
