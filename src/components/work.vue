@@ -170,12 +170,14 @@
         font-family: '楷体';
     }
     .work_title {
-        font-family: '楷体';
         font-weight: blod;
         font-size: 20px;
         color: #000;
         text-decoration: none;
     }
+    .box_title {
+        padding-bottom: 10px;
+    }   
 }
 @media (min-width:768px) {
     .word {
@@ -185,11 +187,14 @@
     }
     .work_title {
         cursor: pointer;
-        font-family: '楷体';
         font-weight: blod;
         font-size: 30px;
         color: #000;
         text-decoration: none;
+    }
+    .box_title {
+        display: flex;
+        justify-content: space-between;
     }
 }
 .paint {
@@ -204,7 +209,7 @@
     color: rgb(132, 132, 238);
     transition-duration: 400ms;
     background-color: rgb(201, 217, 246);
-    font-size: 25px;
+    font-size: 30px;
     padding: 5px;
 }
 .time:hover {
@@ -216,7 +221,7 @@
 .name {
     text-align: center;
     background-color: rgb(182, 162, 216);
-    font-size: 25px;
+    font-size: 18px;
     padding: 5px;
 }
 .name:hover {
@@ -292,10 +297,6 @@
 }
 .a4 {
     animation-delay: 2500ms;
-}
-.box_title {
-    display: flex;
-    justify-content: space-between;
 }
 .label {
     margin-right: 5px;

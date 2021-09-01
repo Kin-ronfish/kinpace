@@ -18,7 +18,12 @@
           :timeList="DiyTimeList"
           :list="DiyList" />
         <Video :key="componentKey" v-if="componentKey === 2" />
-        <time-line :key="componentKey" v-if="componentKey === 3" />
+        <time-line 
+            :key="componentKey" 
+            v-if="componentKey === 3" 
+            :list1="PaintTimeList" 
+            :workList="PaintList"
+            :diyList="DiyList" />
       </div>
       <div class="foot">MIT Licensed | Copyright © 2021-present Kinron</div>
       <el-backtop :bottom="50">

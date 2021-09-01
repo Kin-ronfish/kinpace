@@ -61,11 +61,14 @@ export default {
     },
     methods: {
         setFlag(index) {
-            let height = document.getElementById('Home').offsetTop
-            window.scrollTo({ 
-                top: height-50, 
-                behavior: "smooth" 
-            })
+            console.log(index)
+            if(index != 3){
+                let height = document.getElementById('Home').offsetTop
+                window.scrollTo({ 
+                    top: height-50, 
+                    behavior: "smooth" 
+                })
+            }
             this.$emit('setFlag',index)
         },
         person() {
@@ -159,7 +162,7 @@ a {
     transition-duration: 500ms;
 }
 .li-font:hover {
-    font-size: 19px;
+    font-size: 22px;
     background: rgba(161, 161, 161, 0.205);
     transition-duration: 500ms;
 }

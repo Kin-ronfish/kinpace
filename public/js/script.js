@@ -3,7 +3,7 @@
 
 var snowConfig = {
   color: [161 / 256, 197 / 256, 231 / 256],
-  count: 200,
+  count: 180,
   opacity: 0.6,
   density: 1 / 50
 };
