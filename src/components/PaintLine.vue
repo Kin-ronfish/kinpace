@@ -1,13 +1,13 @@
 <template>
-    <div style="height:1800px;">
+    <div style="height:1600px;">
         <h3 id="timeLine" class="text-center paint animated flipInX">
           TimeLine
         </h3>
         <div class="line"></div>
-        <div class="box" v-for="(item, index1) in allList" :key="index1">
+        <div class="box" v-for="(item, index1) in list" :key="index1">
             <div v-if="index1%2==0" class="left">
                 <div>
-                    <div class="item aminated fadeInUp" :style="aminte(index2)" v-for="(value, index2) in allWork" :key="index2">
+                    <div class="item aminated fadeInUp" :style="aminte(index2)" v-for="(value, index2) in workList" :key="index2">
                         <div v-if="value.time.includes(item)">{{value.value}}</div>
                     </div>
                 </div>
@@ -18,7 +18,7 @@
             <div v-if="index1%2!=0" class="right">
                 <div class="aminated fadeIn time" :style="amin(index1)">{{item}}</div>
                 <div>
-                    <div class="item aminated fadeInLeft" :style="aminte(index3)" v-for="(value, index3) in allWork" :key="index3">
+                    <div class="item aminated fadeInLeft" :style="aminte(index3)" v-for="(value, index3) in workList" :key="index3">
                         <div v-if="value.time.includes(item)">{{value.value}}</div>
                     </div>
                 </div>
@@ -30,23 +30,17 @@
 <script>
     export default {
         props: {
-            list1: Array,
-            workList: Array,
-            diyList: Array
+            list: Array,
+            workList: Array
         },
         data() {
             return {
                 num: 0,
-                id: '',
-                allList: [],
-                allWork: []
+                id: ''
             }
         },
         created() {
-            this.allList = this.list1
-            this.allWork = this.workList
             const height = window.pageYOffset
-            console.log(height)
             if (height!=0){
                 window.scrollTo({ 
                     top: 0, 
@@ -62,7 +56,6 @@
         watch: {
             num(newVal) {
                 const height = document.body.clientHeight
-                console.log(newVal, height)
                 if(newVal > height-500) {
                     clearInterval(this.id)
                 }
@@ -82,7 +75,7 @@
                         behavior: 'smooth'
                     })
                     this.num += 2
-                }, 30);
+                }, 50);
             }
         }
     }
@@ -94,7 +87,39 @@
         height: 1px;
     }
     100% {
-        height: 1550px;
+        height: 1350px;
+    }
+}
+@media (max-width:768px) {
+    .left {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+        color: #fff;
+        margin-right: 170px;
+        width: 150px;
+    }
+    .right {
+        display: flex;
+        justify-content: space-between;
+        color: #fff;
+        margin-left: 170px;
+        width: 150px;
+    }
+}
+@media (min-width:768px) {
+    .left {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+        color: #fff;
+        margin-right: 200px;
+    }
+    .right {
+        display: flex;
+        justify-content: space-between;
+        color: #fff;
+        margin-left: 200px;
     }
 }
 .box {
@@ -102,13 +127,6 @@
     display: flex;
     justify-content: center;
     width: 100%;
-}
-.left {
-    display: flex;
-    margin-top: 50px;
-    color: #fff;
-    text-align: right;
-    margin-right: 200px;
 }
 .line {
     position: absolute;
@@ -122,11 +140,6 @@
     width: 1px;
     height: 1px;
 }
-.right {
-    display: flex;
-    color: #fff;
-    margin-left: 200px;
-}
 .paint {
   color: #fff;
   background-color: rgb(77, 66, 93);
@@ -137,6 +150,6 @@
 }
 .item,
 .time {
-    margin: 0 10px;
+    margin: 0 5px;
 }
 </style>

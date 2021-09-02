@@ -3,7 +3,7 @@
       <img class="bg" src="../assets/img/bg.jpg">
       <Nav :num="1" @setFlag="getFlag"/>
       <div class="container" style="background:rgba(221, 221, 221, 0.4);">
-        <div v-if="componentKey != 3"><Carousel /></div>
+        <div v-if="componentKey != 3 && componentKey != 4"><Carousel /></div>
         <div id="Home"></div>
         <Work
           :key="componentKey"
@@ -18,12 +18,16 @@
           :timeList="DiyTimeList"
           :list="DiyList" />
         <Video :key="componentKey" v-if="componentKey === 2" />
-        <time-line 
+        <paint-line 
             :key="componentKey" 
             v-if="componentKey === 3" 
-            :list1="PaintTimeList" 
-            :workList="PaintList"
-            :diyList="DiyList" />
+            :list="PaintTimeList" 
+            :workList="PaintList" />
+        <diy-line 
+            :key="componentKey" 
+            v-if="componentKey === 4" 
+            :list="DiyTimeList" 
+            :workList="DiyList" />
       </div>
       <div class="foot">MIT Licensed | Copyright © 2021-present Kinron</div>
       <el-backtop :bottom="50">
@@ -37,7 +41,8 @@ import Nav from '../components/nav.vue'
 import Carousel from '../components/carousel.vue'
 import Work from '../components/work.vue'
 import Video from '../components/video.vue'
-import TimeLine from '../components/timeLine.vue'
+import PaintLine from '../components/PaintLine.vue'
+import DiyLine from '../components/DiyLine.vue'
     export default {
       data() {
         return {
@@ -801,7 +806,7 @@ import TimeLine from '../components/timeLine.vue'
           loading: true
         }
       },
-      components: { Nav, Carousel, Work, Video, TimeLine },
+      components: { Nav, Carousel, Work, Video, DiyLine, PaintLine },
       methods: {
         getFlag(value) {
             this.componentKey = value

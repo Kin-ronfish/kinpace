@@ -48,7 +48,7 @@
 export default {
     data() {
         return {
-            titleList: ['Paint', 'Diy', 'Video', 'TimeLine'],
+            titleList: ['Paint', 'Diy', 'Video', 'PaintLine', 'DiyLine'],
             pathList: ['/', '/paint', '/diy'],
             drawer: false,
             size: '30%'
