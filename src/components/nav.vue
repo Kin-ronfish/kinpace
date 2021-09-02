@@ -61,7 +61,6 @@ export default {
     },
     methods: {
         setFlag(index) {
-            console.log(index)
             if(index != 3){
                 let height = document.getElementById('Home').offsetTop
                 window.scrollTo({ 

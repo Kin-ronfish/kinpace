@@ -1,5 +1,5 @@
 <template>
-    <div style="height:1600px;">
+    <div style="height:1300px;">
         <h3 id="timeLine" class="text-center paint animated flipInX">
           TimeLine
         </h3>
@@ -7,7 +7,7 @@
         <div class="box" v-for="(item, index1) in list" :key="index1">
             <div v-if="index1%2==0" class="left">
                 <div>
-                    <div class="item aminated fadeInUp" :style="aminte(index2)" v-for="(value, index2) in workList" :key="index2">
+                    <div class="item aminated fadeInUp" :style="aminte(index2)" v-for="(value, index2) in nameList" :key="index2">
                         <div v-if="value.time.includes(item)">{{value.value}}</div>
                     </div>
                 </div>
@@ -18,7 +18,7 @@
             <div v-if="index1%2!=0" class="right">
                 <div class="aminated fadeIn time" :style="amin(index1)">{{item}}</div>
                 <div>
-                    <div class="item aminated fadeInLeft" :style="aminte(index3)" v-for="(value, index3) in workList" :key="index3">
+                    <div class="item aminated fadeInLeft" :style="aminte(index3)" v-for="(value, index3) in nameList" :key="index3">
                         <div v-if="value.time.includes(item)">{{value.value}}</div>
                     </div>
                 </div>
@@ -36,7 +36,9 @@
         data() {
             return {
                 num: 0,
-                id: ''
+                id: '',
+                nameList: [],
+                hash: {}
             }
         },
         created() {
@@ -47,11 +49,20 @@
                     behavior: "smooth" 
                 })
             }
+            this.workList.forEach(item => {
+                if (!this.hash[item.value]) {
+                    this.hash[item.value] = true
+                    this.nameList.push(item)
+                }
+            })
         },
         mounted() {
             setTimeout(() => {
                 this.scro()
             }, 3000);
+        },
+        beforeDestroy() {
+            clearInterval(this.id)
         },
         watch: {
             num(newVal) {
@@ -66,7 +77,7 @@
                 return `animation-delay: ${index+3}s;`
             },
             aminte(index) {
-                return `animation-delay: ${(index+1)*380}ms;`
+                return `animation-delay: ${(index+1)*460}ms;`
             },
             scro() {
                 this.id = setInterval(() => {
@@ -74,8 +85,8 @@
                         top: this.num,
                         behavior: 'smooth'
                     })
-                    this.num += 2
-                }, 50);
+                    this.num += 1
+                }, 35);
             }
         }
     }
@@ -87,7 +98,7 @@
         height: 1px;
     }
     100% {
-        height: 1350px;
+        height: 1100px;
     }
 }
 @media (max-width:768px) {

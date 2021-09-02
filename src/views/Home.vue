@@ -828,7 +828,7 @@ import DiyLine from '../components/DiyLine.vue'
     text-align: center;
     padding: 20px;
     background-color: rgba(240, 248, 255, 0.6);
-    margin-top: 20px;;
+    margin-top: 20px;
 }
 .note {
   color: #fff;
