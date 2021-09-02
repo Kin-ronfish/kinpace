@@ -1,5 +1,5 @@
 <template>
-    <div style="height:600px;">
+    <div style="height:900px;">
         <h3 id="timeLine" class="text-center paint animated flipInX">
           TimeLine
         </h3>
