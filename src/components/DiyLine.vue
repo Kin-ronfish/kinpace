@@ -1,5 +1,5 @@
 <template>
-    <div style="height:900px;">
+    <div :style="height">
         <h3 id="timeLine" class="text-center paint animated flipInX">
           TimeLine
         </h3>
@@ -38,7 +38,8 @@
                 num: 0,
                 id: '',
                 nameList: [],
-                hash: {}
+                hash: {},
+                height: ''
             }
         },
         created() {
@@ -55,6 +56,12 @@
                     this.nameList.push(item)
                 }
             })
+            const width = document.body.clientWidth
+            if(width>768) {
+                this.height = 'height:900px;'
+            }else {
+                this.height = 'height:700px;'
+            }
         },
         mounted() {
             setTimeout(() => {
@@ -67,9 +74,17 @@
         watch: {
             num(newVal) {
                 const height = document.body.clientHeight
-                if(newVal > height-500) {
-                    clearInterval(this.id)
+                const width = document.body.clientWidth
+                if(width>768) {
+                    if(newVal > height-900) {
+                        clearInterval(this.id)
+                    }
+                }else {
+                    if(newVal > height-650) {
+                        clearInterval(this.id)
+                    }
                 }
+                
             }
         },
         methods: {

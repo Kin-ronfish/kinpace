@@ -67,9 +67,17 @@
         watch: {
             num(newVal) {
                 const height = document.body.clientHeight
-                if(newVal > height-500) {
-                    clearInterval(this.id)
+                const width = document.body.clientWidth
+                if(width>768) {
+                    if(newVal > height-900) {
+                        clearInterval(this.id)
+                    }
+                }else {
+                    if(newVal > height-700) {
+                        clearInterval(this.id)
+                    }
                 }
+                
             }
         },
         methods: {
