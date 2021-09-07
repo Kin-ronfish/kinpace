@@ -85,7 +85,7 @@
                 return `animation-delay: ${index+3}s;`
             },
             aminte(index) {
-                return `animation-delay: ${(index+1)*460}ms;`
+                return `animation-delay: ${(index+1)*550}ms;`
             },
             scro() {
                 this.id = setInterval(() => {
@@ -94,7 +94,7 @@
                         behavior: 'smooth'
                     })
                     this.num += 1
-                }, 35);
+                }, 45);
             }
         }
     }
@@ -152,7 +152,7 @@
     top: 120px;
     left: 50%;
     border: 1px solid #ddd;
-    animation: timeline 24s;
+    animation: timeline 30s;
     animation-timing-function: linear;
     animation-delay: 1s;
     animation-fill-mode: forwards;
