@@ -25,7 +25,7 @@
             :show-close="false">
             <div class="bg0">
                 <div class="content">
-                    <el-image class="headImg aminated rotateIn a1" :src="require('../assets/head.jpg')"></el-image>
+                    <el-image class="headImg aminated rotateIn a1" :src="require('../assets/head.png')"></el-image>
                     <div class="word aminated rotateInUpLeft a2">Kinron</div>
                 </div>
                 <div class="word_box">

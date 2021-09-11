@@ -1,6 +1,7 @@
 <template>
     <div>
         <h3 class="text-center video animated flipInX">Video</h3>
+        <a class="url" href="https://www.bilibili.com/video/BV1fV411r7tA" target="_blank">十年作品原视频地址</a>
         <div class="a1 animated fadeInLeft" style="margin-top:30px;font-size:30px;">2011-2015年作品合辑</div>
         <div class="a1 animated fadeIn">
             <video style="width:100%;" controls>
@@ -16,6 +17,13 @@
     </div>
 </template>
 <style scoped>
+.url {
+    color: darkblue;
+    font-size: 20px;
+    font-weight: bolder;
+    display: block;
+    width: 200px;
+}
 .video {
   color: #fff;
   background-color: rgb(77, 66, 93);

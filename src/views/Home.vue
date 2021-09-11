@@ -29,7 +29,7 @@
             :list="DiyTimeList" 
             :workList="DiyList" />
       </div>
-      <div class="foot">MIT Licensed | Copyright © 2021-present Kinron</div>
+      <div class="foot">MIT Licensed | Copyright © 2011-present Kinron</div>
       <el-backtop :bottom="50">
           <div class="el-icon-arrow-up" :style="goTop"></div>
       </el-backtop>
@@ -88,7 +88,7 @@ import DiyLine from '../components/DiyLine.vue'
             {
                 "value": "霸气苍龙",
                 "time": "2013年",
-                "word": "--",
+                "word": "细节较为复杂的水笔雕刻。",
                 "label": ['动物','上色','吉祥物'],
                 "img": require('@/assets/img/2013/4.jpg')
             },
@@ -116,7 +116,7 @@ import DiyLine from '../components/DiyLine.vue'
             {
                 "value": "花花世界",
                 "time": "2013年4月",
-                "word": "欣赏花朵的美，来自大自然的清新。",
+                "word": "欣赏花朵的美，来至大自然的清新。",
                 "label": ['静物','上色','花朵'],
                 "img": require('@/assets/img/2013/8.jpg')
             },
@@ -130,245 +130,245 @@ import DiyLine from '../components/DiyLine.vue'
             {
                 "value": "盘曲的龙",
                 "time": "2013年4月",
-                "word": "--",
+                "word": "彩铅绘画练习。",
                 "label": ['动物','上色','吉祥物'],
                 "img": require('@/assets/img/2013/10.jpg')
             },
             {
                 "value": "七彩凤凰",
                 "time": "2013年4月",
-                "word": "--",
+                "word": "彩铅绘画练习。",
                 "label": ['动物','上色','吉祥物'],
                 "img": require('@/assets/img/2013/11.jpg')
             },
             {
                 "value": "麒麟腾云驾雾",
                 "time": "2013年4月",
-                "word": "--",
+                "word": "彩铅绘画练习。",
                 "label": ['动物','上色','吉祥物'],
                 "img": require('@/assets/img/2013/12.jpg')
             },
             {
                 "value": "热火标志",
                 "time": "2014年",
-                "word": "--",
+                "word": "简单画画。",
                 "label": ['静物','上色','标志'],
                 "img": require('@/assets/img/2014/1.jpg')
             },
             {
                 "value": "火箭标志",
                 "time": "2014年",
-                "word": "--",
+                "word": "简单画画。",
                 "label": ['静物','上色','标志'],
                 "img": require('@/assets/img/2014/2.jpg')
             },
             {
                 "value": "树",
                 "time": "2014年",
-                "word": "--",
+                "word": "户外写生记录。",
                 "label": ['景物','素描','植物'],
                 "img": require('@/assets/img/2014/3.jpg')
             },
             {
                 "value": "树",
                 "time": "2014年",
-                "word": "--",
+                "word": "户外写生记录。",
                 "label": ['景物','素描','植物'],
                 "img": require('@/assets/img/2014/4.jpg')
             },
             {
                 "value": "树",
                 "time": "2014年",
-                "word": "--",
+                "word": "户外写生记录。",
                 "label": ['景物','素描','植物'],
                 "img": require('@/assets/img/2014/5.jpg')
             },
             {
                 "value": "客厅盆栽",
                 "time": "2014年",
-                "word": "--",
+                "word": "客厅最为亮眼的盆栽。",
                 "label": ['静物','上色','盆栽'],
                 "img": require('@/assets/img/2014/6.jpg')
             },
             {
                 "value": "嫦娥奔月",
                 "time": "2014年",
-                "word": "中秋画嫦娥",
+                "word": "中秋画嫦娥。",
                 "label": ['人物','上色','嫦娥'],
                 "img": require('@/assets/img/2014/7.jpg')
             },
             {
                 "value": "杜甫",
                 "time": "2014年",
-                "word": "--",
+                "word": "一时兴起的绘画表达。",
                 "label": ['人物','素描','诗人'],
                 "img": require('@/assets/img/2014/8.jpg')
             },
             {
                 "value": "茶具试绘",
                 "time": "2014年",
-                "word": "--",
+                "word": "为美术课上的任务做一个小小的练习准备。",
                 "label": ['静物','上色','茶具'],
                 "img": require('@/assets/img/2014/9.jpg')
             },
             {
                 "value": "茶具套装",
                 "time": "2014年",
-                "word": "--",
+                "word": "在美术课比较有创意的一幅作品。",
                 "label": ['静物','上色','茶具'],
                 "img": require('@/assets/img/2014/10.jpg')
             },
             {
                 "value": "双花",
                 "time": "2015年",
-                "word": "开始步入真实世界",
+                "word": "开始步入真实世界，练习花朵的绘制。",
                 "label": ['静物','上色','花朵'],
                 "img": require('@/assets/img/2015/1.jpg')
             },
             {
                 "value": "玫瑰花",
                 "time": "2015年",
-                "word": "母亲节送给妈妈的一朵花",
+                "word": "母亲节送给妈妈的一朵花。",
                 "label": ['静物','上色','花朵'],
                 "img": require('@/assets/img/2015/2.jpg')
             },
             {
                 "value": "手绘雪碧",
                 "time": "2015年",
-                "word": "第一次画雪碧",
+                "word": "第一次画雪碧，颜色过度有些许界限分明。",
                 "label": ['静物','上色','雪碧'],
                 "img": require('@/assets/img/2015/3.jpg')
             },
             {
                 "value": "手绘可乐",
                 "time": "2015年",
-                "word": "肥宅快乐水，激爽每一天",
+                "word": "肥宅快乐水，激爽每一天。",
                 "label": ['静物','上色','可乐'],
                 "img": require('@/assets/img/2015/4.jpg')
             },
             {
                 "value": "山水画",
                 "time": "2015年3月6日",
-                "word": "--",
+                "word": "风景之美，在于它能带来生机。",
                 "label": ['景物','上色','风景'],
                 "img": require('@/assets/img/2015/6.jpg')
             },
             {
                 "value": "湖边",
                 "time": "2016月3月20日",
-                "word": "学校艺术节第一幅作品，一等奖",
+                "word": "学校艺术节第一幅作品，喜获一等奖。",
                 "label": ['景物','上色','风景'],
                 "img": require('@/assets/img/2016/1.jpg')
             },
             {
                 "value": "立体魔方",
                 "time": "2016月5月8日",
-                "word": "尝试画三维立体魔方",
+                "word": "尝试画三维立体魔方。",
                 "label": ['静物','上色','魔方'],
                 "img": require('@/assets/img/2016/2.jpg')
             },
             {
                 "value": "立体魔方",
                 "time": "2016月5月9日",
-                "word": "尝试画三维立体魔方",
+                "word": "尝试画三维立体魔方。",
                 "label": ['静物','上色','魔方'],
                 "img": require('@/assets/img/2016/3.jpg')
             },
             {
                 "value": "手绘西红柿",
                 "time": "2016月7月",
-                "word": "--",
+                "word": "今天妈妈买的西红柿好红，拿一个作为绘画对象。",
                 "label": ['静物','上色','西红柿'],
                 "img": require('@/assets/img/2016/5.jpg')
             },
             {
                 "value": "手绘德芙巧克力",
                 "time": "2016月8月2日",
-                "word": "--",
+                "word": "水粉画练习的进阶，逐渐迈向食物方面绘画。",
                 "label": ['静物','上色','巧克力'],
                 "img": require('@/assets/img/2016/6.jpg')
             },
             {
                 "value": "手绘汉堡",
                 "time": "2016月8月15日",
-                "word": "吃肯德基留下的记录",
+                "word": "吃肯德基留下的记录。",
                 "label": ['静物','上色','汉堡'],
                 "img": require('@/assets/img/2016/8.jpg')
             },
             {
                 "value": "天地壹号",
                 "time": "2016月9月16日",
-                "word": "中秋晚来一罐天地壹号",
+                "word": "中秋晚来一罐天地壹号。",
                 "label": ['静物','上色','天地壹号'],
                 "img": require('@/assets/img/2016/11.jpg')
             },
             {
                 "value": "喜迎国庆手抄报",
                 "time": "2016月10月1日",
-                "word": "在班级作品分享中受到团支部老师的表扬",
+                "word": "在班级作品分享中受到团支部老师的表扬。",
                 "label": ['静物','上色','国庆'],
                 "img": require('@/assets/img/2016/13.jpg')
             },
             {
                 "value": "手绘曼妥思",
                 "time": "2016月12月6日",
-                "word": "年底送给自己一条真实的曼妥思，来年我会更加努力",
+                "word": "年底送给自己一条真实的曼妥思，来年我会更加努力。",
                 "label": ['静物','上色','糖果'],
                 "img": require('@/assets/img/2016/14.jpg')
             },
             {
                 "value": "手绘好丽友派",
                 "time": "2017月2月4日",
-                "word": "--",
+                "word": "来年的第一幅食物画，再续前程。",
                 "label": ['静物','上色','蛋糕'],
                 "img": require('@/assets/img/2017/1.jpg')
             },
             {
                 "value": "海边",
                 "time": "2017月3月25日",
-                "word": "学校艺术绝第二幅作品，一等奖",
+                "word": "学校艺术节第二幅作品，喜获一等奖。",
                 "label": ['景物','上色','风景'],
                 "img": require('@/assets/img/2017/2.jpg')
             },
             {
                 "value": "德芙巧克力",
                 "time": "2017月5月13日",
-                "word": "--",
+                "word": "画一个巧克力外壳，漂亮外表，内有玄机。",
                 "label": ['静物','上色','巧克力'],
                 "img": require('@/assets/img/2017/4.jpg')
             },
             {
                 "value": "玫瑰花",
                 "time": "2017月7月12日",
-                "word": "母亲节送给妈妈的一束花",
+                "word": "母亲节送给妈妈的一束花。",
                 "label": ['静物','上色','花朵'],
                 "img": require('@/assets/img/2017/5.jpg')
             },
             {
                 "value": "手绘月饼",
                 "time": "2017月10月1日",
-                "word": "今年中秋画个月饼留个回忆",
+                "word": "今年中秋画个月饼留个回忆。",
                 "label": ['静物','上色','月饼'],
                 "img": require('@/assets/img/2017/13.jpg')
             },
             {
                 "value": "手绘蛋黄派",
                 "time": "2017月10月8日",
-                "word": "--",
+                "word": "趁着此事绘画的感觉还在，继续再画一个蛋黄派。",
                 "label": ['静物','上色','蛋糕'],
                 "img": require('@/assets/img/2017/14.jpg')
             },
             {
                 "value": "手绘阿尔卑斯",
                 "time": "2017月12月31日",
-                "word": "同学给的小礼物，也是小任务",
+                "word": "同学给的小礼物，也是个小任务。",
                 "label": ['静物','上色','糖果'],
                 "img": require('@/assets/img/2017/15.jpg')
             },
             {
                 "value": "手绘维他柠檬茶",
                 "time": "2018月2月25日",
-                "word": "在罐装饮料上有了熟悉的基础，尝试画一罐柠檬茶",
+                "word": "在罐装饮料上有了熟悉的基础，尝试画一罐柠檬茶。",
                 "label": ['静物','上色','柠檬茶'],
                 "img": require('@/assets/img/2018/3.jpg')
             },
@@ -383,7 +383,7 @@ import DiyLine from '../components/DiyLine.vue'
             {
                 "value": "手绘月饼",
                 "time": "2018月9月23日",
-                "word": "中秋佳节，需要有饼陪伴",
+                "word": "中秋佳节，需要有饼陪伴。",
                 "label": ['静物','上色','月饼'],
                 "img": require('@/assets/img/2018/9.jpg'),
                 "url": 'https://user.qzone.qq.com/1415009447/main'
@@ -422,7 +422,7 @@ import DiyLine from '../components/DiyLine.vue'
             {
                 "value": "手绘月饼",
                 "time": "2019月9月20日",
-                "word": "今晚的中秋也再宿舍吃着月饼，画着月饼，用调试好的3D打印机打个冰皮月饼配着吃。",
+                "word": "今晚的中秋也在宿舍吃着月饼画月饼，用调试好的3D打印机打个冰皮月饼配着吃。",
                 "label": ['静物','上色','月饼'],
                 "img": require('@/assets/img/2019/8.jpg'),
                 "url": 'https://www.bilibili.com/video/BV1nJ411N73G'
@@ -430,7 +430,7 @@ import DiyLine from '../components/DiyLine.vue'
             {
                 "value": "手绘士力架",
                 "time": "2019月10月15日",
-                "word": "学习自己喜欢的画师也画个士力架，拍摄一个创意视频。",
+                "word": "学习自己喜欢的马斯洛画家一样也画个士力架，拍摄一个创意视频。",
                 "label": ['静物','上色','士力架'],
                 "img": require('@/assets/img/2019/11.jpg'),
                 "url": 'https://www.bilibili.com/video/BV1wE411y7Kz'
@@ -438,14 +438,14 @@ import DiyLine from '../components/DiyLine.vue'
             {
                 "value": "手绘一束花",
                 "time": "2019月11月3日",
-                "word": "画一束花作为送给师姐的毕业礼物。",
+                "word": "画一束花送给师姐作为毕业礼物。",
                 "label": ['静物','上色','花朵'],
                 "img": require('@/assets/img/2019/12.jpg')
             },
             {
                 "value": "手绘雪碧",
                 "time": "2019月11月10日",
-                "word": "第三次画雪碧，单独使用水溶性彩铅绘画，由于彩铅本身的特性不太适用此画，效果不如上一幅。",
+                "word": "第三次画雪碧，单独使用水溶性彩铅绘画，由于对彩铅的使用有些许生疏，效果不如上一幅。",
                 "label": ['静物','上色','雪碧'],
                 "img": require('@/assets/img/2019/13.jpg')
             },
@@ -483,7 +483,7 @@ import DiyLine from '../components/DiyLine.vue'
             {
                 "value": "手绘蛋糕",
                 "time": "2020月10月13日",
-                "word": "尝试画一块静态糕点，透过屏幕感受它的甜。",
+                "word": "尝试画一块蛋糕，透过屏幕感受它的甜。",
                 "label": ['静物','上色','蛋糕'],
                 "img": require('@/assets/img/2020/9.jpg'),
                 "url": 'https://www.bilibili.com/video/BV1dZ4y1V7nw'
@@ -491,7 +491,7 @@ import DiyLine from '../components/DiyLine.vue'
             {
                 "value": "手绘蛋糕",
                 "time": "2020月10月30日",
-                "word": "尝试画一块静态糕点，作为毕业的礼物送给自己，在实物中觉得最像的一幅。",
+                "word": "尝试画一块静态糕点，作为毕业的礼物送给自己，在实物中觉得较像的一幅。",
                 "label": ['静物','上色','蛋糕'],
                 "img": require('@/assets/img/2020/10.jpg')
             },
@@ -517,44 +517,37 @@ import DiyLine from '../components/DiyLine.vue'
                 "img": require('@/assets/img/2020/13.jpg')
             },
             {
-                "value": "女孩",
+                "value": "壁纸临摹",
                 "time": "2021月2月11日",
-                "word": "尝试画壁纸和上色，在人物比例协调上存在一定的出入，导致画面看起来有点变形。",
+                "word": "尝试画壁纸和上色，在人物比例协调上存在一定的出入，画面看起来有点变形。",
                 "label": ['人物','上色','壁纸'],
                 "img": require('@/assets/img/2021/1.jpg')
             },
             {
                 "value": "小哥",
                 "time": "2021月2月13日",
-                "word": "接受阿姐给我的一个小任务，尝试画一个动漫版的小哥，相对真实人物还是比较简单的。",
+                "word": "接受阿姐给我的一个小任务，尝试画一个动漫版的小哥，相比于真实人物临摹还是比较简单的。",
                 "label": ['人物','动漫','盗墓笔记'],
                 "img": require('@/assets/img/2021/2.jpg')
             },
             {
-                "value": "小物品",
-                "time": "2021月3月25日",
-                "word": "在公司休息时间，拿起笔画下桌子上的几个小物品，静物素描是绘画基础练习。",
-                "label": ['静物','素描'],
-                "img": require('@/assets/img/2021/3.jpg')
-            },
-            {
-                "value": "可爱女孩",
+                "value": "人物素描",
                 "time": "2021月3月27日",
-                "word": "细致素描尝试，试绘壁纸，在素描画中感觉比较好的一幅，但与壁纸仍存在一定差别。",
+                "word": "细致素描尝试，试绘壁纸，在素描画中感觉提升较为明显的一幅，但与原图仍存在一定差别。",
                 "label": ['人物','素描','壁纸'],
                 "img": require('@/assets/img/2021/4.jpg')
             },
             {
-                "value": "王一博",
+                "value": "人物素描",
                 "time": "2021月4月20日",
-                "word": "细致素描尝试，试绘大众追捧的明星。没有学习素描基础，画出来有点变形。",
+                "word": "尝试人物素描，画一画男明星，没有学习人物素描基础，尝试画真实人物总给自己感觉画得怪怪的。",
                 "label": ['人物','素描','王一博'],
                 "img": require('@/assets/img/2021/5.jpg')
             },
             {
                 "value": "M&M糖果",
                 "time": "2021月6月26日",
-                "word": "尝试向绘画大师一样画一包M&M糖果，效果有些差距，但比起第一次模仿他时的作品，还是由很大的进步。",
+                "word": "尝试像马斯洛画家一样画一包M&M糖果，效果相差就亿点点，但比起第一次模仿他时的作品，还是有很大的进步。",
                 "label": ['静物','上色','糖果'],
                 "img": require('@/assets/img/2021/6.jpg'),
                 "url": 'https://www.bilibili.com/video/BV1Jf4y1b757'
@@ -562,31 +555,38 @@ import DiyLine from '../components/DiyLine.vue'
             {
                 "value": "华为手机",
                 "time": "2021月7月10日",
-                "word": "把自己的手机升级了新的系统，尝试以假乱真，最终还是被识破。",
-                "label": ['静物','上色','手机','华为'],
+                "word": "手机用了快一年多了，画个系统桌面，拍个创意视频，感觉并没有想象中那么逼真。",
+                "label": ['静物','上色','手机'],
                 "img": require('@/assets/img/2021/7.jpg'),
                 "url": 'https://www.bilibili.com/video/BV1o64y147z2'
-            }
+            },
+            {
+                "value": "人物素描",
+                "time": "2021月9月5日",
+                "word": "尝试人物素描练习，绘画就如同做一道好看的美食，投入身心体会其中的美，自然也会回味甘甜。",
+                "label": ['人物','素描','壁纸'],
+                "img": require('@/assets/img/2021/11.jpg')
+            },
           ],
           DiyList: [
             {
                 "value": "木制飞机",
                 "time": "2015年",
-                "word": "第一次开始木制DIY",
+                "word": "第一次开始木制DIY。",
                 "label": ['木模','模型','飞机'],
                 "img": require('@/assets/img/2015/5.jpg')
             },
             {
                 "value": "纸板凉亭",
                 "time": "2016年6月11日",
-                "word": "第一次尝试做纸膜，通过上色让建筑更加逼真",
+                "word": "第一次尝试做纸模，通过上色让建筑更加逼真。",
                 "label": ['纸板','建筑','凉亭'],
                 "img": require('@/assets/img/2016/4.jpg')
             },
             {
                 "value": "纸板风扇",
                 "time": "2016年8月3日",
-                "word": "尝试通过简单的电路做一个DIY纸板压缩小风扇",
+                "word": "尝试通过简单的电路做一个DIY纸板压缩小风扇。",
                 "label": ['纸板','模型','电路','风扇'],
                 "img": require('@/assets/img/2016/7.jpg')
             },
@@ -621,77 +621,77 @@ import DiyLine from '../components/DiyLine.vue'
             {
                 "value": "弓",
                 "time": "2017年8月",
-                "word": "考虑到弓弩的弹射系数是固定的，尝试做一个可自由控制弹力的弓",
+                "word": "考虑到弓弩的弹射系数是固定的，尝试做一个可自由控制弹力的弓。",
                 "label": ['纸板','设计原理','弓'],
                 "img": require('@/assets/img/2017/7.jpg')
             },
             {
                 "value": "炒饭",
                 "time": "2017年8月24日",
-                "word": "尝试自己下厨做炒饭",
+                "word": "尝试自己下厨做炒饭。",
                 "label": ['烹饪','炒饭'],
                 "img": require('@/assets/img/2017/8.jpg')
             },
             {
                 "value": "炒饭",
                 "time": "2017年8月25日",
-                "word": "尝试自己下厨做炒饭",
+                "word": "尝试自己下厨做炒饭。",
                 "label": ['烹饪','炒饭'],
                 "img": require('@/assets/img/2017/9.jpg')
             },
             {
                 "value": "炒饭",
                 "time": "2017年8月26日",
-                "word": "尝试自己下厨做炒饭",
+                "word": "尝试自己下厨做炒饭。",
                 "label": ['烹饪','炒饭'],
                 "img": require('@/assets/img/2017/10.jpg')
             },
             {
                 "value": "炒饭",
                 "time": "2017年8月28日",
-                "word": "尝试自己下厨做炒饭",
+                "word": "尝试自己下厨做炒饭。",
                 "label": ['烹饪','炒饭'],
                 "img": require('@/assets/img/2017/11.jpg')
             },
             {
                 "value": "炒饭",
                 "time": "2017年8月29日",
-                "word": "尝试自己下厨做炒饭",
+                "word": "尝试自己下厨做炒饭。",
                 "label": ['烹饪','炒饭'],
                 "img": require('@/assets/img/2017/12.jpg')
             },
             {
                 "value": "炒饭",
                 "time": "2018年2月12日",
-                "word": "尝试自己下厨做炒饭",
+                "word": "尝试自己下厨做炒饭。",
                 "label": ['烹饪','炒饭'],
                 "img": require('@/assets/img/2018/1.jpg')
             },
             {
                 "value": "意大利面",
                 "time": "2018年2月14日",
-                "word": "尝试做一款螺旋式的意大利面",
+                "word": "尝试做一款螺旋式的意大利面。",
                 "label": ['烹饪','意面'],
                 "img": require('@/assets/img/2018/2.jpg')
             },
             {
                 "value": "纸板水笔",
                 "time": "2018年4月6日",
-                "word": "尝试做一支双头可写的水铅笔",
+                "word": "尝试做一支双头可写的水铅笔。",
                 "label": ['纸板','水笔','铅笔'],
                 "img": require('@/assets/img/2018/4.jpg')
             },
             {
                 "value": "纸板小风扇",
                 "time": "2018年4月6日",
-                "word": "在原有第一代的小风扇进行压缩处理，变得更小巧",
+                "word": "对第一代小风扇进行压缩处理，变得更小巧。",
                 "label": ['纸板','电路','风扇'],
                 "img": require('@/assets/img/2018/5.jpg')
             },
             {
                 "value": "意大利面",
                 "time": "2018年9月3日",
-                "word": "这是做的比较好吃的一份海鲜番茄意大利面",
+                "word": "这是做的比较好吃的一份海鲜番茄意大利面。",
                 "label": ['烹饪','意面'],
                 "img": require('@/assets/img/2018/6.jpg')
             },
@@ -721,7 +721,7 @@ import DiyLine from '../components/DiyLine.vue'
             {
                 "value": "3D打印机",
                 "time": "2019年8月7日",
-                "word": "今年的巅峰之作，尝试做一台可打印的3D打印机，自学arduino语言和C语言，设计打印机雏形，根据一些零散的图来完成打印机的整机设计，组装，开源代码调试。",
+                "word": "今年的巅峰之作，尝试做一台可打印模型的3D打印机，自学arduino语言和C语言，设计打印机雏形，根据一些零散的图来完成打印机的整机设计，组装，开源代码调试。",
                 "label": ['木板','电路','编程','设计原理','3D'],
                 "img": require('@/assets/img/2019/4.jpg'),
                 "url": 'https://www.bilibili.com/video/BV1m4411U7jL'
@@ -745,7 +745,7 @@ import DiyLine from '../components/DiyLine.vue'
             {
                 "value": "手写打印机",
                 "time": "2019年11月19日",
-                "word": "根据网上一些迷你打印机的制作视频，尝试做一台迷你的手写打印机",
+                "word": "根据网上一些迷你打印机的制作视频，尝试做一台迷你的手写打印机。",
                 "label": ['木板','电路','编程','设计原理','写字机'],
                 "img": require('@/assets/img/2019/14.jpg'),
                 "url": 'https://www.bilibili.com/video/BV1kJ41117kh'
@@ -760,7 +760,7 @@ import DiyLine from '../components/DiyLine.vue'
             {
                 "value": "木制小枪",
                 "time": "2020年2月15日",
-                "word": "原有的纸板沙鹰射程有限，现在采用木制的和更换成弹簧，弹力明显提高很多。",
+                "word": "纸板沙鹰射程有限，现在用木制的和橡皮筋更换弹簧，弹力明显提高很多。",
                 "label": ['木制','创意','小枪'],
                 "img": require('@/assets/img/2020/2.jpg')
             },

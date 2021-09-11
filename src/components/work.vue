@@ -19,7 +19,7 @@
                         <div class="conbox" v-for="(item,index) in pageList" :key="item.key">
                             <div class="box">
                                 <div class="content">
-                                    <el-image class="headImg" :src="require('../assets/head.jpg')"></el-image>
+                                    <el-image class="headImg" :src="require('../assets/head.png')"></el-image>
                                     <div style="margin-left:15px;">
                                         <div style="font-size:15px;">Kinron</div>
                                         <div>创作时间：{{item.time}}</div>
