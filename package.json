@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "vue-cli-service serve",
+    "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
@@ -39,7 +40,10 @@
     "parserOptions": {
       "parser": "babel-eslint"
     },
-    "rules": {}
+    "rules": {
+      "no-undef": "off",
+      "no-empty": "off"
+    }
   },
   "browserslist": [
     "> 1%",
