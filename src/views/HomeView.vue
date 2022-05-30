@@ -8,6 +8,7 @@
 </template>
 
 <script>
+import { Toast } from 'vant'
 import uni from '../js/uni.webview.1.5.3'
 export default {
     data() {
@@ -17,24 +18,15 @@ export default {
         // 以下函数用于接收返回值
         window.setResult = (res) => {
             console.log(res)
-            this.$message({
-                message: res,
-                type: 'success'
-            });
+            Toast(`${res}`)
         }
         window.getResult = (res) => {
             console.log(res)
-            this.$message({
-                message: res,
-                type: 'success'
-            });
+            Toast(`${res}`)
         }
         window.removeResult = (res) => {
             console.log(res)
-            this.$message({
-                message: res,
-                type: 'success'
-            });
+            Toast(`${res}`)
         }
         console.log('数据设置成功')
     },
