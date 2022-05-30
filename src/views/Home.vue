@@ -17,12 +17,24 @@ export default {
         // 以下函数用于接收返回值
         window.setResult = (res) => {
             console.log(res)
+            this.$message({
+                message: res,
+                type: 'success'
+            });
         }
         window.getResult = (res) => {
             console.log(res)
+            this.$message({
+                message: res,
+                type: 'success'
+            });
         }
         window.removeResult = (res) => {
             console.log(res)
+            this.$message({
+                message: res,
+                type: 'success'
+            });
         }
         console.log('数据设置成功')
     },
