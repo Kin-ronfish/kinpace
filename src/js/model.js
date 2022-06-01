@@ -15,7 +15,8 @@ export function createCamera(scene, canvas) {
     // 相机位置
     camera.setPosition(new BABYLON.Vector3(40, 50, 70));
     // 相机自动旋转
-    // camera.useFramingBehavior = true;
+    camera.useAutoRotationBehavior = true;
+    camera.beta -= 0.2;
     //变焦速度
     // camera.wheelPrecision = 20; //电脑滚轮速度，越小灵敏度越高
     // camera.pinchPrecision = 20; //手机放大缩小速度，越小灵敏度越高

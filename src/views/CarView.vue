@@ -1,5 +1,6 @@
 <template>
   <div>
+    <!-- <div class="content"><button @click="change">切换</button></div> -->
     <canvas id="renderCanvas"></canvas>
   </div>
 </template>
@@ -12,37 +13,91 @@ export default {
     return {
       canvas: "",
       engine: "",
-      meshList: []
+      meshList: [],
+      path: 'model/car_2.gltf',
+      count: 0
     };
   },
   mounted() {
     this.render();
   },
+  watch: {
+    count() {
+      setTimeout(() => {
+        this.render()
+      },100)
+    }
+  },
   methods: {
     createScene() {
       let scene = new BABYLON.Scene(this.engine);
       createCamera(scene, this.canvas);
-      loadGltf(scene, 'model/car.gltf').then(res => {
+      loadGltf(scene, this.path).then(res => {
         this.meshList = res
         console.log(res) 
         let pbr = new BABYLON.PBRMaterial("pbr", scene)
         pbr.albedoColor = new BABYLON.Color3(1, 1, 1);
-        pbr.metallic = 0.1;
-        pbr.roughness = 0.1;
-        pbr.subSurface.isRefractionEnabled = true;
-        pbr.subSurface.indexOfRefraction = 1.5;
-        this.meshList.forEach(item => {
-          if(item.name === 'bonnet_ok_primitive1' ||
-            item.name === 'door_lf_ok_primitive4' ||
-            item.name === 'chassi_primitive9' ||
-            item.name === 'boot_ok_primitive2' ||
-            item.name === 'door_rf_ok_primitive4' ||
-            item.name === 'bump_fro01_primitive2' ||
-            item.name === 'boot_ok_primitive5' ||
-            item.name === 'extra2') {
-            item.material = pbr
-          }
-        })
+        // pbr.subSurface.isRefractionEnabled = true;
+        // pbr.subSurface.indexOfRefraction = 1.5;
+        if(this.path.indexOf('car_1')!=-1) {
+          pbr.metallic = 0.01;
+          pbr.roughness = 0;
+          this.meshList.forEach(item => {
+            if(item.name === 'bonnet_ok_primitive1' ||
+              item.name === 'door_lf_ok_primitive4' ||
+              item.name === 'chassi_primitive9' ||
+              item.name === 'boot_ok_primitive2' ||
+              item.name === 'door_rf_ok_primitive4' ||
+              item.name === 'bump_fro01_primitive2' ||
+              item.name === 'boot_ok_primitive5' ||
+              item.name === 'extra2') {
+              item.material = pbr
+            }
+          })
+        }else if(this.path.indexOf('car_2')!=-1) {
+          pbr.metallic = 0.01;
+          pbr.roughness = 0;
+          this.meshList.forEach(item => {
+            if(item.name === 'hood_c' ||
+            item.name === 'bumper_f40_primitive0' ||
+            item.name === 'door_rig07' ||
+            item.name === 'body_a01_primitive1' ||
+            item.name === 'skirt_ri21_primitive0' ||
+            item.name === 'body_a01_primitive0' ||
+            item.name === 'door_lef02' ||
+            item.name === 'fender_f01_primitive0' ||
+            item.name === 'fender_f04_primitive0' ||
+            item.name === 'bumper_r27_primitive1' ||
+            item.name === 'trunk_c_primitive0' ||
+            item.name === 'skirt_le13_primitive0') {
+              item.material = pbr
+            }
+          })
+        }else if(this.path.indexOf('car_3')!=-1) {
+          pbr.metallic = 0.01;
+          pbr.roughness = 0;
+          this.meshList.forEach(item => {
+            if(item.name === 'Component#33' ||
+            item.name === 'Component#26') {
+              item.material = pbr
+            }
+          })
+        }else if(this.path.indexOf('car_4')!=-1) {
+          pbr.metallic = 0.01;
+          pbr.roughness = 0;
+          this.meshList.forEach(item => {
+            if(item.name === 'node15' ||
+              item.name === 'node18' ||
+              item.name === 'node10' ||
+              item.name === 'node12' ||
+              item.name === 'node14' ||
+              item.name === 'node16' ||
+              item.name === 'node11' ||
+              item.name === 'node9') {
+              item.material = pbr
+            }
+          })
+        }
         // actionManger(scene, this.meshList)
       })
       createDDS(scene);
@@ -71,6 +126,21 @@ export default {
         this.engine.resize();
       });
     },
+    change() {
+      if(this.count===4) {
+        count = 0
+      }
+      if(this.count === 0) {
+        this.path = 'model/car_1.gltf'
+      }else if(this.count === 1) {
+        this.path = 'model/car_2.gltf'
+      }else if(this.count === 2) {
+        this.path = 'model/car_3.gltf'
+      }else if(this.count === 3) {
+        this.path = 'model/car_4.gltf'
+      }
+      this.count += 1
+    }
   },
 };
 </script>
@@ -86,5 +156,11 @@ export default {
   right: 0;
   bottom: 0;
   outline: none;
+}
+.content {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 </style>
