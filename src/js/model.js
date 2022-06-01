@@ -10,8 +10,8 @@ export function createCamera(scene, canvas) {
     // camera.lowerBetaLimit = 0;
     camera.upperBetaLimit = 1.5;
     // 相机缩放大小限制
-    camera.lowerRadiusLimit = 8;
-    camera.upperRadiusLimit = 15;
+    camera.lowerRadiusLimit = 5;
+    camera.upperRadiusLimit = 10;
     // 相机位置
     camera.setPosition(new BABYLON.Vector3(40, 50, 70));
     // 相机自动旋转
@@ -38,6 +38,7 @@ export function createDDS(scene) {
         "environment.dds",scene);
     hdrTexture.gammaSpace = false;
     scene.environmentTexture = hdrTexture;
+    scene.createDefaultSkybox(scene.environmentTexture);
 }
 
 // 设置全景图像
