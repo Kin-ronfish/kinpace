@@ -14,7 +14,7 @@ export default {
       canvas: "",
       engine: "",
       meshList: [],
-      path: 'model/car_2.gltf',
+      path: 'model/car_3.gltf',
       count: 0
     };
   },
@@ -39,9 +39,9 @@ export default {
         pbr.albedoColor = new BABYLON.Color3(1, 1, 1);
         // pbr.subSurface.isRefractionEnabled = true;
         // pbr.subSurface.indexOfRefraction = 1.5;
-        if(this.path.indexOf('car_1')!=-1) {
-          pbr.metallic = 0.01;
-          pbr.roughness = 0;
+        if(this.path.indexOf('car_5')!=-1) {
+          pbr.metallic = 0.05;
+          pbr.roughness = 0.05;
           this.meshList.forEach(item => {
             if(item.name === 'bonnet_ok_primitive1' ||
               item.name === 'door_lf_ok_primitive4' ||
@@ -55,8 +55,8 @@ export default {
             }
           })
         }else if(this.path.indexOf('car_2')!=-1) {
-          pbr.metallic = 0.01;
-          pbr.roughness = 0;
+          pbr.metallic = 0.05;
+          pbr.roughness = 0.05;
           this.meshList.forEach(item => {
             if(item.name === 'hood_c' ||
             item.name === 'bumper_f40_primitive0' ||
@@ -83,6 +83,21 @@ export default {
             }
           })
         }else if(this.path.indexOf('car_4')!=-1) {
+          pbr.metallic = 0.01;
+          pbr.roughness = 0;
+          this.meshList.forEach(item => {
+            if(item.name === 'node15' ||
+              item.name === 'node18' ||
+              item.name === 'node10' ||
+              item.name === 'node12' ||
+              item.name === 'node14' ||
+              item.name === 'node16' ||
+              item.name === 'node11' ||
+              item.name === 'node9') {
+              item.material = pbr
+            }
+          })
+        }else if(this.path.indexOf('car_1')!=-1) {
           pbr.metallic = 0.01;
           pbr.roughness = 0;
           this.meshList.forEach(item => {
