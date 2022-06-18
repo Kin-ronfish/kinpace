@@ -3,20 +3,20 @@ import "babylonjs-loaders";
 export function createCamera(scene, canvas) {
     // 参数：名称、alpha、beta、半径、目标位置、场景
     // ArcRotateCamera(弧形旋转相机)
-    const camera = new BABYLON.ArcRotateCamera("Camera",0,0,50,
-    	new BABYLON.Vector3(0, 0.5, 0),scene);
+    const camera = new BABYLON.ArcRotateCamera("Camera",0,0,40,
+    	new BABYLON.Vector3(0, 0, 0),scene);
     camera.attachControl(canvas, true);
     // beta最大最小值限制
     // camera.lowerBetaLimit = 0;
     camera.upperBetaLimit = 1.5;
     // 相机缩放大小限制
     camera.lowerRadiusLimit = 5;
-    camera.upperRadiusLimit = 10;
+    camera.upperRadiusLimit = 5;
     // 相机位置
     camera.setPosition(new BABYLON.Vector3(40, 50, 70));
     // 相机自动旋转
-    camera.useAutoRotationBehavior = true;
-    camera.beta -= 0.2;
+    // camera.useAutoRotationBehavior = true;
+    // camera.beta -= 0.2;
     //变焦速度
     // camera.wheelPrecision = 20; //电脑滚轮速度，越小灵敏度越高
     // camera.pinchPrecision = 20; //手机放大缩小速度，越小灵敏度越高
