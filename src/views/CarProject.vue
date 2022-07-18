@@ -11,10 +11,12 @@
       </div>
       <h6 style="margin:10px 0">选择贴膜材质</h6>
       <div class="select">
-        <div class="select-item" v-for="(item, index) in materials" :key="index" @click="selectMaterial(index)">
-          <div class="select-title">{{item.name}}</div>
+        <div v-for="(item, index) in materials" :key="index" @click="selectMaterial(index)">
+          <van-button style="margin-right: 5px" size="mini">{{item.name}}</van-button>
         </div>
       </div>
+      <h6 style="margin:10px 0">相机状态</h6>
+      <van-button size="mini" @click="setControls">{{controls.autoRotate?'静止':'预览'}}</van-button>
     </div>
   </div>
 </template>
@@ -32,9 +34,9 @@ const scene = new THREE.Scene()
 
 // 相机
 const camera = new THREE.PerspectiveCamera(
-  40, window.innerWidth / window.innerHeight,0.1,1000
+  20, window.innerWidth / window.innerHeight,0.1,1000
 )
-camera.position.set(0,2,6);
+camera.position.set(0,5,10);
 
 const renderer = new THREE.WebGL1Renderer({
   antialias: true // 抗锯齿
@@ -90,7 +92,8 @@ export default {
         }
       ],
       bodyMaterial: '',
-      glassMaterial: ''
+      glassMaterial: '',
+      controls: ''
     }
   },
   created() {
@@ -129,6 +132,7 @@ export default {
     // 控制器
     controls = new OrbitControls(camera, renderer.domElement);
     controls.autoRotate = true;
+    this.controls = controls;
     controls.update();
 
     // 加载模型
@@ -207,6 +211,9 @@ export default {
     },
     selectMaterial(index) {
       this.bodyMaterial.clearcoatRoughness =  this.materials[index].value
+    },
+    setControls() {
+      this.controls.autoRotate = !this.controls.autoRotate
     }
   }
 }
@@ -223,10 +230,15 @@ export default {
 .home-content {
   position: fixed;
   top: 0;
-  right: 20px;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.5);
+  padding-left: 10px;
 }
 .select {
   display: flex;
+  width: 120px;
+  flex-wrap: wrap;
 }
 .select-item-color {
   width: 15px;
@@ -236,14 +248,5 @@ export default {
   display: inline-block;
   cursor: pointer;
   border-radius: 10px;
-}
-.select-title {
-  margin: 5px;
-  background: rgb(168, 168, 168);
-  border-radius: 10px;
-  padding: 1px 5px;
-  font-size: 14px;
-  cursor: pointer;
-  color: #fff;
 }
 </style>
