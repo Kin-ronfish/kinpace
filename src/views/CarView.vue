@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <div>
     <div class="content"><button @click="change">切换</button></div>
     <div class="tool">
@@ -153,4 +153,4 @@ export default {
   left: 0;
   z-index: 1;
 }
-</style>
+</style> -->

@@ -4,7 +4,7 @@
         <button @click="save">保存数据</button>
         <button @click="getValue">获取数据</button>
         <button @click="removeValue">删除数据</button>
-        <button @click="nav('car')">汽车展厅</button>
+        <button @click="nav('/cars')">汽车展厅</button>
     </div>
 </template>
 
@@ -66,9 +66,7 @@ export default {
             },'*')
         },
         nav(name) {
-            if(name === 'car') {
-                this.$router.push('/car')
-            }
+            this.$router.push(name)
         }
     }
 }
