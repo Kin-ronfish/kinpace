@@ -16,6 +16,12 @@ export default {
         return {}
     },
     created() {
+        uni.postMessage({
+            data: {
+                type: 'portrait',
+                content: ''
+            }
+        },'*')
         // 以下函数用于接收返回值
         window.setResult = (res) => {
             console.log(res)
