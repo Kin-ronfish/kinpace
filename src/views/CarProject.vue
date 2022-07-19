@@ -37,7 +37,7 @@ const camera = new THREE.PerspectiveCamera(
   20, window.innerWidth / window.innerHeight,0.1,1000
 )
 camera.position.set(0,5,10);
-
+ 
 const renderer = new THREE.WebGL1Renderer({
   antialias: true // 抗锯齿
 })
@@ -97,15 +97,20 @@ export default {
     }
   },
   created() {
-    // uni.postMessage({
-    //     data: {
-    //         type: 'setStore',
-    //         content: {
-    //             name: 'name',
-    //             value: 'Kin'
-    //         }
-    //     }
-    // },'*')
+    uni.postMessage({
+        data: {
+            type: 'landscape',
+            content: ''
+        }
+    },'*')
+  },
+  beforeDestroy() {
+    uni.postMessage({
+        data: {
+            type: 'portrait',
+            content: ''
+        }
+    },'*')
   },
   mounted() {
     this.$refs.canvasDom.appendChild(renderer.domElement);
