@@ -30,6 +30,20 @@ export default {
             Toast(`${res}`)
         }
         console.log('数据设置成功')
+        uni.postMessage({
+            data: {
+                type: 'landscape',
+                content: ''
+            }
+        },'*')
+    },
+    beforeDestroy() {
+        uni.postMessage({
+            data: {
+                type: 'portrait',
+                content: ''
+            }
+        },'*')
     },
     methods: {
         save() {

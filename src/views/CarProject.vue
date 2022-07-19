@@ -96,22 +96,6 @@ export default {
       controls: ''
     }
   },
-  created() {
-    uni.postMessage({
-        data: {
-            type: 'landscape',
-            content: ''
-        }
-    },'*')
-  },
-  beforeDestroy() {
-    uni.postMessage({
-        data: {
-            type: 'portrait',
-            content: ''
-        }
-    },'*')
-  },
   mounted() {
     this.$refs.canvasDom.appendChild(renderer.domElement);
     renderer.setClearColor('#000');
