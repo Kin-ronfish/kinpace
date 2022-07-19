@@ -18,7 +18,7 @@ export default {
     created() {
         uni.postMessage({
             data: {
-                type: 'portrait',
+                type: 'landscape',
                 content: ''
             }
         },'*')
