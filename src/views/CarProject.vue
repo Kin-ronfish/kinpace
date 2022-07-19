@@ -25,7 +25,6 @@
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
-import uni from '../js/uni.webview.1.5.3'
 let controls;
 let carBody = [], // 车身
     glassCar = []; // 玻璃
