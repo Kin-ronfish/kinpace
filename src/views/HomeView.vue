@@ -1,10 +1,11 @@
 <!-- 我的项目演示 -->
 <template>
-    <div>
+    <div style="margin-top:50px">
         <button @click="save">保存数据</button>
         <button @click="getValue">获取数据</button>
         <button @click="removeValue">删除数据</button>
         <button @click="nav('/cars')">汽车展厅</button>
+        <button @click="back">返回</button>
     </div>
 </template>
 
@@ -16,12 +17,6 @@ export default {
         return {}
     },
     created() {
-        uni.postMessage({
-            data: {
-                type: 'landscape',
-                content: ''
-            }
-        },'*')
         // 以下函数用于接收返回值
         window.setResult = (res) => {
             console.log(res)
@@ -73,6 +68,14 @@ export default {
         },
         nav(name) {
             this.$router.push(name)
+        },
+        back() {
+            uni.postMessage({
+                data: {
+                    type: 'back',
+                    content: ''
+                }
+            },'*')
         }
     }
 }
