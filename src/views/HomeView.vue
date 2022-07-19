@@ -16,12 +16,6 @@ export default {
         return {}
     },
     created() {
-        uni.postMessage({
-            data: {
-                type: 'landscape',
-                content: ''
-            }
-        },'*')
         // 以下函数用于接收返回值
         window.setResult = (res) => {
             console.log(res)
@@ -36,14 +30,6 @@ export default {
             Toast(`${res}`)
         }
         console.log('数据设置成功')
-    },
-    beforeDestroy() {
-        uni.postMessage({
-            data: {
-                type: 'portrait',
-                content: ''
-            }
-        },'*')
     },
     methods: {
         save() {
