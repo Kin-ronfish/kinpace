@@ -8,6 +8,14 @@
 import uni from '../js/uni.webview.1.5.3'
 export default {
   name: "app",
+  mounted() {
+    uni.postMessage({
+      data: {
+        type: 'landscape',
+        content: ''
+        }
+    },'*')
+  },
   beforeDestroy() {
     uni.postMessage({
         data: {
