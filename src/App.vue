@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import uni from '../js/uni.webview.1.5.3'
+import uni from './js/uni.webview.1.5.3'
 export default {
   name: "app",
   created() {
