@@ -1,11 +1,11 @@
 <!-- 我的项目演示 -->
 <template>
     <div style="margin-top:50px">
-        <button @click="save">保存数据</button>
-        <button @click="getValue">获取数据</button>
-        <button @click="removeValue">删除数据</button>
-        <button @click="nav('/cars')">汽车展厅</button>
-        <button @click="back">返回</button>
+        <van-button @click="save">保存数据</van-button>
+        <van-button @click="getValue">获取数据</van-button>
+        <van-button @click="removeValue">删除数据</van-button>
+        <van-button @click="nav('/cars')">汽车展厅</van-button>
+        <van-button @click="back">返回</van-button>
     </div>
 </template>
 

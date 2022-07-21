@@ -75,6 +75,7 @@ export default {
       bodyMaterial: '',
       glassMaterial: '',
       controls: '',
+      camera: '',
       scene: ''
     }
   },
@@ -101,20 +102,21 @@ export default {
     init() {
       const scene = new THREE.Scene()
       this.scene = scene
-
       // 相机
-      const camera = new THREE.PerspectiveCamera(
+      this.camera = new THREE.PerspectiveCamera(
         20, window.innerWidth / window.innerHeight,0.1,1000
       )
-      camera.position.set(0,5,10);
+      this.camera.position.set(0,5,10);
 
       const renderer = new THREE.WebGL1Renderer({
-        antialias: true // 抗锯齿
+        antialias: true, // 抗锯齿
+        alpha: true
       })
       renderer.setSize(window.innerWidth, window.innerHeight);
+      renderer.setClearColor(0xffffff);
 
       const render = () => {
-        renderer.render(scene, camera);
+        renderer.render(scene, this.camera);
         controls && controls.update();
         requestAnimationFrame(render);
       }
@@ -142,7 +144,7 @@ export default {
       })
 
       // 控制器
-      controls = new OrbitControls(camera, renderer.domElement);
+      controls = new OrbitControls(this.camera, renderer.domElement);
       controls.autoRotate = true;
       this.controls = controls;
       controls.update();
@@ -212,7 +214,7 @@ export default {
       let mouse = new THREE.Vector2();
       mouse.x = (event.clientX/window.innerWidth)*2-1
       mouse.y = (event.clientY/window.innerHeight)*2-1
-      raycaster.setFromCamera( mouse, camera );
+      raycaster.setFromCamera( mouse, this.camera );
 
       // 获取raycaster直线和所有模型相交的数组集合
       raycaster.intersectObjects( this.scene.children );
