@@ -1,8 +1,8 @@
 <!-- 我的项目演示 -->
 <template>
-  <div style="margin-top: 50px">
-    <van-nav-bar title="项目列表" left-arrow fixed @click-left="back" />
-    <div style="height:50px"></div>
+  <div>
+    <van-nav-bar title="项目列表" style="margin-top:10px" left-arrow fixed @click-left="back" />
+    <div style="height:60px"></div>
     <van-cell-group>
       <van-cell title="汽车展厅" @click="nav('/car')" />
       <van-cell title="调查问卷" @click="nav('/questionnaire')" />

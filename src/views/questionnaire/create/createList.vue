@@ -4,11 +4,12 @@
       title="问卷列表"
       right-text="新增"
       left-arrow
+      style="margin-top:10px"
       fixed
       @click-left="back"
       @click-right="create"
     />
-    <div style="height: 50px"></div>
+    <div style="height: 60px"></div>
     <van-search
       style="background: #eee"
       v-model="keyword"

@@ -3,12 +3,13 @@
     <van-nav-bar
         title="测试问卷"
         right-text="提交"
+        style="margin-top:10px"
         left-arrow
         fixed
         @click-left="back"
         @click-right="handle"
     />
-    <div style="height: 50px"></div>
+    <div style="height: 60px"></div>
     <form-create :edit="edit" :list="detail.list[index]"></form-create>
     <div class="btn">
       <van-button

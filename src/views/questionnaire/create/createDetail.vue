@@ -3,12 +3,13 @@
     <van-nav-bar
       :title="isDetail?'问卷详情':'新建问卷'"
       :right-text="edit ? '保存' : '编辑'"
+      style="margin-top:10px"
       left-arrow
       fixed
       @click-left="back"
       @click-right="handle"
     />
-    <div style="height: 50px"></div>
+    <div style="height: 60px"></div>
     <div style="margin: 15px 25px 15px 15px">
       <input
         type="text"
