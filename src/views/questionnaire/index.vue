@@ -11,7 +11,7 @@
     <div class="footer">
       <div></div>
       <div>{{version}}</div>
-      <div><van-icon name="question-o" /></div>
+      <div><van-icon name="question-o" @click="show_1=true" /></div>
     </div>
     <van-popup v-model="show" :style="{ width: '60%' }" closeable>
       <div class="list">
@@ -23,6 +23,9 @@
       <div style="margin:15px">
         <van-button class="btn" type="info" size="medium" plain @click="writeTest">确定</van-button>
       </div>
+    </van-popup>
+    <van-popup v-model="show_1">
+      <div style="margin:15px;">{{hint}}</div>
     </van-popup>
   </div>
 </template>
@@ -36,8 +39,10 @@ export default {
     return {
       version: 'V1.0.0',
       show: false,
+      show_1: false,
       list: '',
-      radio: ''
+      radio: '',
+      hint: '在新建问卷里自定义问卷模板后，就可以在填写问卷里模拟'
     }
   },
   methods: {
@@ -53,11 +58,16 @@ export default {
     },
     getData() {
       let questionList = localStorage.getItem("questionList");
-      if (questionList.length) {
-        this.list = JSON.parse(questionList).data;
+      try {
+        if (questionList.length) {
+          this.list = JSON.parse(questionList).data;
+          this.show = true
+        }else {
+          Toast('暂无问卷模板，请先创建')
+        }
+      }catch {
+        this.list = [];
         this.show = true
-      }else {
-        Toast('暂无问卷模板，请先创建')
       }
     }
   }

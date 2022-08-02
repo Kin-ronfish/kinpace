@@ -4,7 +4,7 @@
       title="问卷列表"
       right-text="新增"
       left-arrow
-      style="margin-top:10px"
+      style="margin-top:15px"
       fixed
       @click-left="back"
       @click-right="create"

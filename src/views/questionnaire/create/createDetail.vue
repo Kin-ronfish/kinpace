@@ -3,7 +3,7 @@
     <van-nav-bar
       :title="isDetail?'问卷详情':'新建问卷'"
       :right-text="edit ? '保存' : '编辑'"
-      style="margin-top:10px"
+      style="margin-top:15px"
       left-arrow
       fixed
       @click-left="back"

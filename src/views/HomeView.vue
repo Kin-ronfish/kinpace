@@ -1,7 +1,7 @@
 <!-- 我的项目演示 -->
 <template>
   <div>
-    <van-nav-bar title="项目列表" style="margin-top:10px" left-arrow fixed @click-left="back" />
+    <van-nav-bar title="项目列表" style="margin-top:15px" left-arrow fixed @click-left="back" />
     <div style="height:60px"></div>
     <van-cell-group>
       <van-cell title="汽车展厅" @click="nav('/car')" />

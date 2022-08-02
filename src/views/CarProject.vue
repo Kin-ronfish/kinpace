@@ -17,6 +17,7 @@
       </div>
       <h6 style="margin:10px 0">相机状态</h6>
       <van-button size="mini" @click="setControls">{{controls.autoRotate?'静止':'预览'}}</van-button>
+      <van-button size="mini" @click="back">返回</van-button>
     </div>
   </div>
 </template>
@@ -48,12 +49,6 @@ export default {
         },
         {
           color: "purple"
-        },
-        {
-          color: "lightgray"
-        },
-        {
-          color: "gray"
         },
         {
           color: "white"
@@ -227,6 +222,9 @@ export default {
     },
     setControls() {
       this.controls.autoRotate = !this.controls.autoRotate
+    },
+    back() {
+      this.$router.back()
     }
   }
 }

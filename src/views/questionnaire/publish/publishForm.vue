@@ -3,7 +3,7 @@
     <van-nav-bar
         title="测试问卷"
         right-text="提交"
-        style="margin-top:10px"
+        style="margin-top:15px"
         left-arrow
         fixed
         @click-left="back"
